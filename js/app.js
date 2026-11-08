@@ -2829,7 +2829,7 @@
             <span>✨</span> ${isTa ? '2 & 10-ஆம் அதிபதிகளின் சுபத்துவ - பாவத்துவ ஆய்வு' : '2nd & 10th Lord Subathuvam & Paavathuvam Analysis'}
           </h4>
           <span style="background: rgba(212,175,55,0.18); border: 1px solid #D4AF37; color: #FDE68A; font-size: 0.8rem; font-weight: 700; padding: 0.2rem 0.65rem; border-radius: 999px;">
-            ${isTa ? 'ஆதித்ய குருஜி தத்துவ கணிதம்' : 'Subathuvam & Paavathuvam Assessment'}
+            ${isTa ? 'சுபத்துவ - பாவத்துவ கணிதம்' : 'Subathuvam & Paavathuvam Assessment'}
           </span>
         </div>
 
