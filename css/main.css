@@ -1,0 +1,8505 @@
+/* ==========================================================================
+   EXACT JATHAGAM (துல்லிய ஜாதகம்) - MASTER STYLESHEET
+   Aesthetics: Dark Navy + Sacred Gold + Deep Maroon + Glassmorphism
+   Responsive, Highly Interactive, Bilingual (Tamil & English)
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;900&family=Noto+Sans+Tamil:wght@300;400;500;600;700;800&family=Outfit:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+  /* Color Palette */
+  --bg-darkest: #050811;
+  --bg-primary: #080D1E;
+  --bg-secondary: #0E162E;
+  --bg-tertiary: #141F3E;
+  
+  --surface-glass: rgba(14, 22, 46, 0.78);
+  --surface-glass-hover: rgba(22, 35, 71, 0.88);
+  --surface-modal: rgba(10, 15, 33, 0.95);
+  
+  /* Sacred Gold Palette */
+  --gold-primary: #D4AF37;
+  --gold-light: #F7D774;
+  --gold-bright: #FFE89C;
+  --gold-dark: #A37F1E;
+  --gold-glow: rgba(212, 175, 55, 0.35);
+  --gold-border: rgba(212, 175, 55, 0.28);
+  --gold-border-strong: rgba(247, 215, 116, 0.65);
+  
+  /* Sacred Maroon / Kumkum */
+  --maroon-primary: #721827;
+  --maroon-dark: #4F0E19;
+  --maroon-light: #9C2437;
+  --maroon-glow: rgba(156, 36, 55, 0.4);
+  
+  /* Accents */
+  --emerald: #10B981;
+  --ruby: #EF4444;
+  --sapphire: #3B82F6;
+  --amethyst: #8B5CF6;
+  
+  /* Typography Colors */
+  --text-primary: #F8FAFC;
+  --text-secondary: #CBD5E1;
+  --text-muted: #8492A6;
+  --text-gold: #F7D774;
+  
+  /* Shadows & Glass */
+  --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.35);
+  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.5);
+  --shadow-lg: 0 16px 40px rgba(0, 0, 0, 0.65);
+  --shadow-gold: 0 0 25px rgba(212, 175, 55, 0.25);
+  --shadow-gold-intense: 0 0 40px rgba(212, 175, 55, 0.45);
+  
+  --border-radius-sm: 8px;
+  --border-radius-md: 14px;
+  --border-radius-lg: 20px;
+  --border-radius-xl: 28px;
+  
+  --transition-fast: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-normal: 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Base Reset & Core Typography */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+  background-color: var(--bg-darkest);
+}
+
+body {
+  font-family: 'Outfit', 'Noto Sans Tamil', -apple-system, BlinkMacSystemFont, sans-serif;
+  color: var(--text-primary);
+  background: radial-gradient(circle at 50% 0%, #111A38 0%, #080D1E 45%, #050811 100%);
+  background-attachment: fixed;
+  line-height: 1.6;
+  min-height: 100vh;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Tamil Font Support */
+[lang="ta"] body, body.lang-ta, .tamil-text {
+  font-family: 'Noto Sans Tamil', 'Outfit', sans-serif;
+}
+
+h1, h2, h3, .brand-font {
+  font-family: 'Cinzel', 'Noto Sans Tamil', serif;
+  letter-spacing: 0.03em;
+  font-weight: 700;
+  color: var(--gold-light);
+}
+
+a {
+  color: var(--gold-light);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+a:hover {
+  color: var(--gold-bright);
+}
+
+/* Container */
+.container {
+  max-width: 1380px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* Top Sacred Ticker / Announcement Bar */
+.top-sacred-bar {
+  background: linear-gradient(90deg, #4F0E19, #721827 50%, #4F0E19);
+  color: var(--gold-bright);
+  padding: 0.45rem 1rem;
+  font-size: 0.85rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(212, 175, 55, 0.3);
+  font-weight: 500;
+}
+
+.top-sacred-bar .ticker-content {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.panchang-live-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: rgba(0, 0, 0, 0.3);
+  padding: 0.2rem 0.6rem;
+  border-radius: 999px;
+  border: 1px solid var(--gold-border);
+}
+
+.pulse-dot {
+  width: 8px;
+  height: 8px;
+  background: #10B981;
+  border-radius: 50%;
+  box-shadow: 0 0 8px #10B981;
+  animation: pulseAnim 1.8s infinite;
+}
+
+@keyframes pulseAnim {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.4; transform: scale(0.7); }
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.lang-toggle-btn, .audio-toggle-btn {
+  background: rgba(0, 0, 0, 0.4);
+  color: var(--gold-light);
+  border: 1px solid var(--gold-border);
+  padding: 0.25rem 0.75rem;
+  border-radius: 999px;
+  cursor: pointer;
+  font-size: 0.8rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  transition: all var(--transition-fast);
+}
+
+.lang-toggle-btn:hover, .audio-toggle-btn:hover {
+  background: var(--gold-primary);
+  color: #050811;
+  border-color: var(--gold-light);
+  box-shadow: 0 0 12px var(--gold-glow);
+}
+
+/* ==========================================================================
+   NAVIGATION & MEGA MENU
+   ========================================================================== */
+.main-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(8, 13, 30, 0.92);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--gold-border);
+  box-shadow: var(--shadow-md);
+  transition: all var(--transition-normal);
+}
+
+.nav-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.9rem 0;
+}
+
+.brand-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  cursor: pointer;
+}
+
+.brand-emblem {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 2px solid var(--gold-primary);
+  box-shadow: var(--shadow-gold);
+  object-fit: cover;
+  animation: rotateSlow 60s linear infinite;
+}
+
+@keyframes rotateSlow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.brand-titles {
+  display: flex;
+  flex-direction: column;
+}
+
+.brand-name {
+  font-size: 1.45rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, #FFF1B8 0%, #D4AF37 50%, #F59E0B 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  line-height: 1.2;
+}
+
+.brand-tagline {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+/* Navigation Links */
+.nav-menu {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 0.5rem;
+}
+
+.nav-item {
+  position: relative;
+}
+
+.nav-link {
+  color: var(--text-secondary);
+  font-weight: 600;
+  font-size: 0.92rem;
+  padding: 0.55rem 0.9rem;
+  border-radius: var(--border-radius-sm);
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  transition: all var(--transition-fast);
+  cursor: pointer;
+}
+
+.nav-link:hover, .nav-item.active .nav-link {
+  color: var(--gold-bright);
+  background: rgba(212, 175, 55, 0.12);
+  border: 1px solid rgba(212, 175, 55, 0.3);
+}
+
+.nav-arrow {
+  font-size: 0.65rem;
+  opacity: 0.7;
+  transition: transform var(--transition-fast);
+}
+
+.nav-item:hover .nav-arrow {
+  transform: rotate(180deg);
+}
+
+/* Mega Menu Dropdown */
+.mega-menu {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%) translateY(12px);
+  width: 780px;
+  background: var(--surface-modal);
+  border: 1px solid var(--gold-border-strong);
+  border-radius: var(--border-radius-md);
+  box-shadow: var(--shadow-lg), var(--shadow-gold);
+  padding: 1.5rem;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: all var(--transition-normal);
+  z-index: 1000;
+  backdrop-filter: blur(20px);
+}
+
+.nav-item:hover .mega-menu {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translateX(-50%) translateY(0);
+}
+
+.mega-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+}
+
+.mega-column h4 {
+  font-size: 0.88rem;
+  color: var(--gold-light);
+  border-bottom: 1px solid var(--gold-border);
+  padding-bottom: 0.4rem;
+  margin-bottom: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.mega-links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+
+.mega-links a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.35rem 0.5rem;
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+  border-radius: 6px;
+  transition: all var(--transition-fast);
+}
+
+.mega-links a:hover {
+  color: #FFF;
+  background: rgba(212, 175, 55, 0.15);
+  transform: translateX(4px);
+}
+
+.mega-badge {
+  font-size: 0.68rem;
+  padding: 0.1rem 0.4rem;
+  border-radius: 999px;
+  background: var(--maroon-primary);
+  color: var(--gold-bright);
+}
+
+/* Nav CTA Button */
+.cta-btn-gold {
+  background: linear-gradient(135deg, #F7D774 0%, #D4AF37 50%, #B88915 100%);
+  color: #070B19;
+  font-weight: 700;
+  font-size: 0.9rem;
+  padding: 0.65rem 1.4rem;
+  border-radius: 999px;
+  border: 1px solid #FFE89C;
+  cursor: pointer;
+  box-shadow: 0 4px 18px rgba(212, 175, 55, 0.35);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all var(--transition-normal);
+}
+
+.cta-btn-gold:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 24px rgba(212, 175, 55, 0.55);
+  background: linear-gradient(135deg, #FFE89C 0%, #F7D774 50%, #D4AF37 100%);
+}
+
+.cta-btn-maroon {
+  background: linear-gradient(135deg, #9C2437 0%, #721827 50%, #4F0E19 100%);
+  color: #FFF;
+  font-weight: 700;
+  font-size: 0.9rem;
+  padding: 0.65rem 1.4rem;
+  border-radius: 999px;
+  border: 1px solid rgba(247, 215, 116, 0.4);
+  cursor: pointer;
+  box-shadow: var(--shadow-sm);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all var(--transition-normal);
+}
+
+.cta-btn-maroon:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 22px var(--maroon-glow);
+  border-color: var(--gold-light);
+}
+
+/* ==========================================================================
+   HERO SECTION
+   ========================================================================== */
+.hero-section {
+  position: relative;
+  min-height: 85vh;
+  display: flex;
+  align-items: center;
+  padding: 3.5rem 0 4.5rem;
+  background-image: linear-gradient(to bottom, rgba(8, 13, 30, 0.72) 0%, rgba(8, 13, 30, 0.92) 80%, var(--bg-darkest) 100%), url('../assets/images/vedic-hero-bg.jpg');
+  background-size: cover;
+  background-position: center 30%;
+  border-bottom: 1px solid var(--gold-border);
+  overflow: hidden;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+.hero-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.4rem 1rem;
+  background: rgba(114, 24, 39, 0.4);
+  border: 1px solid var(--gold-border-strong);
+  border-radius: 999px;
+  color: var(--gold-bright);
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 1.25rem;
+  box-shadow: 0 0 15px rgba(114, 24, 39, 0.3);
+}
+
+.hero-title {
+  font-size: 3.2rem;
+  line-height: 1.18;
+  margin-bottom: 1.2rem;
+  color: #FFF;
+}
+
+.hero-title .gold-gradient {
+  background: linear-gradient(135deg, #FFE89C 0%, #F7D774 40%, #D4AF37 80%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
+.hero-desc {
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin-bottom: 2rem;
+  max-width: 95%;
+}
+
+.hero-stats-row {
+  display: flex;
+  gap: 2rem;
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(212, 175, 55, 0.2);
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.stat-num {
+  font-size: 1.9rem;
+  font-weight: 800;
+  color: var(--gold-light);
+  line-height: 1;
+  font-family: 'Cinzel', serif;
+}
+
+.stat-label {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-top: 0.25rem;
+}
+
+/* ==========================================================================
+   BIRTH DETAILS INPUT CARD (Glassmorphism & Sacred Glow)
+   ========================================================================== */
+.birth-form-card {
+  background: var(--surface-glass);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--gold-border-strong);
+  border-radius: var(--border-radius-lg);
+  padding: 2.2rem;
+  box-shadow: var(--shadow-lg), var(--shadow-gold);
+  position: relative;
+  overflow: hidden;
+}
+
+.birth-form-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #721827, #D4AF37, #9C2437);
+}
+
+.card-header-with-badge {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.card-header-with-badge h3 {
+  font-size: 1.35rem;
+  color: #FFF;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.om-symbol {
+  color: var(--gold-primary);
+  font-size: 1.4rem;
+}
+
+.preset-selector-row {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+  overflow-x: auto;
+  padding-bottom: 0.4rem;
+}
+
+.preset-chip {
+  background: rgba(14, 22, 46, 0.9);
+  color: var(--text-secondary);
+  border: 1px solid rgba(212, 175, 55, 0.25);
+  padding: 0.35rem 0.8rem;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all var(--transition-fast);
+}
+
+.preset-chip:hover, .preset-chip.active {
+  background: rgba(212, 175, 55, 0.2);
+  color: var(--gold-bright);
+  border-color: var(--gold-primary);
+  box-shadow: 0 0 10px rgba(212, 175, 55, 0.25);
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.1rem;
+}
+
+.form-group.full-width {
+  grid-column: span 2;
+}
+
+.form-group label {
+  display: block;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--gold-light);
+  margin-bottom: 0.4rem;
+  letter-spacing: 0.02em;
+}
+
+.form-control {
+  width: 100%;
+  background: rgba(7, 11, 24, 0.85);
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  color: #FFF;
+  padding: 0.75rem 1rem;
+  border-radius: var(--border-radius-sm);
+  font-size: 0.92rem;
+  outline: none;
+  transition: all var(--transition-fast);
+  font-family: inherit;
+}
+
+.form-control:focus {
+  border-color: var(--gold-primary);
+  box-shadow: 0 0 15px rgba(212, 175, 55, 0.35);
+  background: rgba(10, 16, 35, 0.95);
+}
+
+.form-control option {
+  background: #0D162E;
+  color: #FFF;
+}
+
+.btn-generate-chart {
+  width: 100%;
+  margin-top: 1.25rem;
+  padding: 0.95rem;
+  font-size: 1.05rem;
+  font-weight: 800;
+  border-radius: var(--border-radius-md);
+}
+
+/* ==========================================================================
+   ASTROLOGY DASHBOARD (42 MODULES CENTRAL WORKSPACE)
+   ========================================================================== */
+.dashboard-section {
+  padding: 3.5rem 0 6rem;
+  position: relative;
+}
+
+.dashboard-header-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--surface-glass);
+  border: 1px solid var(--gold-border);
+  border-radius: var(--border-radius-md);
+  padding: 1.25rem 2rem;
+  margin-bottom: 2rem;
+  box-shadow: var(--shadow-md);
+}
+
+.active-profile-summary {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.user-avatar-chakra {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: radial-gradient(circle, var(--gold-primary) 0%, #721827 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  color: #070B19;
+  font-weight: 800;
+  box-shadow: 0 0 15px var(--gold-glow);
+}
+
+.profile-meta h3 {
+  font-size: 1.25rem;
+  color: #FFF;
+  margin-bottom: 0.2rem;
+}
+
+.profile-meta p {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+
+.dashboard-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.btn-icon-action {
+  background: rgba(14, 22, 46, 0.9);
+  color: var(--gold-light);
+  border: 1px solid var(--gold-border);
+  padding: 0.6rem 1.1rem;
+  border-radius: var(--border-radius-sm);
+  cursor: pointer;
+  font-size: 0.85rem;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  transition: all var(--transition-fast);
+}
+
+.btn-icon-action:hover {
+  background: var(--gold-primary);
+  color: #050811;
+  border-color: var(--gold-light);
+  box-shadow: 0 0 15px var(--gold-glow);
+}
+
+/* Category Filter Tabs (The 7 Pillars) */
+.category-tabs-nav {
+  display: flex;
+  gap: 0.6rem;
+  margin-bottom: 2rem;
+  overflow-x: auto;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid rgba(212, 175, 55, 0.15);
+}
+
+.cat-tab-btn {
+  background: rgba(14, 22, 46, 0.6);
+  color: var(--text-secondary);
+  border: 1px solid rgba(212, 175, 55, 0.2);
+  padding: 0.75rem 1.35rem;
+  border-radius: 999px;
+  font-size: 0.92rem;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all var(--transition-fast);
+}
+
+.cat-tab-btn:hover {
+  background: rgba(212, 175, 55, 0.15);
+  color: var(--gold-bright);
+}
+
+.cat-tab-btn.active {
+  background: linear-gradient(135deg, #721827 0%, #9C2437 100%);
+  color: #FFF;
+  border-color: var(--gold-primary);
+  box-shadow: 0 0 18px var(--maroon-glow);
+}
+
+.cat-tab-btn .badge-count {
+  font-size: 0.72rem;
+  padding: 0.15rem 0.5rem;
+  border-radius: 999px;
+  background: rgba(0, 0, 0, 0.35);
+  color: var(--gold-light);
+}
+
+/* Search within 42 Modules */
+.module-search-box {
+  position: relative;
+  max-width: 420px;
+  margin-bottom: 2rem;
+}
+
+.module-search-box input {
+  width: 100%;
+  background: rgba(14, 22, 46, 0.85);
+  border: 1px solid var(--gold-border);
+  color: #FFF;
+  padding: 0.7rem 1rem 0.7rem 2.5rem;
+  border-radius: 999px;
+  font-size: 0.9rem;
+  outline: none;
+}
+
+.module-search-box .search-icon {
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--gold-light);
+}
+
+/* Modules Grid */
+.modules-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 1.5rem;
+}
+
+.module-card {
+  background: var(--surface-glass);
+  border: 1px solid var(--gold-border);
+  border-radius: var(--border-radius-md);
+  padding: 1.5rem;
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-normal);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.module-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--gold-border-strong);
+  box-shadow: var(--shadow-md), var(--shadow-gold);
+  background: var(--surface-glass-hover);
+}
+
+.module-card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: var(--gold-primary);
+  opacity: 0;
+  transition: opacity var(--transition-fast);
+}
+
+.module-card:hover::after {
+  opacity: 1;
+}
+
+.card-top {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.module-icon-wrap {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  background: rgba(212, 175, 55, 0.12);
+  border: 1px solid var(--gold-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  color: var(--gold-light);
+  flex-shrink: 0;
+}
+
+.module-meta h4 {
+  font-size: 1.05rem;
+  color: #FFF;
+  margin-bottom: 0.25rem;
+  line-height: 1.3;
+}
+
+.module-meta .module-tag {
+  font-size: 0.72rem;
+  color: var(--gold-light);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.module-preview-text {
+  font-size: 0.86rem;
+  color: var(--text-secondary);
+  line-height: 1.55;
+  margin-bottom: 1.25rem;
+}
+
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 0.85rem;
+  border-top: 1px solid rgba(212, 175, 55, 0.12);
+}
+
+.view-details-link {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--gold-light);
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.module-status-chip {
+  font-size: 0.7rem;
+  padding: 0.2rem 0.55rem;
+  border-radius: 999px;
+  background: rgba(16, 185, 129, 0.15);
+  color: #34D399;
+  border: 1px solid rgba(16, 185, 129, 0.3);
+}
+
+/* ==========================================================================
+   INTERACTIVE CHARTS STYLING (South Indian Square, North Indian, 360° Drishti)
+   ========================================================================== */
+.chart-container-card {
+  background: var(--surface-glass);
+  border: 1px solid var(--gold-border-strong);
+  border-radius: var(--border-radius-lg);
+  padding: 1.75rem;
+  box-shadow: var(--shadow-md);
+  margin-bottom: 2rem;
+}
+
+.chart-header-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.chart-type-toggles {
+  display: flex;
+  gap: 0.4rem;
+  background: rgba(7, 11, 24, 0.8);
+  padding: 0.3rem;
+  border-radius: 999px;
+  border: 1px solid var(--gold-border);
+}
+
+.chart-toggle-btn {
+  background: transparent;
+  color: var(--text-secondary);
+  border: none;
+  padding: 0.45rem 1rem;
+  border-radius: 999px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.chart-toggle-btn.active {
+  background: var(--gold-primary);
+  color: #050811;
+  box-shadow: 0 0 10px var(--gold-glow);
+}
+
+/* South Indian Square Chart Grid */
+.south-indian-chart-svg {
+  width: 100%;
+  max-width: 580px;
+  height: auto;
+  margin: 0 auto;
+  display: block;
+  filter: drop-shadow(0 0 20px rgba(0, 0, 0, 0.6));
+}
+
+.chart-cell {
+  fill: rgba(14, 22, 46, 0.85);
+  stroke: var(--gold-primary);
+  stroke-width: 2;
+  transition: all var(--transition-fast);
+  cursor: pointer;
+}
+
+.chart-cell:hover {
+  fill: rgba(30, 48, 90, 0.95);
+  stroke: var(--gold-bright);
+}
+
+.chart-cell.lagna-cell {
+  fill: rgba(114, 24, 39, 0.45);
+}
+
+.sign-title-text {
+  fill: var(--gold-light);
+  font-size: 13px;
+  font-weight: 700;
+  font-family: 'Noto Sans Tamil', 'Outfit', sans-serif;
+}
+
+.planet-pill-text {
+  fill: #FFF;
+  font-size: 12px;
+  font-weight: 600;
+  font-family: 'Noto Sans Tamil', 'Outfit', sans-serif;
+}
+
+.lagna-marker-text {
+  fill: #F59E0B;
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.chart-center-box {
+  fill: rgba(7, 11, 24, 0.95);
+  stroke: var(--gold-primary);
+  stroke-width: 2.5;
+}
+
+/* 360° Circular Aspect Drishti Wheel */
+.circular-aspect-wheel-svg {
+  width: 100%;
+  max-width: 620px;
+  height: auto;
+  margin: 0 auto;
+  display: block;
+}
+
+/* ==========================================================================
+   INTERACTIVE MODAL DRAWER (Module Deep Dive)
+   ========================================================================== */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(3, 5, 12, 0.85);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: all var(--transition-normal);
+  padding: 1.5rem;
+}
+
+.modal-overlay.active {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.modal-container {
+  width: 100%;
+  max-width: 960px;
+  max-height: 90vh;
+  background: var(--surface-modal);
+  border: 1px solid var(--gold-border-strong);
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--shadow-lg), var(--shadow-gold-intense);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  transform: scale(0.96) translateY(20px);
+  transition: transform var(--transition-normal);
+}
+
+.modal-overlay.active .modal-container {
+  transform: scale(1) translateY(0);
+}
+
+.modal-header {
+  padding: 1.5rem 2rem;
+  border-bottom: 1px solid var(--gold-border);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(90deg, #101935 0%, #1A274E 100%);
+}
+
+.modal-header-info {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.modal-header h3 {
+  font-size: 1.4rem;
+  color: #FFF;
+}
+
+.btn-close-modal {
+  background: rgba(239, 68, 68, 0.15);
+  color: #F87171;
+  border: 1px solid rgba(239, 68, 68, 0.4);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1;
+  transition: all var(--transition-fast);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  z-index: 10;
+}
+
+.btn-close-modal:hover {
+  background: #DC2626;
+  color: #FFFFFF;
+  border-color: #EF4444;
+  transform: scale(1.08);
+  box-shadow: 0 0 14px rgba(239, 68, 68, 0.6);
+}
+
+.modal-body {
+  padding: 2rem;
+  overflow-y: auto;
+  flex: 1;
+}
+
+/* Tables inside deep-dive modal */
+.astro-data-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  margin: 1.25rem 0;
+  border: 1px solid var(--gold-border);
+  border-radius: var(--border-radius-sm);
+  overflow: hidden;
+}
+
+.astro-data-table th {
+  background: rgba(114, 24, 39, 0.4);
+  color: var(--gold-bright);
+  font-size: 0.85rem;
+  font-weight: 700;
+  padding: 0.8rem 1rem;
+  text-align: left;
+  border-bottom: 1px solid var(--gold-border);
+  letter-spacing: 0.03em;
+}
+
+.astro-data-table td {
+  padding: 0.75rem 1rem;
+  font-size: 0.88rem;
+  color: var(--text-primary);
+  border-bottom: 1px solid rgba(212, 175, 55, 0.12);
+  background: rgba(14, 22, 46, 0.5);
+}
+
+.astro-data-table tr:last-child td {
+  border-bottom: none;
+}
+
+.astro-data-table tr:hover td {
+  background: rgba(212, 175, 55, 0.08);
+}
+
+/* Dasha Progress Bar */
+.dasha-timeline-wrap {
+  margin: 1.5rem 0;
+}
+
+.dasha-bar-container {
+  height: 24px;
+  background: rgba(7, 11, 24, 0.9);
+  border-radius: 999px;
+  overflow: hidden;
+  border: 1px solid var(--gold-border);
+  display: flex;
+  position: relative;
+}
+
+.dasha-bar-segment {
+  height: 100%;
+  transition: width var(--transition-normal);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: #FFF;
+  position: relative;
+}
+
+/* Porutham Score Box */
+.porutham-score-banner {
+  background: radial-gradient(circle at center, #26111B 0%, #101935 100%);
+  border: 2px solid var(--gold-primary);
+  border-radius: var(--border-radius-md);
+  padding: 1.75rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  box-shadow: var(--shadow-gold);
+}
+
+.porutham-big-score {
+  font-size: 3.5rem;
+  font-weight: 900;
+  color: var(--gold-bright);
+  font-family: 'Cinzel', serif;
+  line-height: 1;
+}
+
+/* Pancha Pakshi Status Grid */
+.pakshi-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+.pakshi-item {
+  background: rgba(14, 22, 46, 0.7);
+  border: 1px solid var(--gold-border);
+  border-radius: var(--border-radius-sm);
+  padding: 1rem;
+  text-align: center;
+}
+
+.pakshi-item.active {
+  border-color: var(--gold-bright);
+  background: rgba(212, 175, 55, 0.15);
+  box-shadow: 0 0 12px var(--gold-glow);
+}
+
+/* ==========================================================================
+   SERVICES & FEATURES SECTION
+   ========================================================================== */
+.services-section {
+  padding: 5rem 0;
+  border-top: 1px solid var(--gold-border);
+  background: rgba(8, 13, 30, 0.6);
+}
+
+.section-title-wrap {
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto 3.5rem;
+}
+
+.section-subtitle {
+  color: var(--gold-primary);
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.section-title-wrap h2 {
+  font-size: 2.3rem;
+  color: #FFF;
+  margin-bottom: 0.8rem;
+}
+
+.section-title-wrap p {
+  color: var(--text-secondary);
+  font-size: 1rem;
+}
+
+/* Testimonials Carousel */
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.75rem;
+}
+
+.testimonial-card {
+  background: var(--surface-glass);
+  border: 1px solid var(--gold-border);
+  border-radius: var(--border-radius-md);
+  padding: 1.75rem;
+  position: relative;
+  box-shadow: var(--shadow-sm);
+}
+
+.quote-icon {
+  font-size: 2.2rem;
+  color: var(--gold-primary);
+  opacity: 0.4;
+  line-height: 1;
+  margin-bottom: 0.5rem;
+}
+
+.testimonial-text {
+  font-size: 0.92rem;
+  color: var(--text-secondary);
+  font-style: italic;
+  margin-bottom: 1.25rem;
+  line-height: 1.6;
+}
+
+.user-author {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.author-avatar {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: 1px solid var(--gold-primary);
+  background: #141F3E;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--gold-light);
+  font-weight: 700;
+}
+
+/* Footer */
+.main-footer {
+  background: #04070F;
+  border-top: 1px solid var(--gold-border);
+  padding: 4.5rem 0 2rem;
+  color: var(--text-secondary);
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1.2fr;
+  gap: 3rem;
+  margin-bottom: 3.5rem;
+}
+
+.footer-col h4 {
+  font-size: 1.1rem;
+  color: var(--gold-light);
+  margin-bottom: 1.2rem;
+  font-family: 'Cinzel', serif;
+}
+
+.footer-links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.footer-links a {
+  color: var(--text-secondary);
+  font-size: 0.88rem;
+  transition: color var(--transition-fast);
+}
+
+.footer-links a:hover {
+  color: var(--gold-bright);
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(212, 175, 55, 0.15);
+  padding-top: 1.75rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.82rem;
+  color: var(--text-muted);
+}
+
+/* ==========================================================================
+   PRINT STYLESHEET (PROFESSIONAL HOROSCOPE PDF EXPORT)
+   ========================================================================== */
+@media print {
+  body {
+    background: #FFF !important;
+    color: #111 !important;
+  }
+
+  .top-sacred-bar,
+  .main-header,
+  .hero-section,
+  .preset-selector-row,
+  .category-tabs-nav,
+  .module-search-box,
+  .services-section,
+  .main-footer,
+  .modal-overlay,
+  .btn-icon-action,
+  .btn-generate-chart,
+  .dashboard-actions {
+    display: none !important;
+  }
+
+  .container {
+    max-width: 100% !important;
+    padding: 0 !important;
+  }
+
+  .chart-container-card,
+  .module-card,
+  .dashboard-header-bar {
+    background: #FFF !important;
+    border: 1px solid #777 !important;
+    color: #000 !important;
+    box-shadow: none !important;
+    page-break-inside: avoid;
+  }
+
+  .chart-cell {
+    fill: #FBFBFB !important;
+    stroke: #333 !important;
+  }
+
+  .sign-title-text,
+  .planet-pill-text {
+    fill: #000 !important;
+  }
+
+  h1, h2, h3, h4 {
+    color: #900 !important;
+  }
+}
+
+/* Responsive Breakpoints */
+@media (max-width: 1024px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .mega-menu {
+    width: 90vw;
+  }
+
+  .footer-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2.3rem;
+  }
+
+  .nav-menu {
+    display: none; /* hamburger on mobile */
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .form-group.full-width {
+    grid-column: span 1;
+  }
+
+  .dashboard-header-bar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.2rem;
+  }
+
+  .pakshi-cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ==========================================================================
+   LEFT SIDE SLIDE BAR DRAWER (42 MODULES CANONICAL SIDEBAR)
+   ========================================================================== */
+.sidebar-toggle-btn {
+  position: fixed;
+  left: 0;
+  top: 48%;
+  transform: translateY(-50%);
+  z-index: 1550;
+  background: linear-gradient(135deg, #721827 0%, #151F42 60%, #0A0F24 100%);
+  color: var(--gold-light);
+  border: 1px solid var(--gold-primary);
+  border-left: none;
+  border-radius: 0 30px 30px 0;
+  padding: 0.85rem 1.15rem 0.85rem 0.9rem;
+  cursor: pointer;
+  box-shadow: 4px 4px 22px rgba(0, 0, 0, 0.7), 0 0 16px rgba(212, 175, 55, 0.35);
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  font-weight: 700;
+  font-size: 0.88rem;
+  letter-spacing: 0.02em;
+  transition: all var(--transition-fast);
+}
+
+.sidebar-toggle-btn:hover {
+  background: linear-gradient(135deg, #9C2437 0%, #1E2D60 60%, #0D1636 100%);
+  color: #FFF;
+  padding-left: 1.15rem;
+  box-shadow: 6px 6px 28px rgba(0, 0, 0, 0.8), 0 0 25px rgba(212, 175, 55, 0.55);
+}
+
+.sidebar-toggle-icon {
+  font-size: 1.2rem;
+  color: var(--gold-bright);
+}
+
+.nav-sidebar-trigger {
+  background: rgba(212, 175, 55, 0.12);
+  color: var(--gold-light);
+  border: 1px solid var(--gold-border-strong);
+  padding: 0.5rem 0.95rem;
+  border-radius: 999px;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 0.85rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  transition: all var(--transition-fast);
+}
+
+.nav-sidebar-trigger:hover {
+  background: var(--gold-primary);
+  color: #050811;
+  box-shadow: 0 0 15px var(--gold-glow);
+}
+
+/* Sidebar Drawer Overlay & Container */
+.sidebar-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(3, 5, 12, 0.75);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  z-index: 1590;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: all var(--transition-normal);
+}
+
+.sidebar-backdrop.active {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.left-sidebar-drawer {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 380px;
+  max-width: 88vw;
+  background: rgba(8, 13, 30, 0.98);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border-right: 2px solid var(--gold-primary);
+  box-shadow: 12px 0 45px rgba(0, 0, 0, 0.85), 0 0 30px rgba(212, 175, 55, 0.2);
+  transform: translateX(-100%);
+  transition: transform 0.38s cubic-bezier(0.16, 1, 0.3, 1);
+  z-index: 1600;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.left-sidebar-drawer.active {
+  transform: translateX(0);
+}
+
+/* Sidebar Header */
+.sidebar-header {
+  padding: 1.25rem 1.5rem;
+  background: linear-gradient(90deg, #101935 0%, #1A274E 100%);
+  border-bottom: 1px solid var(--gold-border);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sidebar-header-title {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.sidebar-header-title img {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  border: 1px solid var(--gold-primary);
+}
+
+.sidebar-header-title h3 {
+  font-size: 1.15rem;
+  color: #FFF;
+  margin: 0;
+}
+
+.sidebar-close-btn {
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--text-secondary);
+  border: 1px solid var(--gold-border);
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 1.1rem;
+  transition: all var(--transition-fast);
+}
+
+.sidebar-close-btn:hover {
+  background: var(--ruby);
+  color: #FFF;
+  border-color: #EF4444;
+}
+
+/* Sidebar Search */
+.sidebar-search-wrap {
+  padding: 0.9rem 1.25rem;
+  background: rgba(14, 22, 46, 0.7);
+  border-bottom: 1px solid rgba(212, 175, 55, 0.15);
+  position: relative;
+}
+
+.sidebar-search-input {
+  width: 100%;
+  background: rgba(7, 11, 24, 0.9);
+  border: 1px solid var(--gold-border);
+  color: #FFF;
+  padding: 0.6rem 0.9rem 0.6rem 2.2rem;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  outline: none;
+  font-family: inherit;
+}
+
+.sidebar-search-input:focus {
+  border-color: var(--gold-primary);
+  box-shadow: 0 0 10px var(--gold-glow);
+}
+
+.sidebar-search-icon {
+  position: absolute;
+  left: 1.9rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--gold-light);
+  font-size: 0.85rem;
+}
+
+/* Scrollable Module List */
+.sidebar-module-list {
+  flex: 1;
+  overflow-y: auto;
+  padding: 0.75rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.sidebar-module-list::-webkit-scrollbar {
+  width: 6px;
+}
+
+.sidebar-module-list::-webkit-scrollbar-track {
+  background: rgba(7, 11, 24, 0.5);
+}
+
+.sidebar-module-list::-webkit-scrollbar-thumb {
+  background: var(--gold-dark);
+  border-radius: 3px;
+}
+
+.sidebar-module-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.65rem 0.85rem;
+  border-radius: 8px;
+  background: rgba(14, 22, 46, 0.55);
+  border: 1px solid rgba(212, 175, 55, 0.12);
+  color: var(--text-primary);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  text-decoration: none;
+}
+
+.sidebar-module-item:hover {
+  background: rgba(212, 175, 55, 0.14);
+  border-color: var(--gold-border-strong);
+  transform: translateX(4px);
+  color: #FFF;
+}
+
+.sidebar-module-item.active {
+  background: linear-gradient(90deg, rgba(114, 24, 39, 0.6) 0%, rgba(212, 175, 55, 0.2) 100%);
+  border-color: var(--gold-primary);
+  box-shadow: 0 0 12px var(--gold-glow);
+}
+
+.sidebar-item-left {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  flex: 1;
+  min-width: 0;
+}
+
+.sidebar-item-num {
+  font-family: 'Cinzel', serif;
+  font-weight: 800;
+  font-size: 0.95rem;
+  color: var(--gold-light);
+  min-width: 26px;
+  flex-shrink: 0;
+}
+
+.sidebar-item-text {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.sidebar-item-title {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: #FFF;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.sidebar-item-subtitle {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.sidebar-item-chevron {
+  font-size: 0.75rem;
+  color: var(--gold-light);
+  opacity: 0.6;
+  transition: opacity var(--transition-fast), transform var(--transition-fast);
+  flex-shrink: 0;
+}
+
+.sidebar-module-item:hover .sidebar-item-chevron {
+  opacity: 1;
+  transform: translateX(2px);
+}
+
+/* Sidebar Footer */
+.sidebar-footer {
+  padding: 0.85rem 1.25rem;
+  background: #04070F;
+  border-top: 1px solid var(--gold-border);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.78rem;
+  color: var(--text-muted);
+}
+
+/* ==========================================================================
+   EXACT PREDICTIONS - FIRST PAGE MODEL DASHBOARD
+   Pixel-accurate replication of app.exactpredictions.in/dashboard.php
+   ========================================================================== */
+
+/* Top Navigation Bar */
+.ep-navbar {
+  background: #FFFFFF;
+  border-bottom: 1px solid #E2E8F0;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  width: 100%;
+}
+
+.ep-nav-container {
+  max-width: 1380px;
+  margin: 0 auto;
+  padding: 0.65rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.ep-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.ep-logo-badge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ep-brand-text {
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.35rem;
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.ep-brand-name {
+  color: #D97706; /* Golden Amber Exact */
+}
+
+.ep-brand-sub {
+  color: #1E293B; /* Dark Slate Jathagam */
+}
+
+.ep-nav-right {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.ep-nav-link {
+  color: #475569;
+  font-size: 0.92rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+
+.ep-nav-link:hover {
+  color: #0F172A;
+}
+
+.ep-nav-tab.active {
+  color: #059669;
+  font-weight: 700;
+  font-size: 0.92rem;
+  text-decoration: none;
+  position: relative;
+  padding: 0.35rem 0.65rem;
+  background: #ECFDF5;
+  border-radius: 6px;
+}
+
+.ep-select-pill {
+  background: #FFFFFF;
+  border: 1px solid #CBD5E1;
+  border-radius: 6px;
+  padding: 0.35rem 0.75rem;
+  font-size: 0.85rem;
+  color: #334155;
+  cursor: pointer;
+  outline: none;
+  font-family: inherit;
+  font-weight: 600;
+}
+
+.ep-user-profile {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.35rem 0.75rem;
+  border-radius: 999px;
+  background: #F8FAFC;
+  border: 1px solid #E2E8F0;
+  cursor: pointer;
+}
+
+.ep-avatar {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: #CBD5E1;
+  color: #334155;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 0.82rem;
+}
+
+.ep-username {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: #334155;
+}
+
+.ep-chevron {
+  font-size: 0.75rem;
+  color: #64748B;
+}
+
+/* Dashboard Hero Background */
+.ep-dashboard-hero {
+  background: #F1F5F9;
+  padding: 1.5rem 0 2.5rem;
+  border-bottom: 1px solid #E2E8F0;
+}
+
+.ep-container {
+  max-width: 1380px;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Top Row: Lakshmi (left) + 44 Pills Grid (right) */
+.ep-top-grid {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 1.25rem;
+  align-items: stretch;
+}
+
+@media (max-width: 992px) {
+  .ep-top-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.ep-lakshmi-card {
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  border-radius: 14px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.04);
+  padding: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.ep-lakshmi-img-wrapper {
+  width: 100%;
+  height: 100%;
+  max-height: 440px;
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(circle, #FFFBEB 0%, #FEF3C7 100%);
+  border: 1px solid #FDE68A;
+}
+
+.ep-lakshmi-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+  transition: transform 0.4s ease;
+}
+
+.ep-lakshmi-img:hover {
+  transform: scale(1.02);
+}
+
+/* 44 Module Buttons Grid Card */
+.ep-modules-grid-card {
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  border-radius: 14px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.04);
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.ep-modules-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 0.6rem;
+}
+
+@media (max-width: 1200px) {
+  .ep-modules-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+@media (max-width: 768px) {
+  .ep-modules-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (max-width: 480px) {
+  .ep-modules-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.ep-pill-btn {
+  background: #FFFFFF;
+  border: 1px solid #CBD5E1;
+  border-radius: 8px;
+  padding: 0.55rem 0.4rem;
+  text-align: center;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #334155;
+  cursor: pointer;
+  outline: none;
+  transition: all 0.18s ease;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  user-select: none;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.02);
+}
+
+.ep-pill-btn:hover {
+  background: #F8FAFC;
+  border-color: #94A3B8;
+  color: #0F172A;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.06);
+}
+
+.ep-pill-btn.active, .ep-pill-btn:focus {
+  border-color: #10B981;
+  background: #ECFDF5;
+  color: #047857;
+  font-weight: 700;
+  box-shadow: 0 0 0 2px rgba(16, 185, 129, 0.2);
+}
+
+/* Snap Attached Location: Jathagam & Jamakkol Primary Module Pills */
+.ep-pill-btn.ep-pill-jathagam {
+  border-color: #F59E0B;
+  background: #FFFDF5;
+  color: #831843;
+  font-weight: 700;
+}
+.ep-pill-btn.ep-pill-jathagam:hover {
+  background: #FEF3C7;
+  border-color: #D97706;
+  color: #701A75;
+  box-shadow: 0 2px 8px rgba(245, 158, 11, 0.22);
+}
+.ep-pill-btn.ep-pill-jathagam.active {
+  background: linear-gradient(135deg, #831843 0%, #701A75 100%) !important;
+  border-color: #831843 !important;
+  color: #FFFFFF !important;
+  box-shadow: 0 0 0 2px rgba(131, 24, 67, 0.3) !important;
+}
+
+.ep-pill-btn.ep-pill-jamakkol {
+  border-color: #C084FC;
+  background: #FAF5FF;
+  color: #6B21A8;
+  font-weight: 700;
+}
+.ep-pill-btn.ep-pill-jamakkol:hover {
+  background: #EDE9FE;
+  border-color: #9333EA;
+  color: #581C87;
+  box-shadow: 0 2px 8px rgba(168, 85, 247, 0.22);
+}
+.ep-pill-btn.ep-pill-jamakkol.active {
+  background: linear-gradient(135deg, #7E22CE 0%, #581C87 100%) !important;
+  border-color: #7E22CE !important;
+  color: #FFFFFF !important;
+  box-shadow: 0 0 0 2px rgba(126, 34, 206, 0.3) !important;
+}
+
+.ep-place-pill {
+  background: #F1F5F9;
+  border: 1px solid #CBD5E1;
+  border-radius: 999px;
+  padding: 0.18rem 0.55rem;
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: #475569;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  line-height: 1.2;
+}
+
+.ep-place-pill:hover {
+  background: #E2E8F0;
+  color: #0F172A;
+  border-color: #94A3B8;
+}
+
+.ep-place-pill.active {
+  background: #10B981;
+  border-color: #10B981;
+  color: #FFFFFF;
+  box-shadow: 0 1px 3px rgba(16, 185, 129, 0.3);
+}
+
+/* Custom Places Searchable Dropdown */
+.ep-place-input-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.ep-place-input-group {
+  display: flex;
+  position: relative;
+  align-items: center;
+}
+
+.ep-place-input-group .ep-input {
+  width: 100%;
+  padding-right: 4.4rem;
+}
+
+.ep-place-clear-btn {
+  position: absolute;
+  right: 32px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(148, 163, 184, 0.25);
+  border: none;
+  font-size: 0.8rem;
+  color: #64748B;
+  cursor: pointer;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.15s ease;
+  line-height: 1;
+}
+
+.ep-place-clear-btn:hover {
+  background: #EF4444;
+  color: #FFFFFF;
+}
+
+.ep-place-dropdown-toggle {
+  position: absolute;
+  right: 6px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: transparent;
+  border: none;
+  font-size: 1.1rem;
+  color: #64748B;
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: 4px;
+  transition: all 0.15s ease;
+  line-height: 1;
+}
+
+.ep-place-dropdown-toggle:hover {
+  background: #E2E8F0;
+  color: #0F172A;
+}
+
+.ep-quick-place-select {
+  margin-top: 6px;
+  width: 100%;
+  font-size: 0.82rem;
+  background-color: #FFFFFF;
+  border: 1.5px solid #10B981;
+  color: #0F172A;
+  border-radius: 8px;
+  padding: 0.5rem 0.65rem;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.ep-quick-place-select:hover {
+  border-color: #059669;
+}
+
+.ep-quick-place-select:focus {
+  outline: none;
+  border-color: #10B981;
+  box-shadow: 0 0 0 2px rgba(16, 185, 129, 0.25);
+}
+
+.ep-places-dropdown-panel {
+  position: absolute;
+  top: calc(100% + 4px);
+  left: 0;
+  right: 0;
+  max-height: 380px;
+  background: #FFFFFF;
+  border: 1.5px solid #10B981;
+  border-radius: 12px;
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.18), 0 4px 12px rgba(16, 185, 129, 0.12);
+  z-index: 1050;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  animation: epDropdownFadeIn 0.18s ease-out;
+}
+
+@keyframes epDropdownFadeIn {
+  from { opacity: 0; transform: translateY(-6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.ep-places-dropdown-header {
+  padding: 8px 10px;
+  background: #F8FAFC;
+  border-bottom: 1px solid #E2E8F0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.ep-place-tabs-row {
+  display: flex;
+  gap: 4px;
+  overflow-x: auto;
+  padding-bottom: 2px;
+}
+
+.ep-place-tab-btn {
+  background: #FFFFFF;
+  border: 1px solid #CBD5E1;
+  border-radius: 6px;
+  padding: 3px 8px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: #475569;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.15s ease;
+}
+
+.ep-place-tab-btn:hover {
+  background: #F1F5F9;
+  color: #0F172A;
+}
+
+.ep-place-tab-btn.active {
+  background: #10B981;
+  border-color: #10B981;
+  color: #FFFFFF;
+}
+
+.ep-places-search-wrap {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: #FFFFFF;
+  border: 1px solid #CBD5E1;
+  border-radius: 6px;
+  padding: 5px 8px;
+}
+
+.ep-places-search-wrap input {
+  border: none;
+  outline: none;
+  width: 100%;
+  font-size: 0.82rem;
+  color: #1E293B;
+  background: transparent;
+}
+
+.ep-places-list-container {
+  overflow-y: auto;
+  max-height: 260px;
+  padding: 4px 0;
+}
+
+.ep-place-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 7px 12px;
+  cursor: pointer;
+  border-bottom: 1px solid #F1F5F9;
+  transition: background 0.12s ease;
+}
+
+.ep-place-item:hover, .ep-place-item.highlighted {
+  background: #ECFDF5;
+}
+
+.ep-place-item.selected {
+  background: rgba(16, 185, 129, 0.15);
+  border-left: 3px solid #10B981;
+}
+
+.ep-place-item-left {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  overflow: hidden;
+}
+
+.ep-place-item-icon {
+  font-size: 1rem;
+}
+
+.ep-place-item-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.ep-place-item-name {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #1E293B;
+}
+
+.ep-place-item-sub {
+  font-size: 0.7rem;
+  color: #64748B;
+}
+
+.ep-place-item-right {
+  font-size: 0.7rem;
+  color: #059669;
+  font-family: monospace;
+  font-weight: 600;
+  white-space: nowrap;
+  background: rgba(16, 185, 129, 0.1);
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+/* Bottom Grid: Form (left) + Saved Horoscopes (right) */
+.ep-bottom-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.35fr;
+  gap: 1.25rem;
+  align-items: start;
+}
+
+@media (max-width: 992px) {
+  .ep-bottom-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Create Horoscope Form Card */
+.ep-form-card {
+  background: #FFFFFF;
+  border: 1.5px solid #10B981;
+  border-radius: 14px;
+  box-shadow: 0 4px 16px rgba(16, 185, 129, 0.08);
+  padding: 1.5rem;
+}
+
+.ep-card-header {
+  margin-bottom: 1.1rem;
+}
+
+.ep-card-title {
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: #0F172A;
+  margin-bottom: 0.2rem;
+}
+
+.ep-card-subtitle {
+  font-size: 0.84rem;
+  color: #64748B;
+}
+
+.ep-form-group {
+  margin-bottom: 0.85rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.ep-form-row-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.85rem;
+}
+
+@media (max-width: 580px) {
+  .ep-form-row-2 {
+    grid-template-columns: 1fr;
+  }
+}
+
+.ep-label {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #475569;
+  margin-bottom: 0.35rem;
+}
+
+.ep-label .req {
+  color: #EF4444;
+}
+
+.ep-input, .ep-select {
+  width: 100%;
+  border: 1px solid #CBD5E1;
+  border-radius: 8px;
+  padding: 0.55rem 0.85rem;
+  font-size: 0.88rem;
+  background: #FFFFFF;
+  color: #0F172A;
+  outline: none;
+  font-family: inherit;
+  transition: all 0.2s ease;
+}
+
+.ep-input:focus, .ep-select:focus {
+  border-color: #10B981;
+  box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.15);
+}
+
+.ep-time-input-group {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.ep-time-field {
+  flex: 1;
+}
+
+.ep-ampm-toggle {
+  display: flex;
+  background: #F1F5F9;
+  border: 1px solid #CBD5E1;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.ep-ampm-btn {
+  border: none;
+  background: transparent;
+  padding: 0.5rem 0.65rem;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #64748B;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.ep-ampm-btn.active {
+  background: #10B981;
+  color: #FFFFFF;
+}
+
+.ep-input-hint {
+  font-size: 0.72rem;
+  color: #64748B;
+  margin-top: 0.3rem;
+  line-height: 1.3;
+}
+
+.ep-advanced-toggle-wrap {
+  margin: 0.5rem 0 1rem;
+}
+
+.ep-toggle-advanced {
+  background: none;
+  border: none;
+  color: #059669;
+  font-size: 0.84rem;
+  font-weight: 700;
+  cursor: pointer;
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.ep-toggle-advanced:hover {
+  text-decoration: underline;
+}
+
+.ep-btn-save-chart {
+  width: 100%;
+  background: #059669;
+  color: #FFFFFF;
+  font-weight: 700;
+  font-size: 0.95rem;
+  padding: 0.75rem 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 3px 8px rgba(5, 150, 105, 0.25);
+}
+
+.ep-btn-save-chart:hover {
+  background: #047857;
+  transform: translateY(-1px);
+  box-shadow: 0 5px 12px rgba(5, 150, 105, 0.35);
+}
+
+/* Saved Horoscopes Card */
+.ep-saved-card {
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  border-radius: 14px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+  padding: 1.5rem;
+}
+
+.ep-saved-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.ep-badge-records {
+  background: #F1F5F9;
+  border: 1px solid #CBD5E1;
+  border-radius: 6px;
+  padding: 0.3rem 0.8rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #475569;
+}
+
+.ep-table-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.ep-search-wrap {
+  flex: 1;
+}
+
+.ep-input-search {
+  width: 100%;
+  max-width: 320px;
+  border: 1px solid #CBD5E1;
+  border-radius: 6px;
+  padding: 0.45rem 0.75rem;
+  font-size: 0.84rem;
+  outline: none;
+}
+
+.ep-input-search:focus {
+  border-color: #10B981;
+}
+
+.ep-perpage-wrap {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.82rem;
+  color: #64748B;
+}
+
+.ep-select-small {
+  border: 1px solid #CBD5E1;
+  border-radius: 6px;
+  padding: 0.35rem 0.5rem;
+  font-size: 0.82rem;
+  background: #FFFFFF;
+}
+
+.ep-table-responsive {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.ep-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 0.85rem;
+}
+
+.ep-table th {
+  padding: 0.65rem 0.75rem;
+  background: #F8FAFC;
+  color: #64748B;
+  font-weight: 700;
+  border-bottom: 2px solid #E2E8F0;
+  white-space: nowrap;
+}
+
+.ep-table td {
+  padding: 0.75rem;
+  color: #334155;
+  border-bottom: 1px solid #F1F5F9;
+  vertical-align: middle;
+}
+
+.ep-table tr:hover td {
+  background: #F8FAFC;
+}
+
+.ep-table-actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+}
+
+.ep-action-btn {
+  border: none;
+  background: transparent;
+  width: 28px;
+  height: 28px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 0.85rem;
+  transition: all 0.15s ease;
+}
+
+.ep-action-view {
+  color: #3B82F6;
+  background: #EFF6FF;
+}
+.ep-action-view:hover {
+  background: #DBEAFE;
+}
+
+.ep-action-edit {
+  color: #F59E0B;
+  background: #FFFBEB;
+}
+.ep-action-edit:hover {
+  background: #FEF3C7;
+}
+
+.ep-action-delete {
+  color: #EF4444;
+  background: #FEF2F2;
+}
+.ep-action-delete:hover {
+  background: #FEE2E2;
+}
+
+/* Floating WhatsApp Button */
+.ep-floating-whatsapp {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  width: 54px;
+  height: 54px;
+  background: #25D366;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 16px rgba(37, 211, 102, 0.4);
+  z-index: 999;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  text-decoration: none;
+}
+
+.ep-floating-whatsapp:hover {
+  transform: scale(1.08);
+  box-shadow: 0 6px 20px rgba(37, 211, 102, 0.55);
+}
+
+/* ==========================================================================
+/* ==========================================================================
+   கிரக பாதசாரம் (GRAHA PAATHASAARAM / PLANETARY EPHEMERIS TABLE)
+   Pixel-accurate 1:1 match of Exact Predictions ephemeris table
+   ========================================================================== */
+.gp-section {
+  margin: 1.5rem 0 2rem;
+  font-family: 'Noto Sans Tamil', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+.gp-title-card {
+  background: #FFFDF8;
+  border: 1.5px solid #F6D7B0;
+  border-radius: 8px;
+  padding: 0.65rem 1rem;
+  margin-bottom: 0.85rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
+}
+
+.gp-title-pill {
+  background: #1D4ED8;
+  color: #FFFFFF;
+  font-weight: 700;
+  font-size: 0.92rem;
+  padding: 0.32rem 0.85rem;
+  border-radius: 4px;
+  display: inline-block;
+  letter-spacing: 0.02em;
+}
+
+.gp-table-card {
+  background: #FFFDF8;
+  border: 1.5px solid #F6D7B0;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.03);
+}
+
+.gp-table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  background: #FFFDF8;
+}
+
+.gp-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.85rem;
+  white-space: nowrap;
+}
+
+.gp-table th {
+  background: #FFFDF8;
+  padding: 0.5rem 0.35rem;
+  vertical-align: middle;
+  border: 1px solid #F6D7B0;
+  text-align: center;
+}
+
+.gp-header-pill {
+  background: #1D4ED8;
+  color: #FFFFFF;
+  font-weight: 700;
+  font-size: 0.78rem;
+  padding: 0.2rem 0.55rem;
+  border-radius: 3px;
+  display: inline-block;
+  line-height: 1.25;
+}
+
+.gp-header-pill.gp-multiline {
+  font-size: 0.72rem;
+  padding: 0.16rem 0.45rem;
+  line-height: 1.15;
+}
+
+.gp-table td {
+  padding: 0.45rem 0.65rem;
+  border: 1px solid #F6D7B0;
+  color: #475569;
+  font-size: 0.85rem;
+  vertical-align: middle;
+  font-weight: 500;
+}
+
+.gp-table tbody tr:nth-child(odd) {
+  background: #FFFFFF;
+}
+
+.gp-table tbody tr:nth-child(even) {
+  background: #FEFAF2;
+}
+
+.gp-table tbody tr:hover td {
+  background: #FEF3C7;
+}
+
+.gp-blue-pill {
+  background: #1D4ED8;
+  color: #FFFFFF;
+  font-weight: 700;
+  font-size: 0.82rem;
+  padding: 0.18rem 0.55rem;
+  border-radius: 3px;
+  display: inline-block;
+}
+
+.gp-planet-name {
+  font-weight: 600;
+  color: #334155;
+  display: block;
+}
+
+.gp-subtext {
+  display: block;
+  font-size: 0.68rem;
+  color: #8E9BAE;
+  margin-top: 1px;
+  font-weight: normal;
+}
+
+.gp-center {
+  text-align: center;
+}
+
+.gp-mono {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, monospace;
+  text-align: center;
+  color: #334155;
+}
+
+.gp-drishti-num {
+  border-bottom: 1.2px dotted #8E9BAE;
+  display: inline-block;
+  padding-bottom: 1px;
+}
+
+/* ==========================================================================
+   VEDIC ASTROLOGICAL DETAILS MASTER CARDS (Screenshots Replication)
+   ========================================================================== */
+.ep-detail-card {
+  background: #FFFDF8;
+  border: 1.5px solid #F6D7B0;
+  border-radius: 8px;
+  padding: 1.25rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.02);
+  font-family: 'Noto Sans Tamil', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+.ep-section-header-card {
+  background: #FFFDF8;
+  border: 1.5px solid #F6D7B0;
+  border-radius: 8px;
+  padding: 0.65rem 1rem;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.ep-card-title-pill {
+  background: #1D4ED8;
+  color: #FFFFFF;
+  font-weight: 700;
+  font-size: 0.92rem;
+  padding: 0.32rem 0.85rem;
+  border-radius: 4px;
+  display: inline-block;
+  letter-spacing: 0.02em;
+}
+
+.ep-info-btn {
+  background: #FEF3C7;
+  border: 1px solid #FDE68A;
+  color: #B45309;
+  border-radius: 4px;
+  width: 26px;
+  height: 26px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.ep-subheading-burgundy {
+  color: #831843;
+  font-size: 0.95rem;
+  font-weight: 700;
+  margin: 0 0 0.75rem 0;
+  letter-spacing: 0.01em;
+}
+
+.ep-header-title-burgundy {
+  color: #831843;
+  font-size: 1.12rem;
+  font-weight: 700;
+  margin: 0;
+  letter-spacing: 0.01em;
+  font-family: 'Noto Sans Tamil', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+.ep-grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
+.ep-grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
+@media (max-width: 980px) {
+  .ep-grid-3 {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 680px) {
+  .ep-grid-2,
+  .ep-grid-3 {
+    grid-template-columns: 1fr;
+  }
+}
+
+.ep-kv-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.84rem;
+  background: #FFFFFF;
+  border: 1px solid #F6D7B0;
+  white-space: nowrap;
+}
+
+.ep-kv-table th,
+.ep-kv-table td {
+  padding: 0.45rem 0.65rem;
+  border: 1px solid #F6D7B0;
+  vertical-align: middle;
+}
+
+.ep-kv-table td.label-cell {
+  color: #713F12;
+  font-weight: 600;
+  background: #FFFDF8;
+  width: 24%;
+}
+
+.ep-kv-table td.val-cell {
+  color: #1E293B;
+  font-weight: 500;
+  background: #FFFFFF;
+}
+
+.ep-kv-table tbody tr:nth-child(even) td.val-cell {
+  background: #FEFAF2;
+}
+
+.ep-current-period-banner {
+  background: #FFFDF8;
+  border: 1.5px solid #F6D7B0;
+  border-radius: 8px;
+  padding: 0.75rem 1.25rem;
+  margin-bottom: 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.ep-current-pill {
+  background: #FB7185;
+  color: #FFFFFF;
+  font-size: 0.72rem;
+  font-weight: 800;
+  padding: 0.2rem 0.65rem;
+  border-radius: 999px;
+  letter-spacing: 0.05em;
+  display: inline-block;
+  margin-right: 0.65rem;
+}
+
+.ep-current-title {
+  color: #831843;
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+
+.ep-current-dates {
+  color: #0F172A;
+  font-weight: 800;
+  font-size: 0.95rem;
+  font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+  background: #FEF3C7;
+  border: 1.5px solid #FCD34D;
+  padding: 0.35rem 0.85rem;
+  border-radius: 6px;
+  display: inline-block;
+}
+
+.ep-dasha-table-card,
+.ep-dasha-card {
+  background: #FFFDF8;
+  border: 1.5px solid #F6D7B0;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+}
+
+.ep-dasha-table-header {
+  background: #FFF8EE;
+  border-bottom: 1px solid #F6D7B0;
+  padding: 0.6rem 0.85rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.ep-dasha-tag {
+  font-size: 0.75rem;
+  color: #78350F;
+  font-weight: 700;
+  background: #FEF3C7;
+  border: 1px solid #FDE68A;
+  padding: 0.2rem 0.55rem;
+  border-radius: 4px;
+}
+
+.ep-dasha-table,
+.ep-mini-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.82rem;
+  text-align: center;
+  background: #FFFFFF;
+}
+
+.ep-dasha-table th,
+.ep-mini-table th {
+  background: #FFF3E0;
+  color: #831843;
+  font-weight: 700;
+  font-size: 0.82rem;
+  padding: 0.5rem 0.4rem;
+  border: 1px solid #F6D7B0;
+  letter-spacing: 0.02em;
+}
+
+.ep-dasha-table td,
+.ep-mini-table td {
+  padding: 0.48rem 0.4rem;
+  border: 1px solid #F6D7B0;
+  color: #0F172A; /* Deep dark slate for maximum legibility */
+  font-size: 0.82rem;
+  vertical-align: middle;
+  background: #FFFFFF;
+}
+
+.ep-dasha-table tbody tr:nth-child(even) td,
+.ep-mini-table tbody tr:nth-child(even) td {
+  background: #FEFAF2;
+}
+
+.ep-current-bhukti-row td {
+  background: #FEF9C3 !important;
+  font-weight: 700 !important;
+  border-top: 1.5px solid #F59E0B !important;
+  border-bottom: 1.5px solid #F59E0B !important;
+}
+
+.ep-dasha-date-start {
+  color: #1E3A8A !important; /* Bold high-contrast navy */
+  font-weight: 800 !important;
+  font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace !important;
+  font-size: 0.84rem !important;
+}
+
+.ep-dasha-date-end {
+  color: #065F46 !important; /* Bold high-contrast dark emerald green */
+  font-weight: 800 !important;
+  font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace !important;
+  font-size: 0.84rem !important;
+}
+
+.ep-graha-pill {
+  display: inline-block;
+  padding: 0.2rem 0.55rem;
+  border-radius: 4px;
+  font-weight: 700;
+  font-size: 0.78rem;
+  color: #FFFFFF !important;
+  min-width: 52px;
+  text-align: center;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+}
+
+.ep-pill-green  { background: #059669 !important; color: #FFFFFF !important; }
+.ep-pill-blue   { background: #2563EB !important; color: #FFFFFF !important; }
+.ep-pill-gold   { background: #D97706 !important; color: #FFFFFF !important; }
+.ep-pill-purple { background: #7C3AED !important; color: #FFFFFF !important; }
+.ep-pill-olive  { background: #65A30D !important; color: #FFFFFF !important; }
+.ep-pill-coral  { background: #DC2626 !important; color: #FFFFFF !important; }
+.ep-pill-amber  { background: #D97706 !important; color: #FFFFFF !important; }
+.ep-pill-sky    { background: #0284C7 !important; color: #FFFFFF !important; }
+
+.ep-south-chart-card {
+  background: #FFFDF8;
+  border: 1.5px solid #F6D7B0;
+  border-radius: 8px;
+  padding: 0.65rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
+}
+
+.ep-south-chart-svg {
+  width: 100%;
+  max-width: 440px;
+  height: auto;
+  aspect-ratio: 1 / 1;
+}
+
+.ep-chart-legend-footer {
+  margin-top: 1rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid #F6D7B0;
+  color: #713F12;
+  font-size: 0.8rem;
+  line-height: 1.5;
+  text-align: center;
+}
+
+/* ==========================================================================
+   UPAGRAHAS & DHUMA ENERGY FLOW STYLES (Screenshots 1, 2, 3)
+   ========================================================================== */
+.ep-upagraha-table td.label-cell {
+  width: 20%;
+}
+
+.ep-subtext-muted {
+  font-size: 0.72rem;
+  color: #78716C;
+  display: block;
+  font-weight: 400;
+  margin-top: 2px;
+}
+
+.ep-energy-flow-container {
+  background: #FFFDF8;
+  border: 1.5px solid #F6D7B0;
+  border-radius: 8px;
+  padding: 1.25rem;
+}
+
+.ep-energy-dial-card {
+  background: #FFFDF8;
+  border: 1.5px solid #F6D7B0;
+  border-radius: 8px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
+}
+
+.ep-energy-svg {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  aspect-ratio: 1 / 1;
+}
+
+.ep-energy-dial-legend {
+  margin-top: 0.75rem;
+  width: 100%;
+  font-size: 0.76rem;
+  color: #713F12;
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+
+.ep-energy-legend-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  text-align: center;
+}
+
+.ep-node-badge {
+  background: #DC2626;
+  color: #FFF;
+  font-size: 0.68rem;
+  font-weight: 700;
+  padding: 0.1rem 0.45rem;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.2rem;
+}
+
+.ep-flow-pill {
+  background: #FEF9C3;
+  border: 1px solid #FDE047;
+  color: #854D0E;
+  font-weight: 700;
+  font-size: 0.76rem;
+  padding: 0.25rem 0.75rem;
+  border-radius: 999px;
+  display: inline-block;
+}
+
+.ep-energy-text-card {
+  background: #FFFDF8;
+  border: 1.5px solid #F6D7B0;
+  border-left: 4px solid #831843;
+  border-radius: 8px;
+  padding: 1.25rem;
+  color: #334155;
+  font-size: 0.85rem;
+  line-height: 1.65;
+}
+
+.ep-energy-stage {
+  margin-bottom: 0.75rem;
+  padding-bottom: 0.65rem;
+  border-bottom: 1px dashed #F6D7B0;
+}
+
+.ep-energy-stage:last-of-type {
+  border-bottom: none;
+}
+
+/* ==========================================================================
+   DASHA DEEP SEARCH ACCORDION STYLES (Screenshot 4)
+   ========================================================================== */
+.ep-btn-subtle {
+  background: transparent;
+  border: 1px solid #FDE68A;
+  color: #A16207;
+  padding: 0.35rem 0.75rem;
+  border-radius: 4px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.ep-btn-subtle:hover {
+  background: #FEF9C3;
+  border-color: #F59E0B;
+}
+
+.ep-btn-outline {
+  background: #FFFFFF;
+  border: 1px solid #CBD5E1;
+  color: #334155;
+  padding: 0.35rem 0.75rem;
+  border-radius: 4px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.ep-btn-outline:hover {
+  border-color: #94A3B8;
+  background: #F8FAFC;
+}
+
+.ep-balance-header-row {
+  display: flex;
+  align-items: center;
+  padding: 0.3rem 0;
+}
+
+.ep-dasha-deep-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.ep-dasha-deep-card {
+  background: #FFFDF8;
+  border: 1.2px solid #F6D7B0;
+  border-left: 4px solid #D97706;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+  overflow: hidden;
+}
+
+.ep-dasha-deep-card.active-current {
+  border-left: 4px solid #10B981;
+  background: #FEFCF6;
+  box-shadow: 0 0 0 1px #10B981;
+}
+
+.ep-dasha-deep-header {
+  display: grid;
+  grid-template-columns: 45px 120px 1.4fr 1.4fr 1.2fr 1.6fr 30px;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.65rem 1rem;
+  cursor: pointer;
+  user-select: none;
+}
+
+@media (max-width: 1024px) {
+  .ep-dasha-deep-header {
+    grid-template-columns: 45px 105px 1fr 1fr 1fr auto 25px;
+  }
+}
+
+@media (max-width: 768px) {
+  .ep-dasha-deep-header {
+    grid-template-columns: 1fr auto;
+    gap: 0.5rem;
+  }
+}
+
+.ep-dasha-deep-header:hover {
+  background: #FEFAF2;
+}
+
+.ep-col-stack {
+  display: flex;
+  flex-direction: column;
+}
+
+.ep-col-label {
+  font-size: 0.68rem;
+  color: #78716C;
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+
+.ep-col-val {
+  font-size: 0.82rem;
+  color: #1E293B;
+  font-family: monospace;
+}
+
+.ep-role-pill {
+  display: inline-block;
+  padding: 0.15rem 0.55rem;
+  border-radius: 999px;
+  font-size: 0.74rem;
+  font-weight: 600;
+  margin-right: 0.35rem;
+  margin-bottom: 0.2rem;
+  letter-spacing: 0.01em;
+}
+
+.ep-role-maraka {
+  background: #FFF1F2;
+  border: 1px solid #FDA4AF;
+  color: #9F1239;
+}
+
+.ep-role-badhaka {
+  background: #FEFCE8;
+  border: 1px solid #FDE68A;
+  color: #854D0E;
+}
+
+.ep-role-ashtama {
+  background: #FFF1F2;
+  border: 1px solid #FECDD3;
+  color: #BE123C;
+}
+
+.ep-dasha-deep-body {
+  border-top: 1px dashed #F6D7B0;
+  background: #FFFFFF;
+  padding: 0.85rem 1rem;
+  display: none;
+}
+
+.ep-dasha-deep-card.expanded .ep-dasha-deep-body {
+  display: block;
+}
+
+.ep-dasha-deep-chevron {
+  font-size: 0.8rem;
+  color: #94A3B8;
+  transition: transform 0.2s ease;
+  display: inline-block;
+  text-align: center;
+}
+
+.ep-dasha-deep-card.expanded .ep-dasha-deep-chevron {
+  transform: rotate(90deg);
+}
+
+/* ==========================================================================
+   PARIHARA TEMPLES STYLES (Screenshot 1)
+   ========================================================================== */
+.ep-temples-table td.label-cell {
+  width: 28%;
+}
+
+.ep-disclaimer-card {
+  margin-top: 1rem;
+  padding: 0.85rem 1rem;
+  background: #FFFDF8;
+  border: 1px dashed #F6D7B0;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  color: #78716C;
+  line-height: 1.55;
+}
+
+/* ==========================================================================
+   VASTU 3X3 MANDALA STYLES (Screenshot 2)
+   ========================================================================== */
+.ep-vastu-kpi-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+@media (max-width: 800px) {
+  .ep-vastu-kpi-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.ep-vastu-kpi-card {
+  background: #FFFDF8;
+  border: 1.2px solid #F6D7B0;
+  border-radius: 6px;
+  padding: 0.75rem 1rem;
+}
+
+.ep-vastu-kpi-label {
+  font-size: 0.76rem;
+  color: #78716C;
+  font-weight: 600;
+  margin-bottom: 0.35rem;
+}
+
+.ep-vastu-kpi-val {
+  font-size: 1.2rem;
+  color: #831843;
+  font-weight: 700;
+}
+
+.ep-vastu-3x3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.9rem;
+  margin-bottom: 0.75rem;
+}
+
+@media (max-width: 860px) {
+  .ep-vastu-3x3 {
+    grid-template-columns: 1fr;
+  }
+}
+
+.ep-vastu-sector-card {
+  background: #FFFDF8;
+  border: 1.2px solid #F6D7B0;
+  border-radius: 8px;
+  padding: 0.85rem 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 120px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
+}
+
+.ep-vastu-sector-card.highlight-lagna {
+  border: 2px solid #701A75;
+  box-shadow: 0 0 0 1px #701A75;
+  background: #FFFDF6;
+}
+
+.ep-vastu-sector-card.is-empty {
+  border-style: dashed;
+  border-color: #E2E8F0;
+  opacity: 0.85;
+}
+
+.ep-vastu-title {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #831843;
+  margin-bottom: 1px;
+}
+
+.ep-vastu-deity {
+  font-size: 0.74rem;
+  color: #78716C;
+  margin-bottom: 0.55rem;
+}
+
+.ep-vastu-lagna-badge {
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: #831843;
+  margin-bottom: 0.35rem;
+  display: block;
+}
+
+.ep-vastu-pills-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.ep-vastu-pill {
+  background: #FEF9C3;
+  border: 1px solid #FDE047;
+  color: #713F12;
+  font-weight: 700;
+  font-size: 0.78rem;
+  padding: 0.15rem 0.55rem;
+  border-radius: 999px;
+  display: inline-block;
+}
+
+.ep-vastu-pill.lagna-pill {
+  background: #FFF1F2;
+  border: 1.2px solid #FDA4AF;
+  color: #831843;
+  font-weight: 800;
+}
+
+.ep-vastu-empty-text {
+  font-size: 0.8rem;
+  color: #94A3B8;
+  font-weight: 500;
+}
+
+.ep-vastu-footer-signs {
+  font-size: 0.72rem;
+  color: #8E9BAE;
+  border-top: 1px dotted #F6D7B0;
+  padding-top: 0.4rem;
+  margin-top: auto;
+}
+
+/* ==========================================================================
+   CHANDRA NADI TIMELINE STYLES (Screenshot 3)
+   ========================================================================== */
+.ep-nadi-sign-card {
+  background: #FFFDF8;
+  border: 1.2px solid #F6D7B0;
+  border-radius: 8px;
+  padding: 0.75rem 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
+.ep-nadi-sign-label {
+  font-size: 0.78rem;
+  color: #831843;
+  font-weight: 700;
+  margin-bottom: 0.2rem;
+}
+
+.ep-nadi-sign-val {
+  font-size: 1.15rem;
+  color: #0F172A;
+  font-weight: 800;
+}
+
+.ep-nadi-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+  align-items: start;
+}
+
+@media (max-width: 860px) {
+  .ep-nadi-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.ep-nadi-col-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.ep-nadi-card {
+  background: #FFFDF8;
+  border: 1.2px solid #F6D7B0;
+  border-radius: 8px;
+  padding: 1.15rem 1.25rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
+}
+
+.ep-nadi-period-label {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #831843;
+  margin-bottom: 0.25rem;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+.ep-nadi-sign-name {
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: #1E293B;
+  margin-bottom: 0.75rem;
+}
+
+.ep-nadi-body-text {
+  font-size: 0.86rem;
+  color: #334155;
+  line-height: 1.7;
+}
+
+.ep-nadi-body-text p {
+  margin-bottom: 0.65rem;
+}
+
+.ep-nadi-body-text p:last-child {
+  margin-bottom: 0;
+}
+
+/* ==========================================================================
+   SHADBALA (ஷட்பலம்) CANONICAL STYLES
+   ========================================================================== */
+.ep-shadbala-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.85rem;
+  background: #FFFDF8;
+  border: 1.2px solid #F6D7B0;
+  text-align: center;
+}
+
+.ep-shadbala-table th {
+  padding: 0.7rem 0.55rem;
+  color: #831843;
+  font-weight: 700;
+  background: #FFFDF8;
+  border: 1px solid #F6D7B0;
+  white-space: nowrap;
+}
+
+.ep-shadbala-table td {
+  padding: 0.65rem 0.55rem;
+  border: 1px solid #FDE68A;
+  color: #1E293B;
+  vertical-align: middle;
+}
+
+.ep-shadbala-table tr:hover td {
+  background: #FEFCE8;
+}
+
+.ep-planet-cell {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-weight: 700;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.ep-planet-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: inline-block;
+  flex-shrink: 0;
+}
+
+.ep-pill-strong {
+  background: #DCFCE7;
+  color: #15803D;
+  border: 1px solid #86EFAC;
+  font-weight: 700;
+  font-size: 0.74rem;
+  padding: 0.2rem 0.55rem;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  white-space: nowrap;
+}
+
+.ep-pill-moderate {
+  background: #FEF3C7;
+  color: #B45309;
+  border: 1px solid #FDE68A;
+  font-weight: 700;
+  font-size: 0.74rem;
+  padding: 0.2rem 0.55rem;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  white-space: nowrap;
+}
+
+.ep-pill-rank {
+  background: #FCE7F3;
+  color: #9D174D;
+  border: 1px solid #FBCFE8;
+  font-weight: 800;
+  font-size: 0.76rem;
+  padding: 0.15rem 0.5rem;
+  border-radius: 6px;
+  display: inline-block;
+}
+
+.ep-rupas-cell {
+  background: #FEF9C3;
+  color: #701A75;
+  font-weight: 800;
+}
+
+.ep-virupas-cell {
+  font-weight: 700;
+  color: #0F172A;
+}
+
+/* Shadbala Visual Comparative Meters */
+.ep-shadbala-meters-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  margin-bottom: 1.5rem;
+}
+
+.ep-shadbala-meter-item {
+  background: #FFFDF8;
+  border: 1.2px solid #F6D7B0;
+  border-radius: 8px;
+  padding: 0.9rem 1.15rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
+}
+
+.ep-meter-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.6rem;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.ep-meter-title-wrap {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+}
+
+.ep-meter-name {
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: #1E293B;
+}
+
+.ep-meter-score-wrap {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.ep-meter-values {
+  font-size: 0.84rem;
+  color: #475569;
+}
+
+.ep-meter-values strong {
+  color: #701A75;
+  font-size: 0.95rem;
+}
+
+.ep-meter-bar-track {
+  width: 100%;
+  height: 18px;
+  background: #F1F5F9;
+  border-radius: 999px;
+  overflow: hidden;
+  display: flex;
+  border: 1px solid #CBD5E1;
+  position: relative;
+}
+
+.ep-meter-segment {
+  height: 100%;
+  transition: width 0.3s ease;
+  position: relative;
+}
+
+.ep-meter-segment:hover {
+  filter: brightness(1.1);
+}
+
+.ep-meter-legend-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  font-size: 0.76rem;
+  color: #475569;
+  margin-top: 0.5rem;
+  justify-content: flex-end;
+}
+
+.ep-meter-legend-item {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.ep-legend-color-box {
+  width: 10px;
+  height: 10px;
+  border-radius: 2px;
+}
+
+/* 6 Balas Canonical Explanations Grid */
+.ep-bala-rules-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+@media (max-width: 960px) {
+  .ep-bala-rules-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .ep-bala-rules-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.ep-bala-rule-card {
+  background: #FFFDF8;
+  border: 1.2px solid #F6D7B0;
+  border-radius: 8px;
+  padding: 1rem 1.15rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.ep-bala-rule-num {
+  font-size: 0.74rem;
+  font-weight: 800;
+  color: #831843;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.2rem;
+}
+
+.ep-bala-rule-title {
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: #1E293B;
+  margin-bottom: 0.2rem;
+}
+
+.ep-bala-rule-sub {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #701A75;
+  margin-bottom: 0.55rem;
+}
+
+.ep-bala-rule-desc {
+  font-size: 0.82rem;
+  color: #334155;
+  line-height: 1.6;
+  margin: 0;
+  flex-grow: 1;
+}
+
+/* Bhava Bala 12 Houses Table */
+.ep-bhava-bala-container {
+  margin-bottom: 1.5rem;
+}
+
+/* ==========================================================================
+   360° DRISHTI WHEEL & ASPECT TABLE (Screenshots 1 & 2)
+   ========================================================================== */
+.ep-drishti-filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.ep-drishti-filter-btn {
+  background: #FFFDF8;
+  border: 1.2px solid #F6D7B0;
+  border-radius: 999px;
+  padding: 0.35rem 0.85rem;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #831843;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: inherit;
+}
+
+.ep-drishti-filter-btn:hover {
+  background: #FEF3C7;
+  border-color: #F59E0B;
+}
+
+.ep-drishti-filter-btn.active {
+  background: #831843;
+  color: #FFFFFF;
+  border-color: #831843;
+  box-shadow: 0 2px 6px rgba(131, 24, 67, 0.25);
+}
+
+.ep-drishti-wheel-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem auto 1.5rem;
+  max-width: 820px;
+  overflow: hidden;
+}
+
+.ep-drishti-wheel-svg {
+  width: 100%;
+  height: auto;
+  max-width: 780px;
+  display: block;
+}
+
+.ep-aspect-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.84rem;
+  background: #FFFDF8;
+  border: 1.2px solid #F6D7B0;
+  text-align: center;
+}
+
+.ep-aspect-table th {
+  padding: 0.7rem 0.55rem;
+  color: #831843;
+  font-weight: 700;
+  background: #FFFDF8;
+  border: 1px solid #F6D7B0;
+  white-space: nowrap;
+}
+
+.ep-aspect-table td {
+  padding: 0.62rem 0.55rem;
+  border: 1px solid #FDE68A;
+  color: #1E293B;
+  vertical-align: middle;
+}
+
+.ep-aspect-table tr:hover td {
+  background: #FEFCE8;
+}
+
+/* ==========================================================================
+   அஷ்டவர்க்கம் & சோதனைகள் (ASHTAKAVARGA & SHODHANAS STYLES)
+   ========================================================================== */
+.ep-ashta-matrix-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.85rem;
+  text-align: center;
+}
+
+.ep-ashta-matrix-table th {
+  padding: 0.6rem 0.4rem;
+  font-weight: 700;
+  color: #831843;
+  background: #FFFDF8;
+  border: 1px solid #F6D7B0;
+  white-space: nowrap;
+}
+
+.ep-ashta-matrix-table td {
+  padding: 0.55rem 0.4rem;
+  border: 1px solid #FDE68A;
+  color: #1E293B;
+  vertical-align: middle;
+}
+
+.ep-ashta-matrix-table tr:hover td {
+  background: #FEF9C3;
+}
+
+.ep-ashta-sav-row {
+  background: #FEF9C3 !important;
+  font-weight: 800;
+  color: #831843 !important;
+}
+
+.ep-ashta-sav-row td {
+  border-top: 2px solid #F59E0B;
+  border-bottom: 2px solid #F59E0B;
+  font-size: 0.92rem;
+}
+
+.ep-ashta-bhava-row {
+  background: #F8FAFC;
+  font-weight: 600;
+  font-size: 0.8rem;
+  color: #64748B;
+}
+
+.ep-ashta-cell-val {
+  display: inline-block;
+  min-width: 26px;
+  padding: 0.15rem 0.4rem;
+  border-radius: 4px;
+  font-weight: 700;
+  font-size: 0.85rem;
+}
+
+.ep-ashta-pt-high {
+  background: rgba(16, 185, 129, 0.15);
+  color: #047857;
+  border: 1px solid rgba(16, 185, 129, 0.35);
+}
+
+.ep-ashta-pt-good {
+  background: rgba(14, 165, 233, 0.12);
+  color: #0369A1;
+  border: 1px solid rgba(14, 165, 233, 0.3);
+}
+
+.ep-ashta-pt-neutral {
+  background: rgba(245, 158, 11, 0.12);
+  color: #B45309;
+  border: 1px solid rgba(245, 158, 11, 0.3);
+}
+
+.ep-ashta-pt-low {
+  background: rgba(239, 68, 68, 0.12);
+  color: #B91C1C;
+  border: 1px solid rgba(239, 68, 68, 0.3);
+}
+
+/* Pinda Badges */
+.ep-pinda-ultra {
+  background: #831843;
+  color: #FDE047;
+  font-weight: 800;
+  padding: 0.2rem 0.6rem;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  display: inline-block;
+  box-shadow: 0 1px 3px rgba(131, 24, 67, 0.25);
+}
+
+.ep-pinda-high {
+  background: #047857;
+  color: #FFFFFF;
+  font-weight: 700;
+  padding: 0.2rem 0.6rem;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  display: inline-block;
+}
+
+.ep-pinda-med {
+  background: #D97706;
+  color: #FFFFFF;
+  font-weight: 700;
+  padding: 0.2rem 0.6rem;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  display: inline-block;
+}
+
+.ep-ashta-total-cell {
+  font-weight: 800;
+  font-size: 0.95rem;
+  color: #831843;
+}
+
+/* ==========================================================================
+   VIVAHA CHAKRA (விவாக சக்கரம் & களத்திர ஆய்வு) STYLES
+   ========================================================================== */
+.ep-vivaha-banner {
+  background: linear-gradient(135deg, #FFFDF8 0%, #FEF3C7 50%, #FDE68A 100%);
+  border: 1.5px solid #F59E0B;
+  border-radius: 8px;
+  padding: 1.15rem 1.35rem;
+  box-shadow: 0 2px 6px rgba(245, 158, 11, 0.12);
+}
+
+.ep-vivaha-banner-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-bottom: 0.6rem;
+}
+
+.ep-vivaha-banner-pill {
+  background: #831843;
+  color: #FFF;
+  font-size: 0.8rem;
+  font-weight: 700;
+  padding: 0.25rem 0.75rem;
+  border-radius: 999px;
+  letter-spacing: 0.5px;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.ep-vivaha-banner-title {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #78350F;
+}
+
+.ep-vivaha-banner-desc {
+  font-size: 0.88rem;
+  color: #1F2937;
+  line-height: 1.5;
+}
+
+.ep-vivaha-3x3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.65rem;
+}
+
+@media (max-width: 768px) {
+  .ep-vivaha-3x3 {
+    grid-template-columns: 1fr;
+  }
+}
+
+.ep-vivaha-slot-card {
+  background: #FFFDF8;
+  border: 1.5px solid #F6D7B0;
+  border-radius: 8px;
+  padding: 0.75rem 0.85rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 118px;
+  position: relative;
+  transition: all 0.2s ease;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
+}
+
+.ep-vivaha-slot-card.is-auspicious {
+  background: rgba(16, 185, 129, 0.05);
+  border-color: rgba(16, 185, 129, 0.45);
+}
+
+.ep-vivaha-slot-card.is-inauspicious {
+  background: rgba(239, 68, 68, 0.04);
+  border-color: rgba(239, 68, 68, 0.35);
+}
+
+.ep-vivaha-slot-card.highlight-native {
+  border: 2px solid #D97706 !important;
+  background: #FEFCE8 !important;
+  box-shadow: 0 0 0 2px rgba(217, 119, 6, 0.25), 0 4px 10px rgba(217, 119, 6, 0.15) !important;
+}
+
+.ep-vivaha-slot-card.highlight-target {
+  border: 2px solid #2563EB !important;
+  background: #EFF6FF !important;
+  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.25), 0 4px 10px rgba(37, 99, 235, 0.15) !important;
+}
+
+.ep-vivaha-slot-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 0.4rem;
+}
+
+.ep-vivaha-slot-num-dir {
+  font-weight: 800;
+  font-size: 0.88rem;
+  color: #1F2937;
+}
+
+.ep-vivaha-slot-badge {
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 0.15rem 0.5rem;
+  border-radius: 999px;
+  display: inline-block;
+  white-space: nowrap;
+}
+
+.ep-vivaha-badge-auspicious {
+  background: #DCFCE7;
+  color: #15803D;
+  border: 1px solid #86EFAC;
+}
+
+.ep-vivaha-badge-inauspicious {
+  background: #FEE2E2;
+  color: #B91C1C;
+  border: 1px solid #FCA5A5;
+}
+
+.ep-vivaha-stars-list {
+  font-size: 0.8rem;
+  color: #4B5563;
+  line-height: 1.4;
+  margin-bottom: 0.4rem;
+}
+
+.ep-vivaha-star-tag {
+  color: #78350F;
+  font-weight: 600;
+}
+
+.ep-vivaha-star-tag.is-native {
+  background: #FEF08A;
+  color: #854D0E;
+  padding: 0.1rem 0.35rem;
+  border-radius: 4px;
+  font-weight: 700;
+}
+
+.ep-vivaha-star-tag.is-target {
+  background: #BFDBFE;
+  color: #1E40AF;
+  padding: 0.1rem 0.35rem;
+  border-radius: 4px;
+  font-weight: 700;
+}
+
+.ep-vivaha-slot-footer {
+  font-size: 0.72rem;
+  color: #6B7280;
+  border-top: 1px dashed rgba(246, 215, 176, 0.6);
+  padding-top: 0.3rem;
+  margin-top: auto;
+}
+
+/* ==========================================================================
+   VIVAHA CHAKRA RULE (விவாக சக்கரம் விதி & நவீன பார்வை)
+   Exact match to classical screenshot with 3x3 compass mandala, 
+   colored left stripes, numbered circular badges, and rule evaluation banner.
+   ========================================================================== */
+.ep-vc-card {
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  border-radius: 10px;
+  padding: 1.5rem;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
+  margin-bottom: 1.5rem;
+}
+
+.ep-vc-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1.25rem;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.ep-vc-title {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: #0F172A;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.ep-vc-subtitle {
+  font-size: 0.85rem;
+  color: #64748B;
+  margin-top: 0.3rem;
+  font-weight: 500;
+}
+
+.ep-vc-view-select {
+  border: 1.5px solid #CBD5E1;
+  border-radius: 6px;
+  padding: 0.35rem 0.85rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #334155;
+  background: #FFFFFF;
+  cursor: pointer;
+  outline: none;
+}
+
+.ep-vc-view-select:focus {
+  border-color: #0F172A;
+}
+
+.ep-vc-rule-banner {
+  text-align: center;
+  font-weight: 700;
+  font-size: 0.95rem;
+  padding: 0.85rem 1.25rem;
+  border-radius: 6px;
+  margin-bottom: 1.5rem;
+  letter-spacing: 0.2px;
+  transition: all 0.2s ease;
+}
+
+.ep-vc-rule-banner.is-bad {
+  background: #FFF8F8;
+  border: 1.5px solid #EF4444;
+  color: #991B1B;
+}
+
+.ep-vc-rule-banner.is-good {
+  background: #F0FDF4;
+  border: 1.5px solid #10B981;
+  color: #065F46;
+}
+
+.ep-vc-grid-3x3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.2rem;
+}
+
+@media (max-width: 900px) {
+  .ep-vc-grid-3x3 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .ep-vc-grid-3x3 {
+    grid-template-columns: 1fr;
+  }
+}
+
+.ep-vc-slot-box {
+  background: #FFFFFF;
+  border: 1.5px solid #E2E8F0;
+  border-radius: 8px;
+  padding: 0.9rem 1.1rem 0.9rem 1.25rem;
+  min-height: 145px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
+  transition: all 0.2s ease;
+}
+
+.ep-vc-slot-box::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 4px;
+  background: var(--slot-color, #64748B);
+  border-top-left-radius: 6px;
+  border-bottom-left-radius: 6px;
+}
+
+.ep-vc-slot-box.is-active-bad {
+  border: 2px solid #EF4444 !important;
+  box-shadow: 0 0 0 1px rgba(239, 68, 68, 0.2), 0 2px 8px rgba(239, 68, 68, 0.08) !important;
+}
+
+.ep-vc-slot-box.is-active-good {
+  border: 2px solid #10B981 !important;
+  box-shadow: 0 0 0 1px rgba(16, 185, 129, 0.2), 0 2px 8px rgba(16, 185, 129, 0.08) !important;
+}
+
+.ep-vc-slot-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.65rem;
+}
+
+.ep-vc-slot-badge-num {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  background: var(--slot-color, #475569);
+  flex-shrink: 0;
+}
+
+.ep-vc-slot-dir {
+  font-weight: 700;
+  font-size: 0.92rem;
+  color: var(--slot-color, #334155);
+}
+
+.ep-vc-stars-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  margin-bottom: 0.75rem;
+}
+
+.ep-vc-star-row {
+  font-size: 0.88rem;
+  color: #1E293B;
+  font-weight: 500;
+}
+
+.ep-vc-star-row.is-native-star {
+  color: #92400E;
+  font-weight: 700;
+}
+
+.ep-vc-slot-footer {
+  font-size: 0.82rem;
+  font-weight: 600;
+  padding-top: 0.5rem;
+  border-top: 1px solid #F1F5F9;
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.ep-vc-slot-footer.is-good {
+  color: #059669;
+}
+
+.ep-vc-slot-footer.is-bad {
+  color: #DC2626;
+}
+
+.ep-vc-bottom-bar {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 1.25rem;
+  margin-top: 1.75rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid #F1F5F9;
+  flex-wrap: wrap;
+}
+
+.ep-vc-inputs-group {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+}
+
+.ep-vc-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.ep-vc-label {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #334155;
+}
+
+.ep-vc-input {
+  padding: 0.45rem 0.75rem;
+  border: 1.5px solid #CBD5E1;
+  border-radius: 6px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: #1E293B;
+  background: #FFFFFF;
+  outline: none;
+  min-width: 140px;
+}
+
+.ep-vc-input:focus {
+  border-color: #0F172A;
+}
+
+.ep-vc-actions-group {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+}
+
+.ep-vc-btn-primary {
+  background: #0F172A;
+  color: #FFFFFF;
+  font-weight: 700;
+  font-size: 0.88rem;
+  padding: 0.55rem 1.4rem;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.ep-vc-btn-primary:hover {
+  background: #1E293B;
+}
+
+.ep-vc-btn-link {
+  background: transparent;
+  color: #0F172A;
+  font-weight: 700;
+  font-size: 0.88rem;
+  border: none;
+  cursor: pointer;
+  text-decoration: underline;
+  padding: 0.55rem 0.5rem;
+}
+
+.ep-vc-btn-link:hover {
+  color: #334155;
+}
+
+/* ==========================================================================
+   108 PADAS (108 நட்சத்திர பாதங்கள் & ராசி பண்புகள்) STYLES
+   ========================================================================== */
+.ep-pada-card {
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
+  margin-bottom: 2rem;
+}
+
+.ep-pada-filter-bar {
+  display: flex;
+  align-items: flex-end;
+  gap: 1rem;
+  flex-wrap: wrap;
+  background: #F8FAFC;
+  border: 1px solid #E2E8F0;
+  border-radius: 10px;
+  padding: 1.15rem 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.ep-pada-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.ep-pada-label {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #334155;
+}
+
+.ep-pada-input,
+.ep-pada-select {
+  padding: 0.5rem 0.85rem;
+  border: 1.5px solid #CBD5E1;
+  border-radius: 6px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: #1E293B;
+  background: #FFFFFF;
+  outline: none;
+  min-width: 140px;
+  transition: border-color 0.2s;
+}
+
+.ep-pada-input:focus,
+.ep-pada-select:focus {
+  border-color: #831843;
+}
+
+.ep-pada-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-left: auto;
+  flex-wrap: wrap;
+}
+
+.ep-pada-btn-primary {
+  background: #831843;
+  color: #FFFFFF;
+  font-weight: 700;
+  font-size: 0.88rem;
+  padding: 0.55rem 1.35rem;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.ep-pada-btn-primary:hover {
+  background: #9D174D;
+}
+
+.ep-pada-btn-reset {
+  background: transparent;
+  color: #831843;
+  font-weight: 700;
+  font-size: 0.88rem;
+  border: 1.5px solid #FBCFE8;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.ep-pada-btn-reset:hover {
+  background: #FDF2F8;
+}
+
+.ep-pada-btn-browse {
+  background: #0F172A;
+  color: #FFFFFF;
+  font-weight: 700;
+  font-size: 0.88rem;
+  padding: 0.55rem 1.25rem;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.ep-pada-btn-browse:hover {
+  background: #1E293B;
+}
+
+.ep-pada-details-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+@media (max-width: 900px) {
+  .ep-pada-details-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.ep-pada-box {
+  background: #FFFFFF;
+  border: 1.5px solid #E2E8F0;
+  border-radius: 10px;
+  padding: 1.25rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
+}
+
+.ep-pada-box-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1.5px solid #F1F5F9;
+}
+
+.ep-pada-box-title {
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: #831843;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+.ep-pada-badge-num {
+  background: #FDF2F8;
+  color: #9D174D;
+  border: 1px solid #FBCFE8;
+  padding: 0.2rem 0.65rem;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.ep-pada-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.ep-pada-table tr {
+  border-bottom: 1px solid #F1F5F9;
+}
+
+.ep-pada-table tr:last-child {
+  border-bottom: none;
+}
+
+.ep-pada-table td {
+  padding: 0.55rem 0.65rem;
+  font-size: 0.86rem;
+  line-height: 1.45;
+}
+
+.ep-pada-table td.label-cell {
+  width: 38%;
+  color: #64748B;
+  font-weight: 600;
+}
+
+.ep-pada-table td.val-cell {
+  color: #0F172A;
+  font-weight: 700;
+}
+
+/* 108 Directory Browser Grid */
+.ep-pada-directory-wrap {
+  background: #F8FAFC;
+  border: 1.5px solid #E2E8F0;
+  border-radius: 10px;
+  padding: 1.25rem;
+  margin-top: 1.5rem;
+}
+
+.ep-pada-dir-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+  gap: 0.65rem;
+  max-height: 380px;
+  overflow-y: auto;
+  padding: 0.5rem;
+}
+
+.ep-pada-dir-item {
+  background: #FFFFFF;
+  border: 1px solid #CBD5E1;
+  border-radius: 6px;
+  padding: 0.6rem 0.75rem;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  user-select: none;
+}
+
+.ep-pada-dir-item:hover {
+  border-color: #831843;
+  background: #FFF1F2;
+  transform: translateY(-1px);
+}
+
+.ep-pada-dir-item.is-selected {
+  border: 2px solid #831843 !important;
+  background: #FDF2F8 !important;
+  box-shadow: 0 0 0 2px rgba(131, 24, 67, 0.15);
+}
+
+.ep-pada-dir-num {
+  font-size: 0.75rem;
+  font-weight: 800;
+  color: #831843;
+  margin-bottom: 0.15rem;
+}
+
+.ep-pada-dir-name {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #1E293B;
+}
+
+.ep-pada-dir-sub {
+  font-size: 0.72rem;
+  color: #64748B;
+  margin-top: 0.2rem;
+}
+
+
+.ep-porutham-badge-passed {
+  background: #DCFCE7;
+  color: #15803D;
+  font-weight: 700;
+  padding: 0.2rem 0.55rem;
+  border-radius: 999px;
+  font-size: 0.78rem;
+}
+
+.ep-porutham-badge-failed {
+  background: #FEE2E2;
+  color: #B91C1C;
+  font-weight: 700;
+  padding: 0.2rem 0.55rem;
+  border-radius: 999px;
+  font-size: 0.78rem;
+}
+
+/* ==========================================================================
+   ரத்தின பரிந்துரைகள் (GEMSTONE RECOMMENDATIONS) STYLES
+   ========================================================================== */
+.ep-gem-kpi-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+@media (max-width: 1024px) {
+  .ep-gem-kpi-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 540px) {
+  .ep-gem-kpi-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.ep-gem-kpi-card {
+  background: #FFFFFF;
+  border: 1.5px solid #E2E8F0;
+  border-radius: 12px;
+  padding: 1.15rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.ep-gem-kpi-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
+
+.ep-gem-kpi-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: #CBD5E1;
+}
+
+.ep-gem-kpi-card.is-life-stone::before {
+  background: linear-gradient(90deg, #F59E0B, #EF4444);
+}
+.ep-gem-kpi-card.is-punya-stone::before {
+  background: linear-gradient(90deg, #10B981, #06B6D4);
+}
+.ep-gem-kpi-card.is-bhagya-stone::before {
+  background: linear-gradient(90deg, #831843, #D97706);
+}
+.ep-gem-kpi-card.is-dasha-stone::before {
+  background: linear-gradient(90deg, #3B82F6, #8B5CF6);
+}
+
+.ep-gem-kpi-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.65rem;
+}
+
+.ep-gem-kpi-badge {
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 0.2rem 0.55rem;
+  border-radius: 999px;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+}
+
+.ep-gem-badge-life {
+  background: #FEF3C7;
+  color: #92400E;
+}
+.ep-gem-badge-punya {
+  background: #D1FAE5;
+  color: #065F46;
+}
+.ep-gem-badge-bhagya {
+  background: #FCE7F3;
+  color: #831843;
+}
+.ep-gem-badge-dasha {
+  background: #DBEAFE;
+  color: #1E40AF;
+}
+
+.ep-gem-kpi-icon {
+  font-size: 1.5rem;
+}
+
+.ep-gem-kpi-name {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #0F172A;
+  margin-bottom: 0.2rem;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.ep-gem-kpi-stone-en {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #64748B;
+}
+
+.ep-gem-kpi-lord-row {
+  font-size: 0.82rem;
+  color: #475569;
+  margin-top: 0.35rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px dashed #E2E8F0;
+}
+
+.ep-gem-kpi-details-list {
+  margin-top: 0.6rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  font-size: 0.8rem;
+  color: #334155;
+}
+
+.ep-gem-kpi-detail-item {
+  display: flex;
+  justify-content: space-between;
+}
+
+.ep-gem-kpi-detail-item span:first-child {
+  color: #64748B;
+}
+
+.ep-gem-kpi-detail-item span:last-child {
+  font-weight: 600;
+  color: #0F172A;
+}
+
+.ep-gem-caution-box {
+  background: #FFF1F2;
+  border: 1.5px solid #FECDD3;
+  border-radius: 10px;
+  padding: 1.15rem;
+}
+
+.ep-gem-browser-grid {
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+  gap: 0.5rem;
+}
+
+@media (max-width: 1024px) {
+  .ep-gem-browser-grid {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .ep-gem-browser-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.ep-gem-thumb-btn {
+  background: #FFFFFF;
+  border: 1.5px solid #E2E8F0;
+  border-radius: 8px;
+  padding: 0.65rem 0.35rem;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.ep-gem-thumb-btn:hover, .ep-gem-thumb-btn.active {
+  border-color: #831843;
+  background: #FFFDF8;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(131, 24, 67, 0.12);
+}
+
+.ep-gem-thumb-icon {
+  font-size: 1.35rem;
+}
+
+.ep-gem-thumb-name {
+  font-size: 0.76rem;
+  font-weight: 700;
+  color: #1E293B;
+  white-space: nowrap;
+}
+
+.ep-gem-thumb-planet {
+  font-size: 0.68rem;
+  color: #64748B;
+}
+
+/* ==========================================================================
+   கடிகார பிரசன்னம் (CLOCK PRASANNAM) STYLES
+   ========================================================================== */
+.ep-clock-chart-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, minmax(95px, auto));
+  gap: 3px;
+  background: #B45309;
+  border: 2.5px solid #B45309;
+  border-radius: 12px;
+  overflow: hidden;
+  max-width: 680px;
+  margin: 0 auto 1.5rem auto;
+  box-shadow: 0 4px 16px rgba(180, 83, 9, 0.12);
+}
+
+.ep-clock-cell {
+  background: #FFFDF8;
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  min-height: 95px;
+  transition: background 0.15s ease;
+}
+
+.ep-clock-cell:hover {
+  background: #FEFCE8;
+}
+
+.ep-clock-cell-meena     { grid-row: 1; grid-column: 1; }
+.ep-clock-cell-mesha     { grid-row: 1; grid-column: 2; }
+.ep-clock-cell-rishaba   { grid-row: 1; grid-column: 3; }
+.ep-clock-cell-mithuna   { grid-row: 1; grid-column: 4; }
+.ep-clock-cell-kumbha    { grid-row: 2; grid-column: 1; }
+.ep-clock-cell-center    { grid-row: 2 / span 2; grid-column: 2 / span 2; }
+.ep-clock-cell-kataka    { grid-row: 2; grid-column: 4; }
+.ep-clock-cell-makara    { grid-row: 3; grid-column: 1; }
+.ep-clock-cell-simha     { grid-row: 3; grid-column: 4; }
+.ep-clock-cell-dhanus    { grid-row: 4; grid-column: 1; }
+.ep-clock-cell-vrischika { grid-row: 4; grid-column: 2; }
+.ep-clock-cell-thula     { grid-row: 4; grid-column: 3; }
+.ep-clock-cell-kanya     { grid-row: 4; grid-column: 4; }
+
+.ep-clock-center-cell {
+  background: linear-gradient(135deg, #FFFBEB 0%, #FEF3C7 100%);
+  border: 1.5px solid #F59E0B;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0.75rem;
+  border-radius: 6px;
+  box-shadow: inset 0 0 12px rgba(245, 158, 11, 0.1);
+}
+
+.ep-clock-rasi-name {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #92400E;
+  margin-bottom: 0.3rem;
+  letter-spacing: 0.3px;
+}
+
+.ep-clock-occupants {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  align-items: center;
+  flex: 1;
+}
+
+.ep-pill-lagna {
+  background: #E0F2FE;
+  color: #0369A1;
+  border: 1px solid #38BDF8;
+  font-weight: 800;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 0.76rem;
+  line-height: 1.2;
+}
+
+.ep-pill-udhayam {
+  background: #FEF3C7;
+  color: #92400E;
+  border: 1.5px solid #F59E0B;
+  font-weight: 800;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 0.76rem;
+  line-height: 1.2;
+  box-shadow: 0 1px 3px rgba(245, 158, 11, 0.25);
+}
+
+.ep-pill-aaroodam {
+  background: #DCFCE7;
+  color: #15803D;
+  border: 1.5px solid #10B981;
+  font-weight: 800;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 0.76rem;
+  line-height: 1.2;
+  box-shadow: 0 1px 3px rgba(16, 185, 129, 0.25);
+}
+
+.ep-clock-planet {
+  font-weight: 700;
+  font-size: 0.82rem;
+  color: #1E293B;
+  display: inline-flex;
+  align-items: center;
+  gap: 1px;
+}
+
+.ep-clock-retro {
+  color: #DC2626;
+  font-size: 0.72rem;
+  font-weight: 800;
+}
+
+.ep-clock-exalt {
+  color: #047857;
+  font-size: 0.68rem;
+  font-weight: 700;
+}
+
+.ep-clock-own {
+  color: #2563EB;
+  font-size: 0.68rem;
+  font-weight: 700;
+}
+
+.ep-clock-deb {
+  color: #B91C1C;
+  font-size: 0.68rem;
+  font-weight: 700;
+}
+
+.ep-clock-verdict-card {
+  background: #FFFDF8;
+  border: 1.5px solid #F6D7B0;
+  border-radius: 12px;
+  padding: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.ep-clock-controls-card {
+  background: #FFFFFF;
+  border: 1.5px solid #E2E8F0;
+  border-radius: 12px;
+  padding: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+@media (max-width: 800px) {
+  .ep-clock-summary-grid {
+    grid-template-columns: 1fr !important;
+  }
+  .ep-clock-chart-grid {
+    grid-template-rows: repeat(4, minmax(75px, auto));
+  }
+  .ep-clock-cell {
+    min-height: 75px;
+    padding: 0.35rem;
+  }
+  .ep-clock-rasi-name {
+    font-size: 0.65rem;
+  }
+  .ep-clock-planet {
+    font-size: 0.72rem;
+  }
+}
+
+/* ==========================================================================
+   MARRIAGE MATCHING (திருமணப் பொருத்தம்) - EXACT UI STYLES
+   ========================================================================== */
+.ep-mm-wrapper {
+  background: #FFFFFF;
+  border-radius: 14px;
+  border: 1px solid #E2E8F0;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+  padding: 1.75rem 2rem;
+  margin-bottom: 2rem;
+  color: #0F172A;
+}
+
+.ep-mm-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+  padding-bottom: 0.75rem;
+}
+
+.ep-mm-title {
+  font-size: 1.45rem;
+  font-weight: 800;
+  color: #0F172A;
+  margin: 0 0 0.2rem 0;
+  letter-spacing: -0.01em;
+}
+
+.ep-mm-subtitle {
+  font-size: 0.85rem;
+  color: #64748B;
+  margin: 0;
+  font-weight: 500;
+}
+
+.ep-mm-header-controls {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.ep-mm-select {
+  background: #FFFFFF;
+  border: 1px solid #CBD5E1;
+  border-radius: 8px;
+  padding: 0.45rem 1rem;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: #1E293B;
+  cursor: pointer;
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+.ep-mm-select:focus {
+  border-color: #2563EB;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.ep-mm-intro-card {
+  background: #F8FAFC;
+  border: 1px solid #E2E8F0;
+  border-radius: 10px;
+  padding: 0.85rem 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.ep-mm-intro-card p {
+  margin: 0;
+  font-size: 0.88rem;
+  color: #334155;
+  line-height: 1.5;
+}
+
+.ep-mm-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 1.75rem;
+}
+
+.ep-mm-card {
+  background: #FFFFFF;
+  border: 1.5px solid #E2E8F0;
+  border-radius: 12px;
+  padding: 1.4rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.02);
+  display: flex;
+  flex-direction: column;
+  transition: all 0.2s ease;
+}
+
+.ep-mm-card:hover {
+  border-color: #CBD5E1;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+}
+
+.ep-mm-card-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.ep-mm-profile-info {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.ep-mm-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  font-weight: 800;
+}
+
+.ep-mm-avatar-female {
+  background: #DCFCE7;
+  color: #16A34A;
+}
+
+.ep-mm-avatar-male {
+  background: #FEF3C7;
+  color: #D97706;
+}
+
+.ep-mm-card-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #0F172A;
+  margin: 0 0 0.15rem 0;
+}
+
+.ep-mm-card-desc {
+  font-size: 0.78rem;
+  color: #64748B;
+  margin: 0;
+}
+
+.ep-mm-tag-btn {
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  border-radius: 999px;
+  padding: 0.25rem 0.75rem;
+  font-size: 0.76rem;
+  font-weight: 600;
+  color: #475569;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.ep-mm-tag-btn:hover {
+  background: #F8FAFC;
+  border-color: #CBD5E1;
+}
+
+.ep-mm-search-wrap {
+  position: relative;
+  margin-bottom: 0.85rem;
+}
+
+.ep-mm-input {
+  width: 100%;
+  box-sizing: border-box;
+  background: #FFFFFF;
+  border: 1px solid #CBD5E1;
+  border-radius: 8px;
+  padding: 0.6rem 0.85rem;
+  font-size: 0.88rem;
+  color: #0F172A;
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+.ep-mm-input:focus {
+  border-color: #059669;
+  box-shadow: 0 0 0 3px rgba(5, 150, 105, 0.1);
+}
+
+.ep-mm-action-row {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 1.15rem;
+  flex-wrap: wrap;
+}
+
+.ep-mm-or-text {
+  font-size: 0.82rem;
+  color: #64748B;
+}
+
+.ep-mm-btn-pill-green {
+  background: #F0FDF4;
+  border: 1.5px solid #22C55E;
+  color: #16A34A;
+  padding: 0.35rem 0.85rem;
+  border-radius: 6px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.ep-mm-btn-pill-green:hover {
+  background: #DCFCE7;
+}
+
+.ep-mm-btn-pill-amber {
+  background: #FFFBEB;
+  border: 1.5px solid #F59E0B;
+  color: #D97706;
+  padding: 0.35rem 0.85rem;
+  border-radius: 6px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.ep-mm-btn-pill-amber:hover {
+  background: #FEF3C7;
+}
+
+.ep-mm-btn-pill-outline {
+  background: #FFFFFF;
+  border: 1px solid #CBD5E1;
+  color: #475569;
+  padding: 0.35rem 0.85rem;
+  border-radius: 6px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.ep-mm-btn-pill-outline:hover {
+  background: #F1F5F9;
+}
+
+.ep-mm-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.ep-mm-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  position: relative;
+}
+
+.ep-mm-label {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #334155;
+}
+
+.ep-mm-sublabel {
+  font-size: 0.74rem;
+  font-weight: 600;
+  color: #64748B;
+}
+
+.ep-mm-row-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+}
+
+.ep-mm-row-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.5rem;
+}
+
+.ep-mm-time-wrap {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.ep-mm-ampm-group {
+  display: flex;
+  border: 1px solid #CBD5E1;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.ep-mm-ampm-btn {
+  padding: 0.55rem 0.55rem;
+  font-size: 0.76rem;
+  font-weight: 700;
+  border: none;
+  background: #F8FAFC;
+  color: #64748B;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.ep-mm-ampm-btn.active {
+  background: #0D9488;
+  color: #FFFFFF;
+}
+
+.ep-mm-toggle-link-wrap {
+  margin-top: 0.2rem;
+}
+
+.ep-mm-toggle-link {
+  background: none;
+  border: none;
+  color: #0D9488;
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0;
+  text-decoration: none;
+}
+
+.ep-mm-toggle-link:hover {
+  text-decoration: underline;
+}
+
+.ep-mm-coords-block {
+  background: #F8FAFC;
+  border: 1px solid #E2E8F0;
+  border-radius: 8px;
+  padding: 0.75rem;
+  margin-top: 0.25rem;
+}
+
+.ep-mm-input-sm {
+  width: 100%;
+  box-sizing: border-box;
+  background: #FFFFFF;
+  border: 1px solid #CBD5E1;
+  border-radius: 6px;
+  padding: 0.4rem 0.55rem;
+  font-size: 0.82rem;
+  color: #0F172A;
+  outline: none;
+}
+
+.ep-mm-btn-save-green {
+  background: #15803D;
+  color: #FFFFFF;
+  border: none;
+  border-radius: 8px;
+  padding: 0.65rem 1rem;
+  font-size: 0.88rem;
+  font-weight: 700;
+  cursor: pointer;
+  margin-top: 0.5rem;
+  width: 100%;
+  transition: all 0.2s;
+}
+
+.ep-mm-btn-save-green:hover {
+  background: #166534;
+}
+
+.ep-mm-btn-save-teal {
+  background: #0D9488;
+  color: #FFFFFF;
+  border: none;
+  border-radius: 8px;
+  padding: 0.65rem 1rem;
+  font-size: 0.88rem;
+  font-weight: 700;
+  cursor: pointer;
+  margin-top: 0.5rem;
+  width: 100%;
+  transition: all 0.2s;
+}
+
+.ep-mm-btn-save-teal:hover {
+  background: #0F766E;
+}
+
+.ep-mm-bottom-bar {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.ep-mm-btn-reset-all {
+  background: #FFFFFF;
+  border: 1.5px solid #CBD5E1;
+  border-radius: 8px;
+  color: #475569;
+  font-size: 0.92rem;
+  font-weight: 700;
+  padding: 0.75rem 1.5rem;
+  cursor: pointer;
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+
+.ep-mm-btn-reset-all:hover {
+  background: #F1F5F9;
+  border-color: #94A3B8;
+}
+
+.ep-mm-btn-generate {
+  flex: 1;
+  background: #831843;
+  border: none;
+  border-radius: 8px;
+  color: #FFFFFF;
+  font-size: 1rem;
+  font-weight: 800;
+  padding: 0.8rem 1.5rem;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(131, 24, 67, 0.2);
+  transition: all 0.2s;
+}
+
+.ep-mm-btn-generate:hover {
+  background: #9D174D;
+  box-shadow: 0 6px 16px rgba(131, 24, 67, 0.3);
+}
+
+.ep-mm-footer-note {
+  font-size: 0.85rem;
+  color: #64748B;
+  margin-top: 0.75rem;
+  margin-bottom: 0;
+  line-height: 1.4;
+}
+
+/* Autocomplete suggestions dropdown */
+.ep-mm-suggestions {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 50;
+  background: #FFFFFF;
+  border: 1.5px solid #CBD5E1;
+  border-radius: 8px;
+  max-height: 220px;
+  overflow-y: auto;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  margin-top: 4px;
+}
+
+.ep-mm-suggestion-item {
+  padding: 0.55rem 0.85rem;
+  font-size: 0.85rem;
+  color: #1E293B;
+  cursor: pointer;
+  border-bottom: 1px solid #F1F5F9;
+  transition: background 0.15s;
+}
+
+.ep-mm-suggestion-item:hover {
+  background: #F8FAFC;
+  color: #0D9488;
+}
+
+.ep-mm-search-dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 50;
+  background: #FFFFFF;
+  border: 1.5px solid #CBD5E1;
+  border-radius: 8px;
+  max-height: 220px;
+  overflow-y: auto;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  margin-top: 4px;
+}
+
+/* Marriage Matching Report Output Styles */
+.ep-mm-report-card {
+  background: #FFFFFF;
+  border: 1.5px solid #F6D7B0;
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-top: 1.5rem;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+}
+
+.ep-mm-score-hero {
+  background: linear-gradient(135deg, #FFFDF8 0%, #FEF9C3 100%);
+  border: 2px solid #F59E0B;
+  border-radius: 12px;
+  padding: 1.5rem;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.ep-mm-score-number {
+  font-size: 3.2rem;
+  font-weight: 900;
+  color: #831843;
+  line-height: 1;
+  margin-bottom: 0.5rem;
+}
+
+.ep-mm-verdict-pill {
+  display: inline-block;
+  padding: 0.4rem 1.2rem;
+  border-radius: 999px;
+  font-weight: 800;
+  font-size: 0.95rem;
+  margin-bottom: 0.5rem;
+}
+
+.ep-mm-verdict-excellent {
+  background: #D1FAE5;
+  color: #065F46;
+  border: 1.5px solid #10B981;
+}
+
+.ep-mm-verdict-moderate {
+  background: #FEF3C7;
+  color: #92400E;
+  border: 1.5px solid #F59E0B;
+}
+
+.ep-mm-verdict-low {
+  background: #FEE2E2;
+  color: #991B1B;
+  border: 1.5px solid #EF4444;
+}
+
+@media (max-width: 900px) {
+  .ep-mm-cards-grid {
+    grid-template-columns: 1fr;
+  }
+  .ep-mm-bottom-bar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+
+/* ==========================================================================
+   கோச்சார பஞ்சபட்சி (GOCHARA PANCHA PAKSHI DAILY SCHEDULE) STYLES
+   Pixel-accurate matching of Exact Predictions Pancha Pakshi Shastra
+   ========================================================================== */
+
+.ep-pp-card {
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+  font-family: 'Mukta Malar', 'Outfit', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  transition: all 0.3s ease;
+}
+
+/* THEMES */
+.ep-pp-card.ep-theme-modern {
+  background: #FFFFFF;
+  border-color: #CBD5E1;
+}
+
+.ep-pp-card.ep-theme-traditional {
+  background: #FFFDF8;
+  border-color: #F59E0B;
+  box-shadow: 0 4px 20px rgba(180, 83, 9, 0.08);
+}
+
+.ep-pp-card.ep-theme-royal {
+  background: #FAF5FF;
+  border-color: #C084FC;
+  box-shadow: 0 4px 20px rgba(107, 33, 168, 0.08);
+}
+
+.ep-pp-card.ep-theme-eclipse {
+  background: #0F172A;
+  color: #F8FAFC;
+  border-color: #334155;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.35);
+}
+
+.ep-pp-card.ep-theme-eclipse .ep-pp-subhead,
+.ep-pp-card.ep-theme-eclipse .ep-pp-note,
+.ep-pp-card.ep-theme-eclipse .ep-pp-muted {
+  color: #94A3B8 !important;
+}
+
+.ep-pp-card.ep-theme-eclipse .ep-pp-table th {
+  background: #1E293B !important;
+  color: #38BDF8 !important;
+  border-color: #334155 !important;
+}
+
+.ep-pp-card.ep-theme-eclipse .ep-pp-table td {
+  border-color: #334155 !important;
+  color: #E2E8F0 !important;
+}
+
+.ep-pp-card.ep-theme-eclipse .ep-pp-table tr:hover {
+  background: rgba(56, 189, 248, 0.08) !important;
+}
+
+.ep-pp-card.ep-theme-eclipse .ep-pp-accordion-header {
+  background: #1E293B !important;
+  border-color: #334155 !important;
+  color: #F8FAFC !important;
+}
+
+.ep-pp-card.ep-theme-eclipse .ep-pp-sub-item {
+  background: #0F172A !important;
+  border-color: #334155 !important;
+  color: #E2E8F0 !important;
+}
+
+.ep-pp-card.ep-theme-classic {
+  background: #FDFBF7;
+  border-color: #D6D3D1;
+  font-family: 'Mukta Malar', Georgia, serif;
+}
+
+/* TOP BAR: THEMES & LANGUAGES */
+.ep-pp-top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #E2E8F0;
+  margin-bottom: 1.25rem;
+}
+
+.ep-pp-theme-group,
+.ep-pp-lang-group {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+}
+
+.ep-pp-theme-btn,
+.ep-pp-lang-btn {
+  background: #F1F5F9;
+  border: 1px solid #CBD5E1;
+  color: #334155;
+  padding: 0.35rem 0.75rem;
+  border-radius: 6px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.ep-pp-theme-btn:hover,
+.ep-pp-lang-btn:hover {
+  background: #E2E8F0;
+  color: #0F172A;
+}
+
+.ep-pp-theme-btn.active {
+  background: #1E3A8A;
+  color: #FFFFFF;
+  border-color: #1E3A8A;
+  box-shadow: 0 2px 4px rgba(30, 58, 138, 0.2);
+}
+
+.ep-pp-lang-btn.active {
+  background: #831843;
+  color: #FFFFFF;
+  border-color: #831843;
+  box-shadow: 0 2px 4px rgba(131, 24, 67, 0.2);
+}
+
+/* DATE & LOCATION NAVIGATION */
+.ep-pp-nav-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  background: #F8FAFC;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  border: 1px solid #E2E8F0;
+}
+
+.ep-theme-eclipse .ep-pp-nav-row {
+  background: #1E293B;
+  border-color: #334155;
+}
+
+.ep-pp-date-nav {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.ep-pp-nav-btn {
+  background: #FFFFFF;
+  border: 1px solid #CBD5E1;
+  color: #1E293B;
+  padding: 0.4rem 0.85rem;
+  border-radius: 6px;
+  font-weight: 700;
+  font-size: 0.88rem;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  transition: all 0.2s;
+  text-decoration: none;
+}
+
+.ep-theme-eclipse .ep-pp-nav-btn {
+  background: #0F172A;
+  border-color: #475569;
+  color: #F8FAFC;
+}
+
+.ep-pp-nav-btn:hover {
+  background: #F1F5F9;
+  border-color: #94A3B8;
+}
+
+.ep-pp-nav-btn.primary {
+  background: #2563EB;
+  color: #FFFFFF;
+  border-color: #2563EB;
+}
+
+.ep-pp-nav-btn.primary:hover {
+  background: #1D4ED8;
+}
+
+.ep-pp-loc-display {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.9rem;
+  color: #334155;
+}
+
+.ep-theme-eclipse .ep-pp-loc-display {
+  color: #E2E8F0;
+}
+
+.ep-pp-loc-pill {
+  font-weight: 700;
+  color: #0F172A;
+}
+
+.ep-theme-eclipse .ep-pp-loc-pill {
+  color: #38BDF8;
+}
+
+.ep-pp-link-btn {
+  background: none;
+  border: none;
+  color: #2563EB;
+  text-decoration: underline;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.85rem;
+  padding: 0;
+}
+
+.ep-pp-link-btn:hover {
+  color: #1D4ED8;
+}
+
+/* HERO MAIN BIRD CARD */
+.ep-pp-hero-banner {
+  text-align: center;
+  padding: 1.5rem 1rem;
+  background: linear-gradient(135deg, #FFFDF8 0%, #FEF3C7 100%);
+  border: 1.5px solid #F59E0B;
+  border-radius: 10px;
+  margin-bottom: 1.5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.ep-theme-eclipse .ep-pp-hero-banner {
+  background: linear-gradient(135deg, #1E293B 0%, #0F172A 100%);
+  border-color: #0284C7;
+}
+
+.ep-pp-main-bird-title {
+  font-size: 2.6rem;
+  font-weight: 900;
+  color: #831843;
+  margin: 0 0 0.4rem 0;
+  line-height: 1.1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+}
+
+.ep-theme-eclipse .ep-pp-main-bird-title {
+  color: #38BDF8;
+}
+
+.ep-pp-main-bird-sub {
+  font-size: 1.05rem;
+  color: #475569;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.ep-theme-eclipse .ep-pp-main-bird-sub {
+  color: #CBD5E1;
+}
+
+.ep-pp-noon-bird-pill {
+  display: inline-block;
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  color: #1E293B;
+  padding: 0.35rem 1rem;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 0.9rem;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+}
+
+.ep-theme-eclipse .ep-pp-noon-bird-pill {
+  background: #334155;
+  border-color: #475569;
+  color: #F8FAFC;
+}
+
+/* OVERVIEW METRICS GRID & TABLE */
+.ep-pp-metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.ep-pp-metric-card {
+  background: #F8FAFC;
+  border: 1px solid #E2E8F0;
+  border-radius: 8px;
+  padding: 0.85rem 0.65rem;
+  text-align: center;
+  transition: transform 0.2s ease;
+}
+
+.ep-theme-eclipse .ep-pp-metric-card {
+  background: #1E293B;
+  border-color: #334155;
+}
+
+.ep-pp-metric-card:hover {
+  transform: translateY(-2px);
+  border-color: #CBD5E1;
+}
+
+.ep-pp-metric-label {
+  font-size: 0.78rem;
+  color: #64748B;
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.ep-theme-eclipse .ep-pp-metric-label {
+  color: #94A3B8;
+}
+
+.ep-pp-metric-val {
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: #0F172A;
+}
+
+.ep-theme-eclipse .ep-pp-metric-val {
+  color: #F8FAFC;
+}
+
+/* EXPLANATORY NOTE BOX */
+.ep-pp-note-box {
+  background: #F1F5F9;
+  border-left: 4px solid #2563EB;
+  padding: 0.75rem 1rem;
+  border-radius: 0 6px 6px 0;
+  font-size: 0.85rem;
+  color: #334155;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+}
+
+.ep-theme-eclipse .ep-pp-note-box {
+  background: #1E293B;
+  border-left-color: #38BDF8;
+  color: #CBD5E1;
+}
+
+/* TABLES STYLING */
+.ep-pp-table-wrap {
+  width: 100%;
+  overflow-x: auto;
+  border-radius: 8px;
+  border: 1px solid #E2E8F0;
+  margin-bottom: 1.75rem;
+  background: #FFFFFF;
+}
+
+.ep-theme-eclipse .ep-pp-table-wrap {
+  background: #0F172A;
+  border-color: #334155;
+}
+
+.ep-pp-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.88rem;
+  text-align: left;
+}
+
+.ep-pp-table th {
+  background: #F8FAFC;
+  color: #475569;
+  font-weight: 700;
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid #E2E8F0;
+  white-space: nowrap;
+}
+
+.ep-pp-table td {
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid #F1F5F9;
+  color: #1E293B;
+  white-space: nowrap;
+}
+
+.ep-pp-table tr:hover {
+  background: #F8FAFC;
+}
+
+.ep-pp-table tr.active-row {
+  background: #FEF3C7 !important;
+  font-weight: 700;
+}
+
+.ep-theme-eclipse .ep-pp-table tr.active-row {
+  background: rgba(245, 158, 11, 0.15) !important;
+}
+
+/* STATUS & ACTIVITY BADGES */
+.ep-pp-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.25rem 0.65rem;
+  border-radius: 4px;
+  font-weight: 700;
+  font-size: 0.82rem;
+  line-height: 1.2;
+}
+
+.badge-arasu {
+  background: #D1FAE5;
+  color: #065F46;
+  border: 1px solid #10B981;
+}
+
+.badge-oon {
+  background: #CCFBF1;
+  color: #0F766E;
+  border: 1px solid #0D9488;
+}
+
+.badge-nadai {
+  background: #DBEAFE;
+  color: #1E40AF;
+  border: 1px solid #3B82F6;
+}
+
+.badge-thuyil {
+  background: #FEF3C7;
+  color: #92400E;
+  border: 1px solid #F59E0B;
+}
+
+.badge-saavu {
+  background: #FEE2E2;
+  color: #991B1B;
+  border: 1px solid #EF4444;
+}
+
+/* LIVE PULSING SUB-PERIOD INDICATOR */
+.ep-pp-live-indicator-card {
+  background: linear-gradient(135deg, #EFF6FF 0%, #DBEAFE 100%);
+  border: 2px solid #3B82F6;
+  border-radius: 8px;
+  padding: 1rem 1.25rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.ep-theme-eclipse .ep-pp-live-indicator-card {
+  background: linear-gradient(135deg, #1E293B 0%, #0F172A 100%);
+  border-color: #0284C7;
+}
+
+.ep-pp-live-left {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.ep-pp-pulse-dot {
+  width: 12px;
+  height: 12px;
+  background: #10B981;
+  border-radius: 50%;
+  box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7);
+  animation: ep-pulse 1.8s infinite;
+}
+
+@keyframes ep-pulse {
+  0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7); }
+  70% { transform: scale(1); box-shadow: 0 0 0 8px rgba(16, 185, 129, 0); }
+  100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
+}
+
+.ep-pp-live-title {
+  font-weight: 800;
+  font-size: 1.05rem;
+  color: #1E3A8A;
+}
+
+.ep-theme-eclipse .ep-pp-live-title {
+  color: #38BDF8;
+}
+
+.ep-pp-live-badge-val {
+  font-size: 1rem;
+  font-weight: 800;
+  color: #0F172A;
+  background: #FFFFFF;
+  padding: 0.35rem 0.85rem;
+  border-radius: 6px;
+  border: 1px solid #BFDBFE;
+}
+
+.ep-theme-eclipse .ep-pp-live-badge-val {
+  background: #1E293B;
+  border-color: #334155;
+  color: #F8FAFC;
+}
+
+/* 3-TIER NESTED ACCORDION / TREE */
+.ep-pp-accordion-group {
+  margin-bottom: 2rem;
+}
+
+.ep-pp-section-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 1.5rem 0 1rem 0;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #E2E8F0;
+}
+
+.ep-theme-eclipse .ep-pp-section-heading {
+  border-bottom-color: #334155;
+}
+
+.ep-pp-heading-text {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #1E293B;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.ep-theme-eclipse .ep-pp-heading-text {
+  color: #F8FAFC;
+}
+
+.ep-pp-tree-card {
+  border: 1px solid #E2E8F0;
+  border-radius: 8px;
+  margin-bottom: 0.85rem;
+  overflow: hidden;
+  background: #FFFFFF;
+}
+
+.ep-theme-eclipse .ep-pp-tree-card {
+  border-color: #334155;
+  background: #1E293B;
+}
+
+.ep-pp-accordion-header {
+  padding: 0.85rem 1rem;
+  background: #F8FAFC;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  border-bottom: 1px solid transparent;
+  user-select: none;
+  transition: background 0.2s ease;
+}
+
+.ep-pp-accordion-header:hover {
+  background: #F1F5F9;
+}
+
+.ep-pp-tree-card.open .ep-pp-accordion-header {
+  border-bottom-color: #E2E8F0;
+  background: #F1F5F9;
+}
+
+.ep-theme-eclipse .ep-pp-tree-card.open .ep-pp-accordion-header {
+  border-bottom-color: #334155;
+  background: #334155;
+}
+
+.ep-pp-tree-title {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+
+.ep-pp-sub-container {
+  padding: 0.75rem 1rem 1rem 1.5rem;
+  display: none;
+}
+
+.ep-pp-tree-card.open .ep-pp-sub-container {
+  display: block;
+}
+
+.ep-pp-sub-card {
+  border-left: 2px solid #CBD5E1;
+  padding-left: 1rem;
+  margin-bottom: 0.85rem;
+}
+
+.ep-theme-eclipse .ep-pp-sub-card {
+  border-left-color: #475569;
+}
+
+.ep-pp-sub-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  cursor: pointer;
+  padding: 0.35rem 0;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.ep-pp-micro-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+  padding: 0.5rem 0;
+}
+
+.ep-pp-micro-item {
+  background: #F8FAFC;
+  border: 1px solid #E2E8F0;
+  border-radius: 6px;
+  padding: 0.45rem 0.65rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.8rem;
+}
+
+.ep-theme-eclipse .ep-pp-micro-item {
+  background: #0F172A;
+  border-color: #334155;
+  color: #CBD5E1;
+}
+
+.ep-pp-micro-time {
+  font-family: monospace;
+  font-weight: 600;
+}
+
+/* RESPONSIVE QUERIES */
+@media (max-width: 768px) {
+  .ep-pp-top-bar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .ep-pp-nav-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .ep-pp-main-bird-title {
+    font-size: 2rem;
+  }
+}
+
+/* ==========================================================================
+   NERAM NALLA NERAM (நேரம் நல்ல நேரம்) MODULE STYLES
+   ========================================================================== */
+.ep-nn-container {
+  font-family: 'Noto Sans Tamil', 'Outfit', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  color: #1E293B;
+}
+
+.ep-nn-top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  background: #FFFFFF;
+  border: 1.5px solid #E2E8F0;
+  border-radius: 10px;
+  padding: 0.75rem 1rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+}
+
+.ep-nn-date-nav {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.ep-nn-nav-btn {
+  background: #F1F5F9;
+  border: 1px solid #CBD5E1;
+  color: #1E293B;
+  padding: 0.4rem 0.85rem;
+  border-radius: 6px;
+  font-size: 0.86rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.ep-nn-nav-btn:hover {
+  background: #E2E8F0;
+  border-color: #94A3B8;
+  color: #0F172A;
+}
+
+.ep-nn-nav-btn.primary {
+  background: #831843;
+  color: #FFFFFF;
+  border-color: #831843;
+}
+
+.ep-nn-nav-btn.primary:hover {
+  background: #9D174D;
+}
+
+.ep-nn-filter-controls {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+}
+
+.ep-nn-filter-field {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.ep-nn-filter-label {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #475569;
+}
+
+.ep-nn-input {
+  padding: 0.38rem 0.65rem;
+  border: 1px solid #CBD5E1;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  outline: none;
+  background: #FFFFFF;
+  transition: border-color 0.2s;
+}
+
+.ep-nn-input:focus {
+  border-color: #831843;
+}
+
+.ep-nn-btn-submit {
+  background: linear-gradient(135deg, #059669, #10B981);
+  color: #FFFFFF;
+  border: none;
+  border-radius: 6px;
+  padding: 0.42rem 1.15rem;
+  font-size: 0.88rem;
+  font-weight: 800;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(16,185,129,0.3);
+  transition: transform 0.15s, background 0.2s;
+}
+
+.ep-nn-btn-submit:hover {
+  transform: translateY(-1px);
+  background: linear-gradient(135deg, #047857, #059669);
+}
+
+/* Astronomical Metadata Banner */
+.ep-nn-meta-card {
+  background: linear-gradient(135deg, #0F172A, #1E293B);
+  color: #FFFFFF;
+  border: 1px solid rgba(212,175,55,0.35);
+  border-radius: 12px;
+  padding: 1rem 1.25rem;
+  margin-bottom: 1.25rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.ep-nn-meta-items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+  font-size: 0.88rem;
+}
+
+.ep-nn-meta-item {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.ep-nn-meta-item .label {
+  color: #94A3B8;
+  font-size: 0.82rem;
+}
+
+.ep-nn-meta-item .value {
+  color: #F8FAFC;
+  font-weight: 700;
+}
+
+.ep-nn-meta-item .value.gold {
+  color: #FDE68A;
+}
+
+.ep-nn-meta-item .value.sunrise {
+  color: #F59E0B;
+}
+
+.ep-nn-meta-item .value.sunset {
+  color: #F87171;
+}
+
+/* KPI Metrics Grid */
+.ep-nn-kpi-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 0.85rem;
+  margin-bottom: 1.25rem;
+}
+
+.ep-nn-kpi-card {
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  border-radius: 10px;
+  padding: 1rem 1.15rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+  transition: transform 0.2s, box-shadow 0.2s;
+  position: relative;
+  overflow: hidden;
+}
+
+.ep-nn-kpi-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+}
+
+.ep-nn-kpi-card.kpi-good {
+  border-left: 4px solid #10B981;
+}
+
+.ep-nn-kpi-card.kpi-bad {
+  border-left: 4px solid #EF4444;
+}
+
+.ep-nn-kpi-card.kpi-tot-good {
+  border-left: 4px solid #059669;
+}
+
+.ep-nn-kpi-card.kpi-tot-bad {
+  border-left: 4px solid #DC2626;
+}
+
+.ep-nn-kpi-label {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #64748B;
+  margin-bottom: 0.35rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.ep-nn-kpi-value {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #0F172A;
+  font-family: 'Outfit', 'Noto Sans Tamil', sans-serif;
+}
+
+.ep-nn-kpi-card.kpi-good .ep-nn-kpi-value,
+.ep-nn-kpi-card.kpi-tot-good .ep-nn-kpi-value {
+  color: #065F46;
+}
+
+.ep-nn-kpi-card.kpi-bad .ep-nn-kpi-value,
+.ep-nn-kpi-card.kpi-tot-bad .ep-nn-kpi-value {
+  color: #991B1B;
+}
+
+/* Live Status Badge Card */
+.ep-nn-live-status-card {
+  background: linear-gradient(135deg, rgba(16,185,129,0.12), rgba(6,95,70,0.12));
+  border: 1.5px solid #10B981;
+  border-radius: 10px;
+  padding: 0.85rem 1.25rem;
+  margin-bottom: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.ep-nn-live-status-card.status-bad {
+  background: linear-gradient(135deg, rgba(239,68,68,0.12), rgba(153,27,27,0.12));
+  border-color: #EF4444;
+}
+
+.ep-nn-live-badge-left {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.ep-nn-live-pulse {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #10B981;
+  box-shadow: 0 0 0 0 rgba(16,185,129,0.7);
+  animation: epPulseGood 1.8s infinite;
+}
+
+.ep-nn-live-status-card.status-bad .ep-nn-live-pulse {
+  background: #EF4444;
+  box-shadow: 0 0 0 0 rgba(239,68,68,0.7);
+  animation: epPulseBad 1.8s infinite;
+}
+
+@keyframes epPulseGood {
+  0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(16,185,129,0.7); }
+  70% { transform: scale(1.05); box-shadow: 0 0 0 10px rgba(16,185,129,0); }
+  100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(16,185,129,0); }
+}
+
+@keyframes epPulseBad {
+  0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(239,68,68,0.7); }
+  70% { transform: scale(1.05); box-shadow: 0 0 0 10px rgba(239,68,68,0); }
+  100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(239,68,68,0); }
+}
+
+.ep-nn-live-title {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #065F46;
+}
+
+.ep-nn-live-status-card.status-bad .ep-nn-live-title {
+  color: #991B1B;
+}
+
+.ep-nn-live-subtitle {
+  font-size: 0.82rem;
+  color: #475569;
+}
+
+/* 24-Hour Visual Dual Timeline */
+.ep-nn-timeline-card {
+  background: #FFFFFF;
+  border: 1.5px solid #E2E8F0;
+  border-radius: 12px;
+  padding: 1.35rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.03);
+}
+
+.ep-nn-timeline-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.ep-nn-timeline-title {
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: #831843;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+.ep-nn-timeline-track-wrap {
+  position: relative;
+  background: #F8FAFC;
+  border: 1px solid #CBD5E1;
+  border-radius: 8px;
+  padding: 0.75rem 0.5rem 1.5rem 0.5rem;
+}
+
+.ep-nn-timeline-row {
+  margin-bottom: 0.85rem;
+}
+
+.ep-nn-timeline-row-label {
+  font-size: 0.8rem;
+  font-weight: 700;
+  margin-bottom: 0.35rem;
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.ep-nn-timeline-row-label.good {
+  color: #065F46;
+}
+
+.ep-nn-timeline-row-label.bad {
+  color: #991B1B;
+}
+
+.ep-nn-bar-track {
+  position: relative;
+  height: 26px;
+  background: #E2E8F0;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.ep-nn-segment {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  cursor: pointer;
+  transition: opacity 0.2s, transform 0.15s;
+}
+
+.ep-nn-segment:hover {
+  filter: brightness(1.15);
+  z-index: 2;
+  box-shadow: 0 0 8px rgba(0,0,0,0.25);
+}
+
+.ep-nn-segment.good {
+  background: linear-gradient(180deg, #34D399, #10B981);
+  border-right: 1px solid rgba(255,255,255,0.4);
+}
+
+.ep-nn-segment.bad {
+  background: linear-gradient(180deg, #F87171, #EF4444);
+  border-right: 1px solid rgba(255,255,255,0.4);
+}
+
+.ep-nn-time-scale {
+  position: relative;
+  height: 20px;
+  margin-top: 0.5rem;
+  border-top: 1px solid #94A3B8;
+}
+
+.ep-nn-time-tick {
+  position: absolute;
+  top: 4px;
+  transform: translateX(-50%);
+  font-size: 0.76rem;
+  font-weight: 700;
+  color: #475569;
+  font-family: monospace;
+}
+
+.ep-nn-live-line {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: #F59E0B;
+  box-shadow: 0 0 6px rgba(245,158,11,0.9);
+  z-index: 5;
+  pointer-events: none;
+}
+
+.ep-nn-live-line-pin {
+  position: absolute;
+  top: -8px;
+  left: -14px;
+  background: #F59E0B;
+  color: #000;
+  font-size: 0.65rem;
+  font-weight: 900;
+  padding: 1px 4px;
+  border-radius: 4px;
+}
+
+/* Two-Column Schedule Cards Grid */
+.ep-nn-schedule-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+  gap: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.ep-nn-schedule-col {
+  background: #FFFFFF;
+  border: 1.5px solid #E2E8F0;
+  border-radius: 12px;
+  padding: 1.25rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.02);
+}
+
+.ep-nn-col-good {
+  border-color: rgba(16,185,129,0.3);
+}
+
+.ep-nn-col-bad {
+  border-color: rgba(239,68,68,0.3);
+}
+
+.ep-nn-col-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  padding-bottom: 0.65rem;
+  border-bottom: 1px solid #E2E8F0;
+}
+
+.ep-nn-col-title {
+  margin: 0;
+  font-size: 1.15rem;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+.ep-nn-col-good .ep-nn-col-title {
+  color: #065F46;
+}
+
+.ep-nn-col-bad .ep-nn-col-title {
+  color: #991B1B;
+}
+
+.ep-nn-col-badge {
+  font-size: 0.78rem;
+  font-weight: 800;
+  padding: 0.2rem 0.6rem;
+  border-radius: 999px;
+}
+
+.ep-nn-col-good .ep-nn-col-badge {
+  background: #D1FAE5;
+  color: #065F46;
+}
+
+.ep-nn-col-bad .ep-nn-col-badge {
+  background: #FEE2E2;
+  color: #991B1B;
+}
+
+.ep-nn-slots-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.ep-nn-slot-card {
+  background: #F8FAFC;
+  border: 1px solid #E2E8F0;
+  border-radius: 8px;
+  padding: 0.65rem 0.85rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  transition: all 0.15s ease;
+}
+
+.ep-nn-slot-card:hover {
+  background: #FFFFFF;
+  border-color: #CBD5E1;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+
+.ep-nn-slot-card.active-now {
+  border: 2px solid #F59E0B;
+  background: #FFFBEB;
+}
+
+.ep-nn-slot-time {
+  font-size: 0.92rem;
+  font-weight: 700;
+  font-family: monospace;
+  color: #0F172A;
+}
+
+.ep-nn-slot-dur {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #64748B;
+  background: #F1F5F9;
+  padding: 0.15rem 0.5rem;
+  border-radius: 4px;
+}
+
+.ep-nn-slot-reasons {
+  display: flex;
+  gap: 0.35rem;
+  flex-wrap: wrap;
+  width: 100%;
+  margin-top: 0.35rem;
+}
+
+.ep-nn-reason-tag {
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 0.15rem 0.45rem;
+  border-radius: 4px;
+  background: #FEE2E2;
+  color: #991B1B;
+  border: 1px solid #FECACA;
+}
+
+.ep-nn-reason-tag.rahu {
+  background: #FCE7F3;
+  color: #831843;
+  border-color: #FBCFE8;
+}
+
+.ep-nn-reason-tag.yamagandam {
+  background: #FEF3C7;
+  color: #92400E;
+  border-color: #FDE68A;
+}
+
+.ep-nn-reason-tag.tithi {
+  background: #EDE9FE;
+  color: #5B21B6;
+  border-color: #DDD6FE;
+}
+
+.ep-nn-reason-tag.nakshatra {
+  background: #E0E7FF;
+  color: #3730A3;
+  border-color: #C7D2FE;
+}
+
+/* Detailed Astronomical Transitions */
+.ep-nn-transitions-wrap {
+  background: #FFFFFF;
+  border: 1.5px solid #E2E8F0;
+  border-radius: 12px;
+  padding: 1.35rem;
+  margin-bottom: 1.5rem;
+}
+
+.ep-nn-transitions-header {
+  margin-bottom: 1rem;
+}
+
+.ep-nn-transitions-title {
+  margin: 0;
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #831843;
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+.ep-nn-trans-subgrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+}
+
+.ep-nn-trans-box {
+  background: #F8FAFC;
+  border: 1px solid #E2E8F0;
+  border-radius: 8px;
+  padding: 1rem;
+}
+
+.ep-nn-trans-box-title {
+  margin: 0 0 0.75rem 0;
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: #1E293B;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.ep-nn-trans-items {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.ep-nn-trans-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.85rem;
+  padding: 0.35rem 0.5rem;
+  background: #FFFFFF;
+  border: 1px solid #CBD5E1;
+  border-radius: 6px;
+}
+
+.ep-nn-trans-tag {
+  font-weight: 700;
+  color: #831843;
+}
+
+.ep-nn-trans-time {
+  font-family: monospace;
+  font-weight: 600;
+  color: #334155;
+}
+
+/* Lagna Transition Chips Grid */
+.ep-nn-lagna-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+  gap: 0.6rem;
+}
+
+.ep-nn-lagna-chip {
+  background: #FFFFFF;
+  border: 1px solid #CBD5E1;
+  border-radius: 6px;
+  padding: 0.45rem 0.65rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.ep-nn-lagna-name {
+  font-weight: 800;
+  font-size: 0.82rem;
+  color: #1E3A8A;
+}
+
+.ep-nn-lagna-span {
+  font-family: monospace;
+  font-size: 0.78rem;
+  color: #475569;
+}
+
+/* Classical Disclaimer Box */
+.ep-nn-disclaimer {
+  background: #FFFBEB;
+  border: 1px solid #FDE68A;
+  border-left: 4px solid #D97706;
+  border-radius: 8px;
+  padding: 0.85rem 1.15rem;
+  font-size: 0.86rem;
+  color: #92400E;
+  line-height: 1.6;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+}
+
+/* ==========================================================================
+   ஜாதகக் கட்டம் (Jathagam Kattam - Rasi & Navamsam Master Card)
+   ========================================================================== */
+.ep-dual-kattam-card {
+  background: #FFFFFF;
+  border: 1.5px solid #F8CBA6;
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 4px 18px rgba(224, 114, 50, 0.05);
+  margin: 0 auto;
+}
+
+.ep-dual-kattam-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.25rem;
+  align-items: stretch;
+  justify-content: center;
+}
+
+@media (max-width: 900px) {
+  .ep-dual-kattam-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}
+
+.ep-kattam-col {
+  width: 100%;
+  max-width: 540px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.exact-attached-chart-svg {
+  width: 100%;
+  height: auto;
+  max-width: 520px;
+  display: block;
+  filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.04));
+  transition: transform 0.2s ease;
+}
+
+.exact-attached-chart-svg:hover {
+  filter: drop-shadow(0 4px 14px rgba(224, 114, 50, 0.12));
+}
+
+/* ==========================================================================
+   TARA BALAM CHART & NAVBAR JATHAGAM BUTTON
+   ========================================================================== */
+
+/* Navbar Jathagam Button */
+.ep-nav-jathagam-btn {
+  background: linear-gradient(135deg, #831843, #500724);
+  color: #FDE68A !important;
+  border: 1px solid #F59E0B;
+  padding: 0.38rem 1.05rem;
+  border-radius: 6px;
+  font-weight: 700;
+  font-size: 0.92rem;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  box-shadow: 0 2px 6px rgba(131, 24, 67, 0.25);
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.ep-nav-jathagam-btn:hover {
+  background: linear-gradient(135deg, #9D174D, #831843);
+  color: #FFFFFF !important;
+  box-shadow: 0 4px 12px rgba(131, 24, 67, 0.4);
+  transform: translateY(-1px);
+}
+
+/* Tara Balam Metric Cards */
+.tb-stat-card {
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  border-radius: 10px;
+  padding: 1rem 1.15rem;
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.tb-stat-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.tb-stat-icon {
+  font-size: 1.85rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 46px;
+  height: 46px;
+  border-radius: 10px;
+  background: #FFFDF8;
+  border: 1px solid #FED7AA;
+  flex-shrink: 0;
+}
+
+.tb-stat-info {
+  flex: 1;
+}
+
+.tb-stat-label {
+  font-size: 0.74rem;
+  color: #64748B;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 2px;
+}
+
+.tb-stat-value {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #0F172A;
+  line-height: 1.25;
+}
+
+.tb-stat-sub {
+  font-size: 0.75rem;
+  color: #64748B;
+  margin-top: 2px;
+}
+
+/* Highlight Pulse Animation */
+@keyframes epHighlightPulse {
+  0% { box-shadow: 0 0 0 0 rgba(245, 158, 11, 0.7); }
+  50% { box-shadow: 0 0 0 12px rgba(245, 158, 11, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(245, 158, 11, 0); }
+}
+
+.ep-highlight-pulse {
+  animation: epHighlightPulse 1.8s ease-in-out;
+  border-color: #F59E0B !important;
+}
+
+/* Tara Tables */
+.tb-master-table th, .tb-master-table td,
+.tb-planets-table th, .tb-planets-table td {
+  padding: 0.7rem 0.85rem;
+  font-size: 0.86rem;
+  vertical-align: middle;
+}
+
+.tb-master-table tbody tr:nth-child(even),
+.tb-planets-table tbody tr:nth-child(even) {
+  background: #FFFDF8;
+}
+
+.tb-master-table tbody tr:hover,
+.tb-planets-table tbody tr:hover {
+  background: #FEF9C3;
+}
+
+.tb-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 0.22rem 0.65rem;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.tb-badge-good {
+  background: #ECFDF5;
+  color: #065F46;
+  border: 1px solid #A7F3D0;
+}
+
+.tb-badge-caution {
+  background: #FFFBEB;
+  color: #92400E;
+  border: 1px solid #FDE68A;
+}
+
+.tb-badge-danger {
+  background: #FEF2F2;
+  color: #991B1B;
+  border: 1px solid #FECACA;
+}
+
+.tb-badge-star {
+  display: inline-block;
+  background: #F1F5F9;
+  color: #1E293B;
+  border: 1px solid #CBD5E1;
+  padding: 0.15rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+/* ========================================================
+   JAMAKKOL AAROODAM (ஜாமக்கோள் ஆரூடம்) STYLES
+   ======================================================== */
+.ep-nav-jamakkol-btn {
+  background: linear-gradient(135deg, #6B21A8, #4C1D95);
+  color: #FDE68A !important;
+  border: 1px solid #D8B4FE;
+  padding: 0.38rem 1.05rem;
+  border-radius: 6px;
+  font-weight: 700;
+  font-size: 0.92rem;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  box-shadow: 0 2px 8px rgba(107, 33, 168, 0.28);
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.ep-nav-jamakkol-btn:hover {
+  background: linear-gradient(135deg, #7E22CE, #581C87);
+  color: #FFFFFF !important;
+  box-shadow: 0 4px 14px rgba(107, 33, 168, 0.45);
+  transform: translateY(-1px);
+}
+
+.ep-nav-career-btn {
+  background: linear-gradient(135deg, #1E3A8A, #0F172A);
+  color: #FDE68A !important;
+  border: 1px solid #3B82F6;
+  padding: 0.38rem 1.05rem;
+  border-radius: 6px;
+  font-weight: 700;
+  font-size: 0.92rem;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  box-shadow: 0 2px 8px rgba(30, 58, 138, 0.35);
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.ep-nav-career-btn:hover {
+  background: linear-gradient(135deg, #2563EB, #1D4ED8);
+  color: #FFFFFF !important;
+  box-shadow: 0 4px 14px rgba(37, 99, 235, 0.5);
+  transform: translateY(-1px);
+}
+
+
+/* Jamakkol Metric Cards */
+.jk-stat-card {
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  border-radius: 10px;
+  padding: 1rem 1.15rem;
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.jk-stat-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(107, 33, 168, 0.12);
+}
+
+.jk-stat-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.35rem;
+  flex-shrink: 0;
+}
+
+.jk-badge-udhayam {
+  background: #FEF3C7;
+  color: #7C2D12;
+  border: 1px solid #FCD34D;
+  padding: 0.2rem 0.6rem;
+  border-radius: 4px;
+  font-weight: 800;
+  font-size: 0.82rem;
+}
+
+.jk-badge-aaroodam {
+  background: #1E293B;
+  color: #FFFFFF;
+  border: 1px solid #334155;
+  padding: 0.2rem 0.6rem;
+  border-radius: 4px;
+  font-weight: 800;
+  font-size: 0.82rem;
+}
+
+.jk-badge-kavippu {
+  background: #E11D48;
+  color: #FFFFFF;
+  border: 1px solid #BE123C;
+  padding: 0.2rem 0.6rem;
+  border-radius: 4px;
+  font-weight: 800;
+  font-size: 0.82rem;
+}
+
+.jk-badge-maandi {
+  background: #EDE9FE;
+  color: #5B21B6;
+  border: 1px solid #C4B5FD;
+  padding: 0.2rem 0.6rem;
+  border-radius: 4px;
+  font-weight: 800;
+  font-size: 0.82rem;
+}
+
+.jk-verdict-card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.jk-verdict-card:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.jk-toggle-btn {
+  transition: all 0.2s ease;
+}
+
+.jk-toggle-btn.active {
+  background: #7E22CE !important;
+  color: #FFFFFF !important;
+}
+
+/* ==========================================================================
+   Lagna Tyajyam (லக்ன தியாஜ்யம்) - Time & Traditional Calculation
+   ========================================================================== */
+.ep-lt-container {
+  background: #FFFFFF;
+  border-radius: 14px;
+  border: 1px solid #FED7AA;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.lt-chip-btn {
+  padding: 0.35rem 0.75rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  border-radius: 999px;
+  border: 1px solid #CBD5E1;
+  background: #FFFFFF;
+  color: #334155;
+  cursor: pointer;
+  transition: all 0.18s ease;
+  user-select: none;
+}
+.lt-chip-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+.lt-chip-btn.active {
+  background: linear-gradient(135deg, #831843 0%, #701A75 100%) !important;
+  color: #FFFFFF !important;
+  border-color: #831843 !important;
+  box-shadow: 0 2px 8px rgba(131, 24, 67, 0.3) !important;
+}
+
+.lt-chip-first {
+  border-color: #FDBA74;
+  color: #9A3412;
+  background: #FFF7ED;
+}
+.lt-chip-middle {
+  border-color: #D8B4FE;
+  color: #6B21A8;
+  background: #FAF5FF;
+}
+.lt-chip-last {
+  border-color: #FECDD3;
+  color: #9F1239;
+  background: #FFF1F2;
+}
+
+.lt-timeline-segment {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.76rem;
+  font-weight: 800;
+  color: #FFFFFF;
+  transition: opacity 0.2s ease;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.2);
+}
+.lt-timeline-segment:hover {
+  opacity: 0.9;
+  filter: brightness(1.08);
+}
+
+.lt-stat-card {
+  background: #FFFFFF;
+  border-radius: 12px;
+  padding: 1.1rem;
+  border: 1px solid #E2E8F0;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  transition: transform 0.2s ease;
+}
+.lt-stat-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+.lt-stat-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.35rem;
+  flex-shrink: 0;
+}
+
+/* ==========================================================================
+   Nakshatra Tyajyam (நட்சத்திர தியாஜ்யம்) - Time & Traditional Calculation
+   ========================================================================== */
+.ep-nt-container {
+  background: #FFFFFF;
+  border-radius: 14px;
+  border: 1px solid #C7D2FE;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.nt-chips-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  max-height: 220px;
+  overflow-y: auto;
+  padding: 0.5rem;
+  background: #F8FAFC;
+  border-radius: 10px;
+  border: 1px solid #E2E8F0;
+}
+
+.nt-chip-btn {
+  padding: 0.32rem 0.65rem;
+  font-size: 0.78rem;
+  font-weight: 700;
+  border-radius: 999px;
+  border: 1px solid #CBD5E1;
+  background: #FFFFFF;
+  color: #334155;
+  cursor: pointer;
+  transition: all 0.18s ease;
+  user-select: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.nt-chip-btn .nt-chip-fraction {
+  font-size: 0.7rem;
+  font-weight: 800;
+  padding: 0.1rem 0.35rem;
+  border-radius: 999px;
+  background: #E0E7FF;
+  color: #3730A3;
+}
+
+.nt-chip-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  border-color: #6366F1;
+}
+
+.nt-chip-btn.active {
+  background: linear-gradient(135deg, #4338CA 0%, #312E81 100%) !important;
+  color: #FFFFFF !important;
+  border-color: #4338CA !important;
+  box-shadow: 0 2px 8px rgba(67, 56, 202, 0.35) !important;
+}
+
+.nt-chip-btn.active .nt-chip-fraction {
+  background: rgba(255, 255, 255, 0.25);
+  color: #FFFFFF;
+}
+
+.nt-timeline-segment {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.76rem;
+  font-weight: 800;
+  color: #FFFFFF;
+  transition: opacity 0.2s ease;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.2);
+}
+
+.nt-timeline-segment:hover {
+  opacity: 0.9;
+  filter: brightness(1.08);
+}
+
+/* ==========================================================================
+   Tithi Tyajyam (திதி தியாஜ்யம்) - Time & Traditional Calculation
+   ========================================================================== */
+.ep-tt-container {
+  background: #FFFFFF;
+  border-radius: 14px;
+  border: 1px solid #C7D2FE;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.tt-chips-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  max-height: 220px;
+  overflow-y: auto;
+  padding: 0.5rem;
+  background: #F8FAFC;
+  border-radius: 10px;
+  border: 1px solid #E2E8F0;
+}
+
+.tt-chip-btn {
+  padding: 0.35rem 0.75rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  border-radius: 999px;
+  border: 1px solid #CBD5E1;
+  background: #FFFFFF;
+  color: #334155;
+  cursor: pointer;
+  transition: all 0.18s ease;
+  user-select: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.tt-chip-btn .tt-chip-fraction {
+  font-size: 0.72rem;
+  font-weight: 800;
+  padding: 0.1rem 0.4rem;
+  border-radius: 999px;
+  background: #E0E7FF;
+  color: #3730A3;
+}
+
+.tt-chip-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  border-color: #6366F1;
+}
+
+.tt-chip-btn.active {
+  background: linear-gradient(135deg, #4338CA 0%, #312E81 100%) !important;
+  color: #FFFFFF !important;
+  border-color: #4338CA !important;
+  box-shadow: 0 2px 8px rgba(67, 56, 202, 0.35) !important;
+}
+
+.tt-chip-btn.active .tt-chip-fraction {
+  background: rgba(255, 255, 255, 0.25);
+  color: #FFFFFF;
+}
+
+.tt-timeline-segment {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.76rem;
+  font-weight: 800;
+  color: #FFFFFF;
+  transition: opacity 0.2s ease;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.2);
+}
+
+.tt-timeline-segment:hover {
+  opacity: 0.9;
+  filter: brightness(1.08);
+}
+
+/* ==========================================================================
+   Vara Tyajyam (வார தியாஜ்யம்) - Weekday Fixed Nazhigai Calculation
+   ========================================================================== */
+.ep-vt-container {
+  background: #FFFFFF;
+  border-radius: 14px;
+  border: 1px solid #C7D2FE;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.vt-chips-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  padding: 0.5rem;
+  background: #F8FAFC;
+  border-radius: 10px;
+  border: 1px solid #E2E8F0;
+}
+
+.vt-chip-btn {
+  padding: 0.38rem 0.85rem;
+  font-size: 0.82rem;
+  font-weight: 700;
+  border-radius: 999px;
+  border: 1px solid #CBD5E1;
+  background: #FFFFFF;
+  color: #334155;
+  cursor: pointer;
+  transition: all 0.18s ease;
+  user-select: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.vt-chip-btn .vt-chip-ghatikas {
+  font-size: 0.74rem;
+  font-weight: 800;
+  padding: 0.1rem 0.45rem;
+  border-radius: 999px;
+  background: #E0E7FF;
+  color: #3730A3;
+}
+
+.vt-chip-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  border-color: #6366F1;
+}
+
+.vt-chip-btn.active {
+  background: linear-gradient(135deg, #4338CA 0%, #312E81 100%) !important;
+  color: #FFFFFF !important;
+  border-color: #4338CA !important;
+  box-shadow: 0 2px 8px rgba(67, 56, 202, 0.35) !important;
+}
+
+.vt-chip-btn.active .vt-chip-ghatikas {
+  background: rgba(255, 255, 255, 0.25);
+  color: #FFFFFF;
+}
+
+.vt-timeline-segment {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.76rem;
+  font-weight: 800;
+  color: #FFFFFF;
+  transition: opacity 0.2s ease;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.2);
+}
+
+.vt-timeline-segment:hover {
+  opacity: 0.9;
+  filter: brightness(1.08);
+}
+
+/* ==========================================================================
+   PLANETARY HORA (கிரக ஹோரா - 3-LEVEL HIERARCHY) STYLES
+   ========================================================================== */
+.ep-hora-container {
+  background: #FFFFFF;
+  border: 1px solid #E0E7FF;
+  border-radius: 14px;
+  box-shadow: 0 4px 20px rgba(49, 46, 129, 0.06);
+}
+
+.hora-tab-btn {
+  background: transparent;
+  color: #4338CA;
+  border: none;
+  cursor: pointer;
+  border-radius: 8px;
+  padding: 0.45rem 1.15rem;
+  font-weight: 800;
+  font-size: 0.9rem;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hora-tab-btn:hover {
+  background: rgba(255, 255, 255, 0.6);
+  color: #312E81;
+}
+
+.hora-tab-btn.active {
+  background: #312E81 !important;
+  color: #FFFFFF !important;
+  box-shadow: 0 2px 6px rgba(49, 46, 129, 0.35);
+}
+
+.hora-tree-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.hora-card {
+  background: #FFFFFF;
+  border: 1.5px solid #E2E8F0;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: all 0.25s ease;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+}
+
+.hora-card:hover {
+  border-color: #818CF8;
+  box-shadow: 0 4px 12px rgba(99, 102, 241, 0.1);
+}
+
+.hora-card.active {
+  border-color: #F59E0B;
+  box-shadow: 0 0 0 2px rgba(245, 158, 11, 0.3), 0 4px 16px rgba(245, 158, 11, 0.15);
+  background: linear-gradient(to right, #FFFDF5, #FFFFFF);
+}
+
+.hora-card-header {
+  padding: 0.9rem 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  user-select: none;
+  background: inherit;
+  transition: background 0.2s;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.hora-card-header:hover {
+  background: #F8FAFC;
+}
+
+.hora-card.active .hora-card-header:hover {
+  background: #FFFBEB;
+}
+
+.hora-phase-day {
+  background: #FEF3C7;
+  color: #92400E;
+  border: 1px solid #FDE68A;
+}
+
+.hora-phase-night {
+  background: #EEF2FF;
+  color: #3730A3;
+  border: 1px solid #C7D2FE;
+}
+
+.hora-sub-panel {
+  display: none;
+  background: #F8FAFC;
+  border-top: 1px solid #E2E8F0;
+  padding: 0.85rem 1rem 1rem 1.25rem;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.hora-sub-panel.expanded {
+  display: flex;
+}
+
+.hora-sub-card {
+  background: #FFFFFF;
+  border: 1px solid #CBD5E1;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: all 0.2s;
+}
+
+.hora-sub-card:hover {
+  border-color: #6366F1;
+  box-shadow: 0 2px 8px rgba(99, 102, 241, 0.08);
+}
+
+.hora-sub-card.active {
+  border-color: #10B981;
+  box-shadow: 0 0 0 2px rgba(16, 185, 129, 0.25);
+  background: #F0FDF4;
+}
+
+.hora-sub-header {
+  padding: 0.65rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  user-select: none;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.hora-sub-header:hover {
+  background: #F1F5F9;
+}
+
+.hora-sub-card.active .hora-sub-header:hover {
+  background: #DCFCE7;
+}
+
+.hora-subsub-panel {
+  display: none;
+  background: #F8FAFC;
+  border-top: 1px solid #E2E8F0;
+  padding: 0.75rem;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 0.55rem;
+}
+
+.hora-subsub-panel.expanded {
+  display: grid;
+}
+
+.hora-subsub-card {
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  border-radius: 8px;
+  padding: 0.55rem 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  transition: all 0.15s;
+}
+
+.hora-subsub-card:hover {
+  background: #F1F5F9;
+  border-color: #94A3B8;
+}
+
+.hora-subsub-card.active {
+  background: #ECFDF5;
+  border: 1.5px solid #059669;
+  box-shadow: 0 2px 6px rgba(5, 150, 105, 0.2);
+}
+
+.hora-chevron {
+  transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  display: inline-block;
+  font-size: 0.8rem;
+  color: #64748B;
+}
+
+.hora-chevron.open {
+  transform: rotate(180deg);
+}
+
+.hora-active-pulse {
+  animation: horaPulseGlow 2s infinite;
+}
+
+/* ==========================================================================
+   12 BAVA PALAN (12 Bhava Predictions - பாவ பலன்கள்)
+   ========================================================================== */
+.bp-filter-bar {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 1.25rem;
+  padding-bottom: 0.65rem;
+  border-bottom: 1.5px dashed #F6D7B0;
+}
+
+.bp-filter-btn {
+  background: #FFFFFF;
+  border: 1px solid #CBD5E1;
+  border-radius: 999px;
+  padding: 0.4rem 0.95rem;
+  font-size: 0.84rem;
+  font-weight: 700;
+  color: #334155;
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
+}
+
+.bp-filter-btn:hover {
+  background: #FEF3C7;
+  border-color: #F59E0B;
+  color: #92400E;
+  transform: translateY(-1px);
+}
+
+.bp-filter-btn.active {
+  background: linear-gradient(135deg, #7C2D12 0%, #991B1B 100%);
+  border-color: #7C2D12;
+  color: #FFFFFF;
+  box-shadow: 0 2px 8px rgba(124, 45, 18, 0.35);
+}
+
+.bp-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+  gap: 1.25rem;
+}
+
+.bp-card {
+  background: #FFFFFF;
+  border: 1.5px solid #F6D7B0;
+  border-radius: 12px;
+  padding: 1.25rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.bp-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(180, 83, 9, 0.12);
+  border-color: #D97706;
+}
+
+.bp-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 0.85rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid #F1F5F9;
+  gap: 0.5rem;
+}
+
+.bp-card-num-badge {
+  background: linear-gradient(135deg, #1E293B, #0F172A);
+  color: #F7D774;
+  border: 1px solid rgba(212, 175, 55, 0.6);
+  font-weight: 800;
+  font-size: 0.8rem;
+  padding: 0.2rem 0.65rem;
+  border-radius: 6px;
+  display: inline-block;
+  margin-bottom: 0.35rem;
+  letter-spacing: 0.5px;
+}
+
+.bp-card-title {
+  color: #831843;
+  font-size: 1.08rem;
+  font-weight: 700;
+  margin: 0;
+  line-height: 1.4;
+  font-family: 'Noto Sans Tamil', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+.bp-meta-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-bottom: 0.85rem;
+}
+
+.bp-pill-tag {
+  font-size: 0.78rem;
+  font-weight: 600;
+  padding: 0.22rem 0.6rem;
+  border-radius: 6px;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  line-height: 1.3;
+}
+
+.bp-pill-rasi {
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  color: #1E40AF;
+}
+
+.bp-pill-lord {
+  background: #FEF3C7;
+  border: 1px solid #FDE68A;
+  color: #92400E;
+}
+
+.bp-pill-planets {
+  background: #F0FDF4;
+  border: 1px solid #BBF7D0;
+  color: #166534;
+}
+
+.bp-pill-empty {
+  background: #F8FAFC;
+  border: 1px solid #E2E8F0;
+  color: #64748B;
+}
+
+.bp-card-points {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+  flex: 1;
+}
+
+.bp-point-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.55rem;
+  font-size: 0.88rem;
+  line-height: 1.65;
+  color: #334155;
+  background: #FAFAF9;
+  border: 1px solid #F5F5F4;
+  padding: 0.5rem 0.65rem;
+  border-radius: 8px;
+}
+
+.bp-point-icon {
+  color: #D97706;
+  font-size: 0.85rem;
+  margin-top: 0.15rem;
+  flex-shrink: 0;
+}
+
+@media (max-width: 600px) {
+  .bp-cards-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ========================================================
+   CAREER, JOB VS BUSINESS & TIMING ENGINE STYLES (தொழில் கணிப்பு)
+   ======================================================== */
+.career-timing-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.career-hero-banner {
+  background: linear-gradient(135deg, rgba(15, 23, 42, 0.95), rgba(30, 41, 59, 0.95));
+  border: 1px solid rgba(212, 175, 55, 0.4);
+  border-radius: 14px;
+  padding: 1.5rem;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+}
+
+.career-grid-2 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1.25rem;
+}
+
+.career-card-glass {
+  background: rgba(14, 22, 46, 0.85);
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  border-radius: 12px;
+  padding: 1.35rem;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+}
+
+.career-meter-wrapper {
+  background: rgba(15, 23, 42, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 10px;
+  padding: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
+.career-meter-item {
+  margin-bottom: 1rem;
+}
+
+.career-meter-item:last-child {
+  margin-bottom: 0;
+}
+
+.career-meter-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.4rem;
+  font-size: 0.9rem;
+}
+
+.career-meter-track {
+  width: 100%;
+  height: 18px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 999px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: inset 0 2px 4px rgba(0,0,0,0.4);
+}
+
+.career-meter-fill {
+  height: 100%;
+  border-radius: 999px;
+  transition: width 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 6px;
+  font-size: 0.75rem;
+  font-weight: 800;
+  color: #FFF;
+}
+
+.career-meter-fill-job {
+  background: linear-gradient(90deg, #2563EB, #38BDF8);
+  box-shadow: 0 0 12px rgba(56, 189, 248, 0.4);
+}
+
+.career-meter-fill-biz {
+  background: linear-gradient(90deg, #D97706, #10B981);
+  box-shadow: 0 0 12px rgba(16, 185, 129, 0.4);
+}
+
+.career-verdict-box {
+  background: rgba(16, 185, 129, 0.12);
+  border: 1.5px solid #10B981;
+  border-radius: 12px;
+  padding: 1.25rem;
+  margin-top: 1rem;
+  box-shadow: 0 4px 16px rgba(16, 185, 129, 0.15);
+}
+
+.career-sector-card {
+  background: rgba(15, 23, 42, 0.85);
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  border-radius: 12px;
+  padding: 1.35rem;
+  margin-bottom: 1.25rem;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.career-sector-card:hover {
+  transform: translateY(-2px);
+  border-color: #D4AF37;
+}
+
+.career-sector-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 5px;
+  height: 100%;
+  background: linear-gradient(180deg, #F59E0B, #10B981);
+}
+
+.career-role-pills-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.75rem;
+}
+
+.career-role-pill {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: #E2E8F0;
+  font-size: 0.82rem;
+  padding: 0.3rem 0.7rem;
+  border-radius: 6px;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+.career-role-pill:hover {
+  background: rgba(212, 175, 55, 0.15);
+  border-color: rgba(212, 175, 55, 0.4);
+  color: #FDE68A;
+}
+
+.career-milestone-step {
+  background: rgba(15, 23, 42, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 10px;
+  padding: 1.15rem;
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  position: relative;
+  margin-bottom: 0.85rem;
+}
+
+.career-milestone-icon-wrap {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(212, 175, 55, 0.15);
+  border: 1.5px solid #D4AF37;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  flex-shrink: 0;
+}
+
+.career-dasha-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 0.85rem;
+  margin-top: 1rem;
+}
+
+.career-dasha-stat {
+  background: rgba(15, 23, 42, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+  padding: 0.85rem;
+  text-align: center;
+}
+
+.career-remedy-box {
+  background: rgba(14, 22, 46, 0.85);
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  border-radius: 10px;
+  padding: 1.15rem;
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+}
+
+/* Glowing Career Module Pill & Callout */
+.ep-pill-career {
+  background: linear-gradient(135deg, #1E3A8A, #1D4ED8) !important;
+  color: #FDE68A !important;
+  border: 1.5px solid #60A5FA !important;
+  font-weight: 800 !important;
+  box-shadow: 0 0 10px rgba(59, 130, 246, 0.45) !important;
+  animation: pulse-glow-career 2.5s infinite ease-in-out;
+}
+
+@keyframes pulse-glow-career {
+  0%, 100% {
+    box-shadow: 0 0 8px rgba(59, 130, 246, 0.4);
+    border-color: #60A5FA;
+  }
+  50% {
+    box-shadow: 0 0 16px rgba(96, 165, 250, 0.8);
+    border-color: #93C5FD;
+  }
+}
+
+.ep-quick-career-callout {
+  transition: all 0.25s ease;
+}
+
+.ep-quick-career-callout:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(30, 58, 138, 0.55);
+}
+
+/* Career Education Switcher Buttons */
+.career-edu-filter-pill-wrap {
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+  transition: all 0.25s ease;
+}
+
+.career-edu-btn {
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  color: #CBD5E1;
+  padding: 0.35rem 0.75rem;
+  border-radius: 6px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  outline: none;
+}
+
+.career-edu-btn:hover {
+  background: rgba(212, 175, 55, 0.2);
+  border-color: #D4AF37;
+  color: #FDE68A;
+  transform: translateY(-1px);
+}
+
+.career-edu-btn.active {
+  background: linear-gradient(135deg, #F59E0B, #D97706);
+  border-color: #FBBF24;
+  color: #FFFFFF;
+  font-weight: 700;
+  box-shadow: 0 2px 8px rgba(245, 158, 11, 0.4);
+}
+
+/* ==========================================
+   REAL-TIME LIVE CALCULATION & QUICK PRESETS
+   ========================================== */
+.live-calc-banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  background: #ECFDF5;
+  border: 1px solid #A7F3D0;
+  padding: 0.6rem 0.9rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  transition: all 0.25s ease-in-out;
+}
+
+.live-calc-banner.banner-pulsing {
+  background: #D1FAE5;
+  border-color: #34D399;
+  box-shadow: 0 0 12px rgba(16, 185, 129, 0.35);
+  transform: scale(1.008);
+}
+
+.live-pulse-dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background-color: #10B981;
+  border-radius: 50%;
+  box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7);
+  animation: livePulseAnim 1.6s infinite;
+}
+
+@keyframes livePulseAnim {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7);
+  }
+  70% {
+    transform: scale(1.15);
+    box-shadow: 0 0 0 8px rgba(16, 185, 129, 0);
+  }
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(16, 185, 129, 0);
+  }
+}
+
+.ep-quick-presets-bar {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+  padding: 0.6rem 0.8rem;
+  background: #F8FAFC;
+  border: 1px solid #E2E8F0;
+  border-radius: 8px;
+}
+
+.ep-preset-quick-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.4rem 0.85rem;
+  font-size: 0.82rem;
+  font-weight: 700;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: 1px solid #CBD5E1;
+  background: #FFFFFF;
+  color: #334155;
+}
+
+.ep-preset-quick-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.ep-preset-quick-btn.active-preset {
+  background: linear-gradient(135deg, #1E3A8A, #2563EB);
+  color: #FFFFFF;
+  border-color: #1D4ED8;
+  box-shadow: 0 2px 8px rgba(37, 99, 235, 0.3);
+}
+
+.career-live-sync-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  background: #ECFDF5;
+  color: #065F46;
+  border: 1px solid #A7F3D0;
+  padding: 0.25rem 0.65rem;
+  border-radius: 9999px;
+}
+
+
+
+
+
+
+
+
+
+
+
+

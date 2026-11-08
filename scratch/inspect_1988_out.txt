@@ -1,0 +1,39 @@
+=== 1988 PLANETS DETAILED ===
+Su   | சூரியன்  | மேஷம்      ( 0) |  16.85° | பரணி-2 (Ve) | Dig: உச்சம் (Exalted) | Retro: False | Combust: False
+Mo   | சந்திரன் | துலாம்     ( 6) |   1.56° | சித்திரை-3 (Ma) | Dig: நட்பு (Friendly) | Retro: False | Combust: False
+Ma   | செவ்வாய் | மகரம்      ( 9) |  22.20° | திருவோணம்-4 (Mo) | Dig: உச்சம் (Exalted) | Retro: False | Combust: False
+Me   | புதன்    | மேஷம்      ( 0) |  28.29° | கார்த்திகை-1 (Su) | Dig: நட்பு (Friendly) | Retro: False | Combust: True
+Ju   | குரு     | மேஷம்      ( 0) |  18.44° | பரணி-2 (Ve) | Dig: நட்பு (Friendly) | Retro: False | Combust: True
+Ve   | சுக்கிரன் | ரிஷபம்     ( 1) |  28.91° | மிருகசீரிஷம்-2 (Ma) | Dig: ஆட்சி (Own Sign) | Retro: False | Combust: False
+Sa   | சனி      | தனுசு      ( 8) |   8.54° | மூலம்-3 (Ke) | Dig: நட்பு (Friendly) | Retro: True | Combust: False
+Ra   | ராகு     | கும்பம்    (10) |  27.07° | பூரட்டாதி-3 (Ju) | Dig: ஆட்சி (Own Sign) | Retro: True | Combust: False
+Ke   | கேது     | சிம்மம்    ( 4) |  27.07° | உத்திரம்-1 (Su) | Dig: நட்பு (Friendly) | Retro: True | Combust: False
+Asc  | லக்னம்   | தனுசு      ( 8) |   8.62° | மூலம்-3 (Ke) | Dig: நட்பு (Friendly) | Retro: False | Combust: False
+Man  | மாந்தி   | மகரம்      ( 9) |   7.74° | உத்திராடம்-4 (Su) | Dig: நட்பு (Friendly) | Retro: False | Combust: False
+
+=== BHAVAS (From Dhanusu Lagna) ===
+Bhava  1 (தனுசு     ): Sa (சனி)
+Bhava  2 (மகரம்     ): Ma (செவ்வாய்), Man (மாந்தி)
+Bhava  3 (கும்பம்   ): Ra (ராகு)
+Bhava  4 (மீனம்     ): Empty
+Bhava  5 (மேஷம்     ): Su (சூரியன்), Me (புதன்), Ju (குரு)
+Bhava  6 (ரிஷபம்    ): Ve (சுக்கிரன்)
+Bhava  7 (மிதுனம்   ): Empty
+Bhava  8 (கடகம்     ): Empty
+Bhava  9 (சிம்மம்   ): Ke (கேது)
+Bhava 10 (கன்னி     ): Empty
+Bhava 11 (துலாம்    ): Mo (சந்திரன்)
+Bhava 12 (விருச்சிகம்): Empty
+
+=== D9 NAVAMSHA ===
+Su   in D9: கன்னி (5)
+Mo   in D9: துலாம் (6)
+Ma   in D9: கடகம் (3)
+Me   in D9: தனுசு (8)
+Ju   in D9: கன்னி (5)
+Ve   in D9: கன்னி (5)
+Sa   in D9: மிதுனம் (2)
+Ra   in D9: மிதுனம் (2)
+Ke   in D9: தனுசு (8)
+Asc  in D9: மிதுனம் (2)
+Man  in D9: மேஷம் (0)

@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="ta">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>108 பாதங்கள் &amp; ராசி பண்புகள் · Exact Jathagam (துல்லிய ஜாதகம்)</title>
+  <meta name="description" content="108 நட்சத்திர பாதங்களைப் பார்க்கவும். ஒவ்வொரு ராசியிலும் 9 பாதங்கள்; ஒவ்வொரு நட்சத்திரத்திலும் 4 பாதங்கள். ராசி பண்புகள் தமிழ் ஆய்வு அட்டவணையிலிருந்து காட்டப்படுகின்றன.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Mukta+Malar:wght@400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css">
+  <style>
+    body {
+      background: #F8FAFC;
+      color: #0F172A;
+      font-family: 'Mukta Malar', 'Outfit', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    .standalone-nav {
+      background: #FFFFFF;
+      border-bottom: 1px solid #E2E8F0;
+      padding: 0.75rem 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.03);
+    }
+    .standalone-container {
+      max-width: 1200px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+    .back-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      color: #831843;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 0.9rem;
+      background: #FDF2F8;
+      border: 1px solid #FBCFE8;
+      padding: 0.4rem 0.85rem;
+      border-radius: 6px;
+      transition: all 0.2s;
+    }
+    .back-btn:hover {
+      background: #FCE7F3;
+    }
+  </style>
+</head>
+<body>
+  <!-- Top Navigation Bar -->
+  <header class="standalone-nav">
+    <div style="display: flex; align-items: center; gap: 0.75rem;">
+      <span style="font-size: 1.5rem;">🪐</span>
+      <div>
+        <div style="font-weight: 800; font-size: 1.15rem; color: #831843;">துல்லிய ஜாதகம் · Exact Jathagam</div>
+        <div style="font-size: 0.75rem; color: #64748B;">108 நட்சத்திர பாதங்கள் ஆய்வுப் பெட்டகம்</div>
+      </div>
+    </div>
+    <div>
+      <a href="index.html" class="back-btn">⬅ முதன்மை ஜாதகத்திற்குத் திரும்பு</a>
+    </div>
+  </header>
+
+  <main class="standalone-container">
+    <div class="ep-pada-card">
+      <div class="ep-section-header-card" style="margin-bottom: 1rem;">
+        <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem; width: 100%;">
+          <div style="display: flex; align-items: center; gap: 0.5rem;">
+            <h1 class="ep-header-title-burgundy" style="margin: 0; font-size: 1.4rem; display: flex; align-items: center; gap: 0.5rem;">
+              <span>✨</span> 108 பாதங்கள் (108 Nakshatra Padas)
+            </h1>
+          </div>
+          <span style="font-size: 0.8rem; background: #FEF3C7; color: #92400E; padding: 0.25rem 0.75rem; border-radius: 999px; font-weight: 700; border: 1px solid #FCD34D;">
+            27 நட்சத்திரங்கள் • 108 பாதங்கள்
+          </span>
+        </div>
+      </div>
+
+      <p style="font-size: 0.92rem; color: #334155; line-height: 1.65; margin-bottom: 1.25rem;">
+        108 நட்சத்திர பாதங்களைப் பார்க்கவும். ஒவ்வொரு ராசியிலும் 9 பாதங்கள்; ஒவ்வொரு நட்சத்திரத்திலும் 4 பாதங்கள். ராசி பண்புகள் தமிழ் ஆய்வு அட்டவணையிலிருந்து காட்டப்படுகின்றன.
+      </p>
+
+      <!-- Filter Controls Bar -->
+      <div class="ep-pada-filter-bar">
+        <div class="ep-pada-field">
+          <label for="padaNumberInput" class="ep-pada-label">பாத எண்:</label>
+          <input type="number" id="padaNumberInput" class="ep-pada-input" min="1" max="108" value="1" style="width: 100px;" />
+        </div>
+
+        <div class="ep-pada-field">
+          <label for="padaNakshatraFilter" class="ep-pada-label">நட்சத்திர வடிகட்டி</label>
+          <select id="padaNakshatraFilter" class="ep-pada-select">
+            <option value="all">அனைத்தும்</option>
+          </select>
+        </div>
+
+        <div class="ep-pada-field">
+          <label for="padaRasiFilter" class="ep-pada-label">ராசி வடிகட்டி</label>
+          <select id="padaRasiFilter" class="ep-pada-select">
+            <option value="all">அனைத்தும்</option>
+          </select>
+        </div>
+
+        <div class="ep-pada-actions">
+          <button type="button" id="btnShowPada" class="ep-pada-btn-primary">
+            பாதத்தைக் காட்டு
+          </button>
+          <button type="button" id="btnResetPada" class="ep-pada-btn-reset">
+            மீட்டு அமை
+          </button>
+          <button type="button" id="btnTogglePadaBrowse" class="ep-pada-btn-browse">
+            பாதங்களைப் பார்க்க
+          </button>
+        </div>
+      </div>
+
+      <!-- 2-Column Details Grid: Left Card - Pada Details / Right Card - Rasi Attributes -->
+      <div class="ep-pada-details-grid">
+        <!-- Left: Pada Details -->
+        <div class="ep-pada-box" id="padaDetailsBox">
+          <div class="ep-pada-box-header">
+            <h2 class="ep-pada-box-title">
+              <span>🌟</span> <span id="padaTitleDisplay">பாத எண் 1</span>
+            </h2>
+            <span id="padaBadgeDisplay" class="ep-pada-badge-num">அசுவினி · பாதம் 1</span>
+          </div>
+          <table class="ep-pada-table">
+            <tbody id="padaDetailsTableBody"></tbody>
+          </table>
+        </div>
+
+        <!-- Right: Rasi Attributes -->
+        <div class="ep-pada-box" id="rasiAttributesBox">
+          <div class="ep-pada-box-header">
+            <h2 class="ep-pada-box-title">
+              <span>♈</span> <span id="rasiTitleDisplay">ராசி பண்புகள்</span>
+            </h2>
+            <span id="rasiElementDisplay" class="ep-pada-badge-num">அக்னி</span>
+          </div>
+          <table class="ep-pada-table">
+            <tbody id="rasiAttributesTableBody"></tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Collapsible 108 Padas Directory Browser Grid -->
+      <div id="padaDirectorySection" class="ep-pada-directory-wrap" style="display: none;">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem; flex-wrap: wrap; gap: 0.5rem;">
+          <h3 style="color: #831843; margin: 0; font-size: 1rem; font-weight: 700;">
+            📚 108 நட்சத்திர பாதங்களின் முழுமையான அட்டவணை
+          </h3>
+          <span style="font-size: 0.8rem; color: #64748B;">ஏதேனும் பாதத்தைக் கிளிக் செய்து விவரங்களைக் காணலாம்</span>
+        </div>
+        <div id="padaDirectoryGrid" class="ep-pada-dir-grid"></div>
+      </div>
+    </div>
+  </main>
+
+  <script src="js/pada-108-engine.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const numInput = document.getElementById("padaNumberInput");
+      const nakSelect = document.getElementById("padaNakshatraFilter");
+      const rasiSelect = document.getElementById("padaRasiFilter");
+      const btnShow = document.getElementById("btnShowPada");
+      const btnReset = document.getElementById("btnResetPada");
+      const btnBrowse = document.getElementById("btnTogglePadaBrowse");
+      const padaTitle = document.getElementById("padaTitleDisplay");
+      const padaBadge = document.getElementById("padaBadgeDisplay");
+      const padaTbody = document.getElementById("padaDetailsTableBody");
+      const rasiTitle = document.getElementById("rasiTitleDisplay");
+      const rasiElement = document.getElementById("rasiElementDisplay");
+      const rasiTbody = document.getElementById("rasiAttributesTableBody");
+      const dirSection = document.getElementById("padaDirectorySection");
+      const dirGrid = document.getElementById("padaDirectoryGrid");
+
+      // Populate filter dropdowns
+      nakSelect.innerHTML = `<option value="all">அனைத்தும்</option>` +
+        Pada108Engine.NAKSHATRA_NAMES_TA.map(name => `<option value="${name}">${name}</option>`).join("");
+      rasiSelect.innerHTML = `<option value="all">அனைத்தும்</option>` +
+        Pada108Engine.RASI_NAMES_TA.map(name => `<option value="${name}">${name}</option>`).join("");
+
+      function renderPada(num) {
+        let n = parseInt(num, 10);
+        if (isNaN(n) || n < 1) n = 1;
+        if (n > 108) n = 108;
+        numInput.value = n;
+
+        const p = Pada108Engine.getPadaDetails(n);
+        const r = p.rasiAttributes;
+
+        padaTitle.textContent = `பாத எண் ${p.padaNum}`;
+        padaBadge.textContent = `${p.nakshatra} · பாதம் ${p.padaInNak}`;
+
+        padaTbody.innerHTML = `
+          <tr><td class="label-cell">நட்சத்திரம்</td><td class="val-cell"><strong>${p.nakshatra}</strong></td></tr>
+          <tr><td class="label-cell">நட்சத்திரத்துள் பாதம்</td><td class="val-cell">${p.padaInNak}</td></tr>
+          <tr><td class="label-cell">ராசி</td><td class="val-cell"><strong>${p.rasi}</strong></td></tr>
+          <tr><td class="label-cell">நவாம்சம்</td><td class="val-cell"><strong>${p.navamsha}</strong></td></tr>
+          <tr><td class="label-cell">ராசி பூதம்</td><td class="val-cell">${p.rasiElement}</td></tr>
+          <tr><td class="label-cell">நட்சத்திர பூதம்</td><td class="val-cell">${p.nakElement}</td></tr>
+          <tr><td class="label-cell">பாகை வீச்சு</td><td class="val-cell"><code style="background: #F1F5F9; padding: 2px 6px; border-radius: 4px; font-weight: 700; color: #0F172A;">${p.degreeRange}</code></td></tr>
+          <tr><td class="label-cell">நட்சத்திர அதிபதி</td><td class="val-cell">${p.nakLord}</td></tr>
+          <tr><td class="label-cell">நட்சத்திர பூதக் குறிப்பு</td><td class="val-cell" style="font-size: 0.82rem; color: #475569; line-height: 1.4;">${p.elementNote}</td></tr>
+          <tr><td class="label-cell">சந்திர தாக்கம்</td><td class="val-cell" style="font-size: 0.82rem; color: #475569; line-height: 1.4;">${p.chandraImpact}</td></tr>
+          <tr><td class="label-cell">பாத பண்பு</td><td class="val-cell" style="font-size: 0.82rem; color: #475569; line-height: 1.4;">${p.padaTrait}</td></tr>
+          <tr><td class="label-cell">குணக்குறிப்பு</td><td class="val-cell" style="font-size: 0.82rem; color: #1E293B; font-weight: 600; line-height: 1.4;">${p.gunaKurippu}</td></tr>
+          <tr><td class="label-cell">முதன்மை பண்பு</td><td class="val-cell"><span style="color: #9D174D; font-weight: 700;">${p.primaryTrait}</span></td></tr>
+        `;
+
+        rasiTitle.textContent = `ராசி பண்புகள் (${r.name})`;
+        rasiElement.textContent = `${r.bootham}`;
+
+        rasiTbody.innerHTML = `
+          <tr><td class="label-cell">பூதம்</td><td class="val-cell">${r.bootham}</td></tr>
+          <tr><td class="label-cell">திசை</td><td class="val-cell">${r.direction}</td></tr>
+          <tr><td class="label-cell">குணம்</td><td class="val-cell">${r.gunam}</td></tr>
+          <tr><td class="label-cell">வர்ணம்</td><td class="val-cell">${r.varnam}</td></tr>
+          <tr><td class="label-cell">வகை</td><td class="val-cell">${r.vagai}</td></tr>
+          <tr><td class="label-cell">பால்</td><td class="val-cell">${r.gender}</td></tr>
+          <tr><td class="label-cell">அதிபதி</td><td class="val-cell"><strong>${r.lord}</strong></td></tr>
+          <tr><td class="label-cell">நிறம்</td><td class="val-cell">${r.color}</td></tr>
+          <tr><td class="label-cell">உடல் உறுப்பு</td><td class="val-cell">${r.bodyPart}</td></tr>
+          <tr><td class="label-cell">இயல்பு</td><td class="val-cell">${r.nature}</td></tr>
+          <tr><td class="label-cell">மனநிலை</td><td class="val-cell">${r.mentalState}</td></tr>
+          <tr><td class="label-cell">யோகம்</td><td class="val-cell">${r.yogam}</td></tr>
+          <tr><td class="label-cell">குணங்கள்</td><td class="val-cell">${r.gunangal}</td></tr>
+          <tr><td class="label-cell">பருவம்</td><td class="val-cell">${r.season}</td></tr>
+          <tr><td class="label-cell">உலோகம்</td><td class="val-cell">${r.metal}</td></tr>
+          <tr><td class="label-cell">கல்</td><td class="val-cell"><strong>${r.gem}</strong></td></tr>
+          <tr><td class="label-cell">நன்மை எண்கள்</td><td class="val-cell">${r.luckyNumbers}</td></tr>
+          <tr><td class="label-cell">தொழில்</td><td class="val-cell" style="font-size: 0.82rem;">${r.career}</td></tr>
+          <tr><td class="label-cell">உயரம்</td><td class="val-cell">${r.height}</td></tr>
+          <tr><td class="label-cell">இடம்</td><td class="val-cell" style="font-size: 0.82rem;">${r.place}</td></tr>
+          <tr><td class="label-cell">தானியம்</td><td class="val-cell">${r.grain}</td></tr>
+          <tr><td class="label-cell">சுவை</td><td class="val-cell">${r.taste}</td></tr>
+          <tr><td class="label-cell">மலர்</td><td class="val-cell">${r.flower}</td></tr>
+          <tr><td class="label-cell">வடிவம்</td><td class="val-cell">${r.shape}</td></tr>
+        `;
+
+        renderDirectory(n);
+      }
+
+      function renderDirectory(selectedNum) {
+        const selectedNak = nakSelect.value;
+        const selectedRasi = rasiSelect.value;
+        const list = Pada108Engine.filterPadas(selectedNak, selectedRasi);
+
+        dirGrid.innerHTML = list.map(item => `
+          <div class="ep-pada-dir-item ${item.padaNum === selectedNum ? 'is-selected' : ''}" data-padanum="${item.padaNum}">
+            <div class="ep-pada-dir-num">பாதம் #${item.padaNum}</div>
+            <div class="ep-pada-dir-name">${item.nakshatra} - ${item.padaInNak}</div>
+            <div class="ep-pada-dir-sub">${item.rasi} · நவா: ${item.navamsha}</div>
+          </div>
+        `).join("");
+
+        dirGrid.querySelectorAll(".ep-pada-dir-item").forEach(item => {
+          item.addEventListener("click", () => {
+            const clickedNum = parseInt(item.getAttribute("data-padanum"), 10);
+            renderPada(clickedNum);
+          });
+        });
+      }
+
+      btnShow.addEventListener("click", () => renderPada(numInput.value));
+      numInput.addEventListener("change", () => renderPada(numInput.value));
+      numInput.addEventListener("keyup", (e) => {
+        if (e.key === "Enter") renderPada(numInput.value);
+      });
+
+      btnReset.addEventListener("click", () => {
+        nakSelect.value = "all";
+        rasiSelect.value = "all";
+        renderPada(1);
+      });
+
+      btnBrowse.addEventListener("click", () => {
+        const isHidden = dirSection.style.display === "none";
+        dirSection.style.display = isHidden ? "block" : "none";
+        btnBrowse.textContent = isHidden ? "அட்டவணையை மறை" : "பாதங்களைப் பார்க்க";
+      });
+
+      nakSelect.addEventListener("change", () => {
+        const chosen = nakSelect.value;
+        if (chosen !== "all") {
+          const idx = Pada108Engine.NAKSHATRA_NAMES_TA.indexOf(chosen);
+          if (idx >= 0) {
+            renderPada(idx * 4 + 1);
+            return;
+          }
+        }
+        renderPada(numInput.value);
+      });
+
+      rasiSelect.addEventListener("change", () => {
+        const chosen = rasiSelect.value;
+        if (chosen !== "all") {
+          const idx = Pada108Engine.RASI_NAMES_TA.indexOf(chosen);
+          if (idx >= 0) {
+            renderPada(idx * 9 + 1);
+            return;
+          }
+        }
+        renderPada(numInput.value);
+      });
+
+      // Initial render on load
+      renderPada(1);
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,72 @@
+[
+  {
+    "date": "2026-10-27",
+    "weekday": "Tuesday",
+    "tithi": "கிருஷ்ண பட்சம் (தேய்பிறை) - துவிதியை",
+    "tithi_num": 17,
+    "paksha": "Krishna Paksha",
+    "nakshatra": "பரணி - 3ம் பாதம்",
+    "nak_index": 1,
+    "tara": "Naidhana",
+    "tara_num": 7,
+    "moon_sign": "Mesham",
+    "is_chandrashtama": false,
+    "yoga": "சித்தி"
+  },
+  {
+    "date": "2026-10-28",
+    "weekday": "Wednesday",
+    "tithi": "கிருஷ்ண பட்சம் (தேய்பிறை) - திருதியை",
+    "tithi_num": 18,
+    "paksha": "Krishna Paksha",
+    "nakshatra": "கார்த்திகை - 4ம் பாதம்",
+    "nak_index": 2,
+    "tara": "Mitra",
+    "tara_num": 8,
+    "moon_sign": "Rishabham",
+    "is_chandrashtama": true,
+    "yoga": "வியதீபாதம்"
+  },
+  {
+    "date": "2026-10-29",
+    "weekday": "Thursday",
+    "tithi": "கிருஷ்ண பட்சம் (தேய்பிறை) - சதுர்த்தி",
+    "tithi_num": 19,
+    "paksha": "Krishna Paksha",
+    "nakshatra": "ரோகிணி - 4ம் பாதம்",
+    "nak_index": 3,
+    "tara": "Parama Mitra",
+    "tara_num": 9,
+    "moon_sign": "Rishabham",
+    "is_chandrashtama": true,
+    "yoga": "பரிகம்"
+  },
+  {
+    "date": "2026-10-30",
+    "weekday": "Friday",
+    "tithi": "கிருஷ்ண பட்சம் (தேய்பிறை) - பஞ்சமி",
+    "tithi_num": 20,
+    "paksha": "Krishna Paksha",
+    "nakshatra": "திருவாதிரை - 1ம் பாதம்",
+    "nak_index": 5,
+    "tara": "Sampat",
+    "tara_num": 2,
+    "moon_sign": "Midhunam",
+    "is_chandrashtama": false,
+    "yoga": "சிவம்"
+  },
+  {
+    "date": "2026-10-31",
+    "weekday": "Saturday",
+    "tithi": "கிருஷ்ண பட்சம் (தேய்பிறை) - சஷ்டி",
+    "tithi_num": 21,
+    "paksha": "Krishna Paksha",
+    "nakshatra": "புனர்பூசம் - 1ம் பாதம்",
+    "nak_index": 6,
+    "tara": "Vipat",
+    "tara_num": 3,
+    "moon_sign": "Midhunam",
+    "is_chandrashtama": false,
+    "yoga": "சித்தம்"
+  }
+]

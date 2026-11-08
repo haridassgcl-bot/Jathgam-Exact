@@ -1,0 +1,346 @@
+=== 1988-04-30 22:10 TIRUVANNAMALAI ===
+Lagna: {'code': 'Asc', 'nameTa': 'லக்னம்', 'nameEn': 'Lagna', 'longitude': 248.625, 'signId': 8, 'signNameTa': 'தனுசு', 'signNameEn': 'Sagittarius', 'deg': 8, 'min': 37, 'sec': 29, 'nakshatraId': 18, 'nakshatraNameTa': 'மூலம்', 'nakshatraNameEn': 'Mula', 'pada': 3, 'starLord': 'Ke', 'dignityTa': 'நட்பு (Friendly)', 'dignityEn': 'Friendly', 'isExalted': False, 'isDebilitated': False, 'isRetrograde': False, 'isCombust': False, 'displayPosition': '8° 37\' 29"'}
+Panchangam: {'tithi': {'nameTa': 'சதுர்த்தசி', 'nameEn': 'Chaturdashi', 'pakshaTa': 'சுக்ல பட்சம் (வளர்பிறை)', 'pakshaEn': 'Shukla Paksha', 'number': 14, 'elapsedPercent': 72.59, 'displayTa': 'சுக்ல பட்சம் (வளர்பிறை) - சதுர்த்தசி'}, 'karanam': {'nameTa': 'வனசை', 'nameEn': 'Vanija', 'type': 'Chara', 'elapsedPercent': 45.17}, 'yoga': {'nameTa': 'வஜ்ரம்', 'nameEn': 'Vajra', 'natureTa': 'அசுபம்', 'natureEn': 'Inauspicious', 'elapsedPercent': 88.01}, 'nakshatra': {'nameTa': 'சித்திரை', 'index': 13, 'pada': 3, 'elapsedPercent': 61.67, 'displayTa': 'சித்திரை - 3ம் பாதம்'}, 'vaaram': {'nameTa': 'சனி', 'nameEn': 'Saturday', 'lord': 'சனி (Saturn)'}, 'inauspiciousTimings': {'rahuKalam': '09:00 - 10:30', 'yamagandam': '13:30 - 15:00', 'kuligai': '06:00 - 07:30'}}
+
+=== PLANETS ===
+Su   | சூரியன்  (Sun    ) | மேஷம்      ( 0) | 16° 50' 43" | பரணி-2 (Ve) | Dig: உச்சம் (Exalted) | Retro: False | Combust: False
+Mo   | சந்திரன் (Moon   ) | துலாம்     ( 6) | 1° 33' 20" | சித்திரை-3 (Ma) | Dig: நட்பு (Friendly) | Retro: False | Combust: False
+Ma   | செவ்வாய் (Mars   ) | மகரம்      ( 9) | 22° 11' 59" | திருவோணம்-4 (Mo) | Dig: உச்சம் (Exalted) | Retro: False | Combust: False
+Me   | புதன்    (Mercury) | மேஷம்      ( 0) | 28° 17' 23" | கார்த்திகை-1 (Su) | Dig: நட்பு (Friendly) | Retro: False | Combust: True
+Ju   | குரு     (Jupiter) | மேஷம்      ( 0) | 18° 26' 17" | பரணி-2 (Ve) | Dig: நட்பு (Friendly) | Retro: False | Combust: True
+Ve   | சுக்கிரன் (Venus  ) | ரிஷபம்     ( 1) | 28° 54' 29" | மிருகசீரிஷம்-2 (Ma) | Dig: ஆட்சி (Own Sign) | Retro: False | Combust: False
+Sa   | சனி      (Saturn ) | தனுசு      ( 8) | 8° 32' 12" | மூலம்-3 (Ke) | Dig: நட்பு (Friendly) | Retro: True | Combust: False
+Ra   | ராகு     (Rahu   ) | கும்பம்    (10) | 27° 4' 0"  | பூரட்டாதி-3 (Ju) | Dig: ஆட்சி (Own Sign) | Retro: True | Combust: False
+Ke   | கேது     (Ketu   ) | சிம்மம்    ( 4) | 27° 4' 0"  | உத்திரம்-1 (Su) | Dig: நட்பு (Friendly) | Retro: True | Combust: False
+Asc  | லக்னம்   (Lagna  ) | தனுசு      ( 8) | 8° 37' 30" | மூலம்-3 (Ke) | Dig: நட்பு (Friendly) | Retro: False | Combust: False
+Man  | மாந்தி   (Mandi  ) | மகரம்      ( 9) | 7° 44' 12" | உத்திராடம்-4 (Su) | Dig: நட்பு (Friendly) | Retro: False | Combust: False
+
+DASHA BALANCE: செவ்வாய் தசை இருப்பு: 2 வருடம், 8 மாதம், 5 நாள்
+Current Dasha: சனி (Sa)
+Current Bhukti: சனி (Sa)
+
+=== DASHAS & BHUKTIS ===
+
+DASHA: செவ்வாய் (Ma) : 1988-04-30 to 1991-01-05 (Years: 2.68)
+    Bhukti: செவ்வாய் (Ma) : 1988-04-30 to 1988-09-27
+    Bhukti: ராகு     (Ra) : 1988-09-27 to 1989-10-15
+    Bhukti: குரு     (Ju) : 1989-10-15 to 1990-09-21
+    Bhukti: சனி      (Sa) : 1990-09-21 to 1991-10-31
+    Bhukti: புதன்    (Me) : 1991-10-31 to 1992-10-27
+    Bhukti: கேது     (Ke) : 1992-10-27 to 1993-03-25
+    Bhukti: சுக்கிரன் (Ve) : 1993-03-25 to 1994-05-25
+    Bhukti: சூரியன்  (Su) : 1994-05-25 to 1994-09-30
+    Bhukti: சந்திரன் (Mo) : 1994-09-30 to 1995-05-01
+
+DASHA: ராகு (Ra) : 1991-01-05 to 2009-01-05 (Years: 18.0)
+    Bhukti: ராகு     (Ra) : 1991-01-05 to 1993-09-18
+    Bhukti: குரு     (Ju) : 1993-09-18 to 1996-02-11
+    Bhukti: சனி      (Sa) : 1996-02-11 to 1998-12-18
+    Bhukti: புதன்    (Me) : 1998-12-18 to 2001-07-06
+    Bhukti: கேது     (Ke) : 2001-07-06 to 2002-07-25
+    Bhukti: சுக்கிரன் (Ve) : 2002-07-25 to 2005-07-25
+    Bhukti: சூரியன்  (Su) : 2005-07-25 to 2006-06-18
+    Bhukti: சந்திரன் (Mo) : 2006-06-18 to 2007-12-18
+    Bhukti: செவ்வாய் (Ma) : 2007-12-18 to 2009-01-05
+
+DASHA: குரு (Ju) : 2009-01-05 to 2025-01-05 (Years: 16.0)
+    Bhukti: குரு     (Ju) : 2009-01-05 to 2011-02-23
+    Bhukti: சனி      (Sa) : 2011-02-23 to 2013-09-05
+    Bhukti: புதன்    (Me) : 2013-09-05 to 2015-12-12
+    Bhukti: கேது     (Ke) : 2015-12-12 to 2016-11-17
+    Bhukti: சுக்கிரன் (Ve) : 2016-11-17 to 2019-07-19
+    Bhukti: சூரியன்  (Su) : 2019-07-19 to 2020-05-06
+    Bhukti: சந்திரன் (Mo) : 2020-05-06 to 2021-09-05
+    Bhukti: செவ்வாய் (Ma) : 2021-09-05 to 2022-08-12
+    Bhukti: ராகு     (Ra) : 2022-08-12 to 2025-01-05
+
+DASHA: சனி (Sa) : 2025-01-05 to 2044-01-05 (Years: 19.0)
+    Bhukti: சனி      (Sa) : 2025-01-05 to 2028-01-08
+    Bhukti: புதன்    (Me) : 2028-01-08 to 2030-09-18
+    Bhukti: கேது     (Ke) : 2030-09-18 to 2031-10-27
+    Bhukti: சுக்கிரன் (Ve) : 2031-10-27 to 2034-12-27
+    Bhukti: சூரியன்  (Su) : 2034-12-27 to 2035-12-09
+    Bhukti: சந்திரன் (Mo) : 2035-12-09 to 2037-07-09
+    Bhukti: செவ்வாய் (Ma) : 2037-07-09 to 2038-08-18
+    Bhukti: ராகு     (Ra) : 2038-08-18 to 2041-06-24
+    Bhukti: குரு     (Ju) : 2041-06-24 to 2044-01-05
+
+DASHA: புதன் (Me) : 2044-01-05 to 2061-01-04 (Years: 17.0)
+    Bhukti: புதன்    (Me) : 2044-01-05 to 2046-06-03
+    Bhukti: கேது     (Ke) : 2046-06-03 to 2047-05-31
+    Bhukti: சுக்கிரன் (Ve) : 2047-05-31 to 2050-03-31
+    Bhukti: சூரியன்  (Su) : 2050-03-31 to 2051-02-04
+    Bhukti: சந்திரன் (Mo) : 2051-02-04 to 2052-07-06
+    Bhukti: செவ்வாய் (Ma) : 2052-07-06 to 2053-07-03
+    Bhukti: ராகு     (Ra) : 2053-07-03 to 2056-01-20
+    Bhukti: குரு     (Ju) : 2056-01-20 to 2058-04-27
+    Bhukti: சனி      (Sa) : 2058-04-27 to 2061-01-04
+
+DASHA: கேது (Ke) : 2061-01-04 to 2068-01-05 (Years: 7.0)
+    Bhukti: கேது     (Ke) : 2061-01-04 to 2061-06-03
+    Bhukti: சுக்கிரன் (Ve) : 2061-06-03 to 2062-08-03
+    Bhukti: சூரியன்  (Su) : 2062-08-03 to 2062-12-09
+    Bhukti: சந்திரன் (Mo) : 2062-12-09 to 2063-07-10
+    Bhukti: செவ்வாய் (Ma) : 2063-07-10 to 2063-12-06
+    Bhukti: ராகு     (Ra) : 2063-12-06 to 2064-12-23
+    Bhukti: குரு     (Ju) : 2064-12-23 to 2065-11-29
+    Bhukti: சனி      (Sa) : 2065-11-29 to 2067-01-08
+    Bhukti: புதன்    (Me) : 2067-01-08 to 2068-01-05
+
+DASHA: சுக்கிரன் (Ve) : 2068-01-05 to 2088-01-05 (Years: 20.0)
+    Bhukti: சுக்கிரன் (Ve) : 2068-01-05 to 2071-05-07
+    Bhukti: சூரியன்  (Su) : 2071-05-07 to 2072-05-06
+    Bhukti: சந்திரன் (Mo) : 2072-05-06 to 2074-01-05
+    Bhukti: செவ்வாய் (Ma) : 2074-01-05 to 2075-03-07
+    Bhukti: ராகு     (Ra) : 2075-03-07 to 2078-03-06
+    Bhukti: குரு     (Ju) : 2078-03-06 to 2080-11-04
+    Bhukti: சனி      (Sa) : 2080-11-04 to 2084-01-05
+    Bhukti: புதன்    (Me) : 2084-01-05 to 2086-11-05
+    Bhukti: கேது     (Ke) : 2086-11-05 to 2088-01-05
+
+DASHA: சூரியன் (Su) : 2088-01-05 to 2094-01-04 (Years: 6.0)
+    Bhukti: சூரியன்  (Su) : 2088-01-05 to 2088-04-24
+    Bhukti: சந்திரன் (Mo) : 2088-04-24 to 2088-10-23
+    Bhukti: செவ்வாய் (Ma) : 2088-10-23 to 2089-02-28
+    Bhukti: ராகு     (Ra) : 2089-02-28 to 2090-01-23
+    Bhukti: குரு     (Ju) : 2090-01-23 to 2090-11-11
+    Bhukti: சனி      (Sa) : 2090-11-11 to 2091-10-24
+    Bhukti: புதன்    (Me) : 2091-10-24 to 2092-08-29
+    Bhukti: கேது     (Ke) : 2092-08-29 to 2093-01-04
+    Bhukti: சுக்கிரன் (Ve) : 2093-01-04 to 2094-01-04
+
+DASHA: சந்திரன் (Mo) : 2094-01-04 to 2104-01-06 (Years: 10.0)
+    Bhukti: சந்திரன் (Mo) : 2094-01-04 to 2094-11-05
+    Bhukti: செவ்வாய் (Ma) : 2094-11-05 to 2095-06-06
+    Bhukti: ராகு     (Ra) : 2095-06-06 to 2096-12-05
+    Bhukti: குரு     (Ju) : 2096-12-05 to 2098-04-06
+    Bhukti: சனி      (Sa) : 2098-04-06 to 2099-11-05
+    Bhukti: புதன்    (Me) : 2099-11-05 to 2101-04-06
+    Bhukti: கேது     (Ke) : 2101-04-06 to 2101-11-05
+    Bhukti: சுக்கிரன் (Ve) : 2101-11-05 to 2103-07-07
+    Bhukti: சூரியன்  (Su) : 2103-07-07 to 2104-01-06
+
+=== CAREER OUTPUT ===
+{
+  "house10": {
+    "signId": 5,
+    "signTa": "கன்னி",
+    "signEn": "Virgo",
+    "lord": "Me",
+    "lordTa": "புதன்",
+    "occupants": [],
+    "subathuvam": {
+      "gradeKey": "grade_1",
+      "gradeTa": "முதல் நிலை சுபத்துவம் (1st Grade Subathuvam - Guru Blessed)",
+      "gradeEn": "1st Grade Subathuvam (Supreme Beneficence)",
+      "subathuvaPoints": 50,
+      "paavathuvaPoints": 22,
+      "sookshmaPoints": 0,
+      "natureTa": "கௌரவமான அரசுப் பணி, உயர் நிர்வாகம், வெள்ளை காலர் உத்தியோகம் (White-collar), ஆலோசனை, வங்கி அல்லது நேர்மையான பெரும் தொழில் யோகம்.",
+      "natureEn": "Prestigious civil/corporate administration, white-collar advisory, high-level banking, or high-tier enterprise."
+    },
+    "fieldSignatures": {
+      "planetTa": "புதன்",
+      "subathuvamTa": "தகவல் தொழில்நுட்பம் (IT/Software), பட்டயக் கணக்காளர் (CA/Auditing), வங்கி, ஜோதிடம், பத்திரிகைத் துறை, கல்லூரி விரிவுரையாளர், வர்த்தக புரோக்கரேஜ் & கமிஷன் ஏஜென்சி.",
+      "subathuvamEn": "IT & Software Engineering, Chartered Accountancy, Banking, Astrology, Journalism, Academic Professorship, Commercial Brokerage.",
+      "paavathuvamTa": "அச்சுக்கூட கூலி ஆள் (Printing press), கொரியர் & தபால் விநியோகம், போலி ஆவணங்கள், கீழ்நிலை எழுதுவினைஞர்.",
+      "paavathuvamEn": "Printing press labor, courier dispatch, stationery clerical, petty brokerage."
+    }
+  },
+  "house2": {
+    "signId": 9,
+    "signTa": "மகரம்",
+    "signEn": "Capricorn",
+    "lord": "Sa",
+    "lordTa": "சனி",
+    "occupants": [
+      "Ma",
+      "Man"
+    ],
+    "subathuvam": {
+      "gradeKey": "grade_1",
+      "gradeTa": "முதல் நிலை சுபத்துவம் (1st Grade Subathuvam - Guru Blessed)",
+      "gradeEn": "1st Grade Subathuvam (Supreme Beneficence)",
+      "subathuvaPoints": 36,
+      "paavathuvaPoints": 0,
+      "sookshmaPoints": 16,
+      "natureTa": "கௌரவமான அரசுப் பணி, உயர் நிர்வாகம், வெள்ளை காலர் உத்தியோகம் (White-collar), ஆலோசனை, வங்கி அல்லது நேர்மையான பெரும் தொழில் யோகம்.",
+      "natureEn": "Prestigious civil/corporate administration, white-collar advisory, high-level banking, or high-tier enterprise."
+    },
+    "fieldSignatures": {
+      "planetTa": "சனி",
+      "subathuvamTa": "ரயில்வே துறை, பெரிய தொழிற்சாலைகள், ஆயில் & எரிவாயு சுத்திகரிப்பு (Oil & Gas), இரும்பு & எஃகு ஆலை, பொதுஜன அமைப்பு, மனிதவள மேலாண்மை (HR), நீதி பரிபாலனம்.",
+      "subathuvamEn": "Indian Railways, Heavy Manufacturing, Oil & Gas Refineries, Steel Plants, Mass Transport, Human Resources, Labor Union Leadership.",
+      "paavathuvamTa": "துப்புரவுப் பணி, பழைய இரும்பு/ஸ்கிராப் வியாபாரம், சுமை தூக்குதல், காலணி தயாரிப்பு, கட்டிடக் கூலி வேலை.",
+      "paavathuvamEn": "Sanitation, scrap metal dealing, manual loading, footwear/leather, heavy construction labor."
+    }
+  },
+  "jobVsBusiness": {
+    "jobScore": 57,
+    "bizScore": 62,
+    "verdictKey": "hybrid",
+    "verdictTa": "🔄 இரட்டை யோகம்: முதலில் உத்தியோகம், பின் சொந்த தொழில் (Dual / Hybrid Career)",
+    "verdictEn": "🔄 Hybrid Model: Corporate Foundation leading to Lucrative Business"
+  },
+  "dasaAnalysis": {
+    "dasaLord": "Sa",
+    "dasaLordTa": "சனி",
+    "bhuktiLord": "Me",
+    "bhuktiLordTa": "புதன்",
+    "dasaNatureTa": "சம தசை (Neutral Dasa)",
+    "dasaNatureEn": "Neutral Dasa",
+    "guidanceTa": "தற்போது நடக்கும் சனி தசையில் நிலைத்தன்மை மற்றும் சுய உழைப்புக்குரிய பலன்கள் கிடைக்கும்.",
+    "guidanceEn": "Active Saturn Dasa delivers steady returns through consistent effort.",
+    "businessViability": 70
+  },
+  "timingPredictions": {
+    "jobTimingTa": "கோச்சார குரு உங்கள் லக்னத்தையோ, 10-ஆம் வீட்டையோ அல்லது 6-ஆம் வீட்டையோ பார்க்கும் காலத்திலும், 6 அல்லது 10-ஆம் அதிபதிகளின் சுப புக்தியிலும் புதிய வேலை மற்றும் பதவி உயர்வு உறுதியாகக் கிடைக்கும்.",
+    "jobTimingEn": "Job appointments and appraisals materialize swiftly when transit Jupiter aspects the 10th or 6th house, or during 6th/10th lord benefic Bhukti.",
+    "businessTimingTa": "லக்ன யோக தசையும், முதல் நிலை சுபத்துவம் பெற்ற புக்தியும் தொடங்கும் காலமே சொந்தத் தொழில் தொடங்குவதற்கான பொற்காலம். அவயோக தசைகளிலோ அல்லது ஏழரை/அஷ்டம சனி காலங்களிலோ தொழில் தொடங்கக் கூடாது.",
+    "businessTimingEn": "The dawn of a Yoga Dasa alongside a 1st Grade Subathuva Bhukti is the golden period to launch an enterprise. Never inaugurate ventures during Avayoga Dashas or Sade Sati."
+  },
+  "milestones": [
+    {
+      "stage": "1. Career Entry & First Job",
+      "stageTa": "1. தொழில் தொடக்கம் & முதல் வேலை",
+      "age": "21 - 24",
+      "years": "2009 - 2012",
+      "descTa": "முறையான கல்வி மற்றும் பயிற்சியுடன் முதல் பணியில் காலடி எடுத்து வைக்கும் காலம்."
+    },
+    {
+      "stage": "2. Major Promotion & Stabilization",
+      "stageTa": "2. தொழில் நிலைப்பாடு & முதல் பெரிய உயர்வு",
+      "age": "26 - 30",
+      "years": "2014 - 2018",
+      "descTa": "பணியிடத்தில் முக்கிய அங்கீகாரம், ஊதிய உயர்வு, முன்னணி நிறுவனங்களுக்கு மாறுதல்."
+    },
+    {
+      "stage": "3. Breakthrough Zenith / Business Launch",
+      "stageTa": "3. மகத்தான தலைமை / சொந்த தொழில் தொடக்கம்",
+      "age": "33 - 38",
+      "years": "2021 - 2026",
+      "descTa": "தலைமைப் பதவி ஏறுதல் அல்லது தனியாக சொந்த தொழில் தொடங்கி பெரும் சாதனை படைத்தல்."
+    },
+    {
+      "stage": "4. Golden Peak Era & Lasting Wealth",
+      "stageTa": "4. பொற்காலம் & நிலைத்த தனலாபம்",
+      "age": "40 - 52",
+      "years": "2028 - 2040",
+      "descTa": "தொழில் முத்திரை, சமூக அந்தஸ்து மற்றும் உச்சக்கட்ட நிதி நிறைவு காணும் காலம்."
+    }
+  ],
+  "nextFavorableWindow": "ஜூலை 2027 – ஆகஸ்ட் 2028 (சிம்ம குரு பெயர்ச்சி யோகம்)",
+  "sectors": [
+    {
+      "id": "finance_banking",
+      "nameTa": "வங்கி, நிதி, கணக்கு & பங்குச்சந்தை (Banking, CA & Wealth Management)",
+      "nameEn": "Banking, Financial Markets, CA & Wealth Management",
+      "icon": "🏦",
+      "primaryPlanets": [
+        "Me",
+        "Ju",
+        "Ve"
+      ],
+      "favorableElements": [
+        "Earth",
+        "Air"
+      ],
+      "favorableSigns": [
+        1,
+        5,
+        9,
+        6
+      ],
+      "descriptionTa": "உங்கள் தனுசு லக்னத்திற்கு 10-ஆம் வீடான கர்ம ஸ்தானம் கன்னி ராசியாகும். அதன் அதிபதி புதன் லக்னத்திற்கு 5-ம் இடமான பூர்வ புண்ணிய ஸ்தானத்தில் (மேஷம்-ல்) சுப நட்பு நிலையில் அமைந்துள்ளார். [ஜாதகரின் கல்வித் தகுதி: டிப்ளமோ / ITI / தொழிற்கல்வி] மேலும் 10-ஆம் வீட்டை சனி சுபப் பார்வையால் நோக்குவது இத்துறைக்கு கூடுதல் அந்தஸ்தை அளிக்கிறது. 10-ஆம் அதிபதி முதல் நிலை சுபத்துவம் (1st Grade Subathuvam - Guru Blessed) பெற்றுள்ளதால் இந்நபருக்கு இத்துறையில் நிலையான கௌரவமும் உயர் அதிகாரமும் கிட்டும். தொழில் காரகனான அமத்யகாரகன் புதன் இந்நபருக்கு இத்துறையில் சமூக அங்கீகாரத்தை நல்குவார்.",
+      "descriptionEn": "Mercury's numerical precision, Jupiter's wealth stewardship, and Venus's liquidity yield immense distinction in Chartered Accountancy and Banking.",
+      "rolesTa": [
+        "Junior Accounts Assistant & Tally Specialist (இளநிலை கணக்காளர் & டேலி ஆபரேட்டர்)",
+        "Cooperative Bank Clerk / Cashier (கூட்டுறவு வங்கி எழுத்தர் / காசாளர்)",
+        "Commercial Billing & Inventory Store Keeper (பில்லிங் & ஸ்டோர் இன்சார்ஜ்)",
+        "Microfinance Loan Recovery Field Officer (மைக்ரோபைனான்ஸ் கடன் வசூல் அலுவலர்)",
+        "GST & Tax Filing Documentation Assistant (ஜிஎஸ்டி & வரி தாக்கல் உதவியாளர்)"
+      ],
+      "rolesEn": [
+        "Chartered Accountant (CA) & Audit Partner",
+        "Investment Banker & Portfolio Asset Manager",
+        "Equity Research & Algorithmic Stock Trader"
+      ],
+      "calculatedScore": 96,
+      "customExplanationTa": "உங்கள் தனுசு லக்னத்திற்கு 10-ஆம் வீடான கர்ம ஸ்தானம் கன்னி ராசியாகும். அதன் அதிபதி புதன் லக்னத்திற்கு 5-ம் இடமான பூர்வ புண்ணிய ஸ்தானத்தில் (மேஷம்-ல்) சுப நட்பு நிலையில் அமைந்துள்ளார். [ஜாதகரின் கல்வித் தகுதி: டிப்ளமோ / ITI / தொழிற்கல்வி] மேலும் 10-ஆம் வீட்டை சனி சுபப் பார்வையால் நோக்குவது இத்துறைக்கு கூடுதல் அந்தஸ்தை அளிக்கிறது. 10-ஆம் அதிபதி முதல் நிலை சுபத்துவம் (1st Grade Subathuvam - Guru Blessed) பெற்றுள்ளதால் இந்நபருக்கு இத்துறையில் நிலையான கௌரவமும் உயர் அதிகாரமும் கிட்டும். தொழில் காரகனான அமத்யகாரகன் புதன் இந்நபருக்கு இத்துறையில் சமூக அங்கீகாரத்தை நல்குவார்."
+    },
+    {
+      "id": "trade_foreign",
+      "nameTa": "வணிகம், வர்த்தகம் & ஏற்றுமதி (Trading, Logistics & Enterprise)",
+      "nameEn": "Commercial Trading, Supply Chain, Logistics & Import-Export",
+      "icon": "🚢",
+      "primaryPlanets": [
+        "Me",
+        "Ve",
+        "Ra",
+        "Sa"
+      ],
+      "favorableElements": [
+        "Air",
+        "Water"
+      ],
+      "favorableSigns": [
+        2,
+        6,
+        10,
+        8
+      ],
+      "descriptionTa": "உங்கள் தனுசு லக்னத்திற்கு 10-ஆம் வீடான கர்ம ஸ்தானம் கன்னி ராசியாகும். அதன் அதிபதி புதன் லக்னத்திற்கு 5-ம் இடமான பூர்வ புண்ணிய ஸ்தானத்தில் (மேஷம்-ல்) சுப நட்பு நிலையில் அமைந்துள்ளார். [ஜாதகரின் கல்வித் தகுதி: டிப்ளமோ / ITI / தொழிற்கல்வி] மேலும் 10-ஆம் வீட்டை சனி சுபப் பார்வையால் நோக்குவது இத்துறைக்கு கூடுதல் அந்தஸ்தை அளிக்கிறது. 10-ஆம் அதிபதி முதல் நிலை சுபத்துவம் (1st Grade Subathuvam - Guru Blessed) பெற்றுள்ளதால் இந்நபருக்கு இத்துறையில் நிலையான கௌரவமும் உயர் அதிகாரமும் கிட்டும். தொழில் காரகனான அமத்யகாரகன் புதன் இந்நபருக்கு இத்துறையில் சமூக அங்கீகாரத்தை நல்குவார்.",
+      "descriptionEn": "Mercury's commercial negotiation, Venus's market allure, and Saturn's distribution backbone enable lucrative trading and global logistics.",
+      "rolesTa": [
+        "Wholesale Trader & Distributor (மொத்த வர்த்தகர் & விநியோகஸ்தர்)",
+        "Supply Chain & Logistics Director (தளவாட மற்றும் சப்ளை செயின் மேலாளர்)",
+        "Import-Export Merchant (சர்வதேச ஏற்றுமதி-இறக்குமதி அதிபர்)"
+      ],
+      "rolesEn": [
+        "Wholesale Commodity Merchant & Stockist",
+        "Global Supply Chain & Logistics Director",
+        "Import-Export Trading House Founder"
+      ],
+      "calculatedScore": 76,
+      "customExplanationTa": "உங்கள் தனுசு லக்னத்திற்கு 10-ஆம் வீடான கர்ம ஸ்தானம் கன்னி ராசியாகும். அதன் அதிபதி புதன் லக்னத்திற்கு 5-ம் இடமான பூர்வ புண்ணிய ஸ்தானத்தில் (மேஷம்-ல்) சுப நட்பு நிலையில் அமைந்துள்ளார். [ஜாதகரின் கல்வித் தகுதி: டிப்ளமோ / ITI / தொழிற்கல்வி] மேலும் 10-ஆம் வீட்டை சனி சுபப் பார்வையால் நோக்குவது இத்துறைக்கு கூடுதல் அந்தஸ்தை அளிக்கிறது. 10-ஆம் அதிபதி முதல் நிலை சுபத்துவம் (1st Grade Subathuvam - Guru Blessed) பெற்றுள்ளதால் இந்நபருக்கு இத்துறையில் நிலையான கௌரவமும் உயர் அதிகாரமும் கிட்டும். தொழில் காரகனான அமத்யகாரகன் புதன் இந்நபருக்கு இத்துறையில் சமூக அங்கீகாரத்தை நல்குவார்."
+    },
+    {
+      "id": "it_software",
+      "nameTa": "தகவல் தொழில்நுட்பம் & AI (IT, Software & Artificial Intelligence)",
+      "nameEn": "IT, Software Engineering & AI Technology",
+      "icon": "💻",
+      "primaryPlanets": [
+        "Me",
+        "Ra",
+        "Ke",
+        "Ma"
+      ],
+      "favorableElements": [
+        "Air",
+        "Fire"
+      ],
+      "favorableSigns": [
+        2,
+        10,
+        5,
+        0
+      ],
+      "descriptionTa": "உங்கள் தனுசு லக்னத்திற்கு 10-ஆம் வீடான கர்ம ஸ்தானம் கன்னி ராசியாகும். அதன் அதிபதி புதன் லக்னத்திற்கு 5-ம் இடமான பூர்வ புண்ணிய ஸ்தானத்தில் (மேஷம்-ல்) சுப நட்பு நிலையில் அமைந்துள்ளார். [ஜாதகரின் கல்வித் தகுதி: டிப்ளமோ / ITI / தொழிற்கல்வி] மேலும் 10-ஆம் வீட்டை சனி சுபப் பார்வையால் நோக்குவது இத்துறைக்கு கூடுதல் அந்தஸ்தை அளிக்கிறது. 10-ஆம் அதிபதி முதல் நிலை சுபத்துவம் (1st Grade Subathuvam - Guru Blessed) பெற்றுள்ளதால் இந்நபருக்கு இத்துறையில் நிலையான கௌரவமும் உயர் அதிகாரமும் கிட்டும். தொழில் காரகனான அமத்யகாரகன் புதன் இந்நபருக்கு இத்துறையில் சமூக அங்கீகாரத்தை நல்குவார்.",
+      "descriptionEn": "Mercury's analytical logic combined with Rahu's technological innovation and Ketu's algorithmic depth creates stellar prowess in IT and AI.",
+      "rolesTa": [
+        "Software Architect / Tech Lead (முதுநிலை மென்பொருள் வடிவமைப்பாளர்)",
+        "AI & Machine Learning Specialist (செயற்கை நுண்ணறிவு நிபுணர்)",
+        "Full-Stack Developer / Cloud Engineer (கிளவுட் மற்றும் மென்பொருள் பொறியாளர்)",
+        "Cyber Security Specialist (சைபர் பாதுகாப்பு நிபுணர்)"
+      ],
+      "rolesEn": [
+        "Software Architect & Technical Lead",
+        "AI & Machine Learning Specialist",
+        "Cloud Solutions & Full-Stack Engineer",
+        "Cyber Security & Big Data Analyst"
+      ],
+      "calculatedScore": 70,
+      "customExplanationTa": "உங்கள் தனுசு லக்னத்திற்கு 10-ஆம் வீடான கர்ம ஸ்தானம் கன்னி ராசியாகும். அதன் அதிபதி புதன் லக்னத்திற்கு 5-ம் இடமான பூர்வ புண்ணிய ஸ்தானத்தில் (மேஷம்-ல்) சுப நட்பு நிலையில் அமைந்துள்ளார். [ஜாதகரின் கல்வித் தகுதி: டிப்ளமோ / ITI / தொழிற்கல்வி] மேலும் 10-ஆம் வீட்டை சனி சுபப் பார்வையால் நோக்குவது இத்துறைக்கு கூடுதல் அந்தஸ்தை அளிக்கிறது. 10-ஆம் அதிபதி முதல் நிலை சுபத்துவம் (1st Grade Subathuvam - Guru Blessed) பெற்றுள்ளதால் இந்நபருக்கு இத்துறையில் நிலையான கௌரவமும் உயர் அதிகாரமும் கிட்டும். தொழில் காரகனான அமத்யகாரகன் புதன் இந்நபருக்கு இத்துறையில் சமூக அங்கீகாரத்தை நல்குவார்."
+    }
+  ]
+}

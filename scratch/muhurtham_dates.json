@@ -1,0 +1,74 @@
+[
+  {
+    "date": "2026-11-11",
+    "weekday": "Wednesday",
+    "tithi": "சுக்ல பட்சம் (வளர்பிறை) - துவிதியை",
+    "nakshatra": "அனுஷம் - 4ம் பாதம்",
+    "tara": "Kshema",
+    "yoga": "அதிகண்டம்",
+    "moon_sign": 7
+  },
+  {
+    "date": "2026-11-16",
+    "weekday": "Monday",
+    "tithi": "சுக்ல பட்சம் (வளர்பிறை) - சப்தமி",
+    "nakshatra": "திருவோணம் - 2ம் பாதம்",
+    "tara": "Parama Mitra",
+    "yoga": "கண்டம்",
+    "moon_sign": 9
+  },
+  {
+    "date": "2026-11-20",
+    "weekday": "Friday",
+    "tithi": "சுக்ல பட்சம் (வளர்பிறை) - ஏகாதசி",
+    "nakshatra": "உத்திரட்டாதி - 1ம் பாதம்",
+    "tara": "Kshema",
+    "yoga": "வஜ்ரம்",
+    "moon_sign": 11
+  },
+  {
+    "date": "2026-12-10",
+    "weekday": "Thursday",
+    "tithi": "சுக்ல பட்சம் (வளர்பிறை) - துவிதியை",
+    "nakshatra": "மூலம் - 2ம் பாதம்",
+    "tara": "Sadhana",
+    "yoga": "சூலம்",
+    "moon_sign": 8
+  },
+  {
+    "date": "2026-12-16",
+    "weekday": "Wednesday",
+    "tithi": "சுக்ல பட்சம் (வளர்பிறை) - சப்தமி",
+    "nakshatra": "சதயம் - 4ம் பாதம்",
+    "tara": "Sampat",
+    "yoga": "வஜ்ரம்",
+    "moon_sign": 10
+  },
+  {
+    "date": "2027-01-08",
+    "weekday": "Friday",
+    "tithi": "சுக்ல பட்சம் (வளர்பிறை) - பிரதமை",
+    "nakshatra": "உத்திராடம் - 1ம் பாதம்",
+    "tara": "Mitra",
+    "yoga": "வியாகாதம்",
+    "moon_sign": 8
+  },
+  {
+    "date": "2027-01-14",
+    "weekday": "Thursday",
+    "tithi": "சுக்ல பட்சம் (வளர்பிறை) - சஷ்டி",
+    "nakshatra": "உத்திரட்டாதி - 2ம் பாதம்",
+    "tara": "Kshema",
+    "yoga": "பரிகம்",
+    "moon_sign": 11
+  },
+  {
+    "date": "2027-02-08",
+    "weekday": "Monday",
+    "tithi": "சுக்ல பட்சம் (வளர்பிறை) - துவிதியை",
+    "nakshatra": "சதயம் - 2ம் பாதம்",
+    "tara": "Sampat",
+    "yoga": "பரிகம்",
+    "moon_sign": 10
+  }
+]

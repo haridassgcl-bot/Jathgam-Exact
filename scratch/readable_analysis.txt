@@ -1,0 +1,948 @@
+LAGNA: {'code': 'Asc', 'nameTa': 'லக்னம்', 'nameEn': 'Lagna', 'longitude': 248.1022, 'signId': 8, 'signNameTa': 'தனுசு', 'signNameEn': 'Sagittarius', 'deg': 8, 'min': 6, 'sec': 7, 'nakshatraId': 18, 'nakshatraNameTa': 'மூலம்', 'nakshatraNameEn': 'Mula', 'pada': 3, 'starLord': 'Ke', 'dignityTa': 'நட்பு (Friendly)', 'dignityEn': 'Friendly', 'isExalted': False, 'isDebilitated': False, 'isRetrograde': False, 'isCombust': False, 'displayPosition': '8° 6\' 7"'}
+PANCHANGAM: {'tithi': {'nameTa': 'பஞ்சமி', 'nameEn': 'Panchami', 'pakshaTa': 'சுக்ல பட்சம் (வளர்பிறை)', 'pakshaEn': 'Shukla Paksha', 'number': 5, 'elapsedPercent': 88.75, 'displayTa': 'சுக்ல பட்சம் (வளர்பிறை) - பஞ்சமி'}, 'karanam': {'nameTa': 'பாலவம்', 'nameEn': 'Balava', 'type': 'Chara', 'elapsedPercent': 77.51}, 'yoga': {'nameTa': 'சுகர்மம்', 'nameEn': 'Sukarma', 'natureTa': 'சுபம்', 'natureEn': 'Auspicious', 'elapsedPercent': 62.61}, 'nakshatra': {'nameTa': 'திருவாதிரை', 'index': 5, 'pada': 3, 'elapsedPercent': 51.24, 'displayTa': 'திருவாதிரை - 3ம் பாதம்'}, 'vaaram': {'nameTa': 'வியாழன்', 'nameEn': 'Thursday', 'lord': 'குரு (Jupiter)'}, 'inauspiciousTimings': {'rahuKalam': '13:30 - 15:00', 'yamagandam': '06:00 - 07:30', 'kuligai': '09:00 - 10:30'}}
+
+PLANETS:
+Su   | சூரியன்  (Sun): sign=மேஷம் (0), deg=0.00, lon=14.85, star=பரணி p1 lord=None, dig=உச்சம் (Exalted), retro=False, comb=False
+Me   | புதன்    (Mercury): sign=மீனம் (11), deg=0.00, lon=349.07, star=ரேவதி p1 lord=None, dig=நீசம் (Debilitated), retro=False, comb=False
+Ve   | சுக்கிரன் (Venus): sign=மீனம் (11), deg=0.00, lon=331.01, star=பூரட்டாதி p4 lord=None, dig=உச்சம் (Exalted), retro=False, comb=False
+Ma   | செவ்வாய் (Mars): sign=மேஷம் (0), deg=0.00, lon=18.13, star=பரணி p2 lord=None, dig=ஆட்சி (Own Sign), retro=False, comb=True
+Ju   | குரு     (Jupiter): sign=கும்பம் (10), deg=0.00, lon=325.36, star=பூரட்டாதி p2 lord=None, dig=நட்பு (Friendly), retro=False, comb=False
+Sa   | சனி      (Saturn): sign=மேஷம் (0), deg=0.00, lon=1.54, star=அஸ்வினி p1 lord=None, dig=நீசம் (Debilitated), retro=False, comb=True
+Mo   | சந்திரன் (Moon): sign=மிதுனம் (2), deg=0.00, lon=73.50, star=திருவாதிரை p3 lord=None, dig=நட்பு (Friendly), retro=False, comb=False
+Ra   | ராகு     (Rahu): sign=சிம்மம் (4), deg=0.00, lon=133.56, star=பூரம் p1 lord=None, dig=நட்பு (Friendly), retro=True, comb=False
+Ke   | கேது     (Ketu): sign=கும்பம் (10), deg=0.00, lon=313.56, star=சதயம் p3 lord=None, dig=நட்பு (Friendly), retro=True, comb=False
+Asc  | லக்னம்   (Lagna): sign=தனுசு (8), deg=0.00, lon=248.10, star=மூலம் p3 lord=None, dig=நட்பு (Friendly), retro=False, comb=False
+Man  | மாந்தி   (Mandi): sign=மகரம் (9), deg=0.00, lon=277.22, star=உத்திராடம் p4 lord=None, dig=நட்பு (Friendly), retro=False, comb=False
+
+DASHA BALANCE: None
+DASHAS & BUKTIS:
+
+CAREER:
+{
+  "house10": {
+    "signId": 5,
+    "signTa": "கன்னி",
+    "signEn": "Virgo",
+    "lord": "Me",
+    "lordTa": "புதன்",
+    "occupants": [],
+    "subathuvam": {
+      "gradeKey": "grade_2",
+      "gradeTa": "இரண்டாம் நிலை சுபத்துவம் (2nd Grade Subathuvam - Venus/Mercury Blessed)",
+      "gradeEn": "2nd Grade Subathuvam (Commercial/Creative Beneficence)",
+      "subathuvaPoints": 20,
+      "paavathuvaPoints": 0,
+      "sookshmaPoints": 0,
+      "natureTa": "மென்பொருள் (IT), கலை, வடிவமைப்பு, ஆட்டோமொபைல், ஜவுளி, வர்த்தக ஏஜென்சி அல்லது நடுத்தர வணிக யோகம்.",
+      "natureEn": "IT, Software, Arts, Design, Automobile, Commerce, or thriving mid-scale business."
+    },
+    "fieldSignatures": {
+      "planetTa": "புதன்",
+      "subathuvamTa": "தகவல் தொழில்நுட்பம் (IT/Software), பட்டயக் கணக்காளர் (CA/Auditing), வங்கி, ஜோதிடம், பத்திரிகைத் துறை, கல்லூரி விரிவுரையாளர், வர்த்தக புரோக்கரேஜ் & கமிஷன் ஏஜென்சி.",
+      "subathuvamEn": "IT & Software Engineering, Chartered Accountancy, Banking, Astrology, Journalism, Academic Professorship, Commercial Brokerage.",
+      "paavathuvamTa": "அச்சுக்கூட கூலி ஆள் (Printing press), கொரியர் & தபால் விநியோகம், போலி ஆவணங்கள், கீழ்நிலை எழுதுவினைஞர்.",
+      "paavathuvamEn": "Printing press labor, courier dispatch, stationery clerical, petty brokerage."
+    }
+  },
+  "house2": {
+    "signId": 9,
+    "signTa": "மகரம்",
+    "signEn": "Capricorn",
+    "lord": "Sa",
+    "lordTa": "சனி",
+    "occupants": [
+      "Man"
+    ],
+    "subathuvam": {
+      "gradeKey": "paavathuvam_afflicted",
+      "gradeTa": "கடுமையான பாவத்துவம் (Afflicted / High Friction)",
+      "gradeEn": "Afflicted Paavathuvam (High Risk)",
+      "subathuvaPoints": 0,
+      "paavathuvaPoints": 22,
+      "sookshmaPoints": 0,
+      "natureTa": "தொழில் ரிஸ்க் எடுக்கக் கூடாது; கடன் மற்றும் விரயம் வர வாய்ப்புள்ளதால், மாத சம்பள நிறுவன வேலையில் (Job) இருப்பதே 100% பாதுகாப்பானது.",
+      "natureEn": "Avoid capital-intensive business; regular salaried employment is strongly advised to prevent debt and loss."
+    },
+    "fieldSignatures": {
+      "planetTa": "சனி",
+      "subathuvamTa": "ரயில்வே துறை, பெரிய தொழிற்சாலைகள், ஆயில் & எரிவாயு சுத்திகரிப்பு (Oil & Gas), இரும்பு & எஃகு ஆலை, பொதுஜன அமைப்பு, மனிதவள மேலாண்மை (HR), நீதி பரிபாலனம்.",
+      "subathuvamEn": "Indian Railways, Heavy Manufacturing, Oil & Gas Refineries, Steel Plants, Mass Transport, Human Resources, Labor Union Leadership.",
+      "paavathuvamTa": "துப்புரவுப் பணி, பழைய இரும்பு/ஸ்கிராப் வியாபாரம், சுமை தூக்குதல், காலணி தயாரிப்பு, கட்டிடக் கூலி வேலை.",
+      "paavathuvamEn": "Sanitation, scrap metal dealing, manual loading, footwear/leather, heavy construction labor."
+    }
+  },
+  "jobVsBusiness": {
+    "jobScore": 48,
+    "bizScore": 64,
+    "verdictKey": "business",
+    "verdictTa": "🏢 சொந்தத் தொழில் & வியாபாரம் அதி உன்னதம் (High Business Yoga)",
+    "verdictEn": "🏢 Outstanding Entrepreneurship & Business Potential"
+  },
+  "dasaAnalysis": {
+    "dasaLord": "Sa",
+    "dasaLordTa": "சனி",
+    "bhuktiLord": "Me",
+    "bhuktiLordTa": "புதன்",
+    "dasaNatureTa": "சம தசை (Neutral Dasa)",
+    "dasaNatureEn": "Neutral Dasa",
+    "guidanceTa": "தற்போது நடக்கும் சனி தசையில் நிலைத்தன்மை மற்றும் சுய உழைப்புக்குரிய பலன்கள் கிடைக்கும்.",
+    "guidanceEn": "Active Saturn Dasa delivers steady returns through consistent effort.",
+    "businessViability": 70
+  },
+  "timingPredictions": {
+    "jobTimingTa": "கோச்சார குரு உங்கள் லக்னத்தையோ, 10-ஆம் வீட்டையோ அல்லது 6-ஆம் வீட்டையோ பார்க்கும் காலத்திலும், 6 அல்லது 10-ஆம் அதிபதிகளின் சுப புக்தியிலும் புதிய வேலை மற்றும் பதவி உயர்வு உறுதியாகக் கிடைக்கும்.",
+    "jobTimingEn": "Job appointments and appraisals materialize swiftly when transit Jupiter aspects the 10th or 6th house, or during 6th/10th lord benefic Bhukti.",
+    "businessTimingTa": "லக்ன யோக தசையும், முதல் நிலை சுபத்துவம் பெற்ற புக்தியும் தொடங்கும் காலமே சொந்தத் தொழில் தொடங்குவதற்கான பொற்காலம். அவயோக தசைகளிலோ அல்லது ஏழரை/அஷ்டம சனி காலங்களிலோ தொழில் தொடங்கக் கூடாது.",
+    "businessTimingEn": "The dawn of a Yoga Dasa alongside a 1st Grade Subathuva Bhukti is the golden period to launch an enterprise. Never inaugurate ventures during Avayoga Dashas or Sade Sati."
+  },
+  "milestones": [
+    {
+      "stage": "1. Career Entry & First Job",
+      "stageTa": "1. தொழில் தொடக்கம் & முதல் வேலை",
+      "age": "21 - 24",
+      "years": "2019 - 2022",
+      "descTa": "முறையான கல்வி மற்றும் பயிற்சியுடன் முதல் பணியில் காலடி எடுத்து வைக்கும் காலம்."
+    },
+    {
+      "stage": "2. Major Promotion & Stabilization",
+      "stageTa": "2. தொழில் நிலைப்பாடு & முதல் பெரிய உயர்வு",
+      "age": "26 - 30",
+      "years": "2024 - 2028",
+      "descTa": "பணியிடத்தில் முக்கிய அங்கீகாரம், ஊதிய உயர்வு, முன்னணி நிறுவனங்களுக்கு மாறுதல்."
+    },
+    {
+      "stage": "3. Breakthrough Zenith / Business Launch",
+      "stageTa": "3. மகத்தான தலைமை / சொந்த தொழில் தொடக்கம்",
+      "age": "33 - 38",
+      "years": "2031 - 2036",
+      "descTa": "தலைமைப் பதவி ஏறுதல் அல்லது தனியாக சொந்த தொழில் தொடங்கி பெரும் சாதனை படைத்தல்."
+    },
+    {
+      "stage": "4. Golden Peak Era & Lasting Wealth",
+      "stageTa": "4. பொற்காலம் & நிலைத்த தனலாபம்",
+      "age": "40 - 52",
+      "years": "2038 - 2050",
+      "descTa": "தொழில் முத்திரை, சமூக அந்தஸ்து மற்றும் உச்சக்கட்ட நிதி நிறைவு காணும் காலம்."
+    }
+  ],
+  "nextFavorableWindow": "ஜூலை 2027 – ஆகஸ்ட் 2028 (சிம்ம குரு பெயர்ச்சி யோகம்)",
+  "sectors": [
+    {
+      "id": "finance_banking",
+      "nameTa": "வங்கி, நிதி, கணக்கு & பங்குச்சந்தை (Banking, CA & Wealth Management)",
+      "nameEn": "Banking, Financial Markets, CA & Wealth Management",
+      "icon": "🏦",
+      "primaryPlanets": [
+        "Me",
+        "Ju",
+        "Ve"
+      ],
+      "favorableElements": [
+        "Earth",
+        "Air"
+      ],
+      "favorableSigns": [
+        1,
+        5,
+        9,
+        6
+      ],
+      "descriptionTa": "உங்கள் தனுசு லக்னத்திற்கு 10-ஆம் வீடான கர்ம ஸ்தானம் கன்னி ராசியாகும். அதன் அதிபதி புதன் லக்னத்திற்கு 4-ம் இடமான சுக ஸ்தானத்தில் (மீனம்-ல்) சுப நட்பு நிலையில் அமைந்துள்ளார். [ஜாதகரின் கல்வித் தகுதி: டிப்ளமோ / ITI / தொழிற்கல்வி] மேலும் 10-ஆம் வீட்டை புதன், சுக்கிரன் சுபப் பார்வையால் நோக்குவது இத்துறைக்கு கூடுதல் அந்தஸ்தை அளிக்கிறது. 10-ஆம் அதிபதி இரண்டாம் நிலை சுபத்துவம் (2nd Grade Subathuvam - Venus/Mercury Blessed) பெற்றுள்ளதால் இந்நபருக்கு இத்துறையில் நிலையான கௌரவமும் உயர் அதிகாரமும் கிட்டும். தொழில் காரகனான அமத்யகாரகன் புதன் இந்நபருக்கு இத்துறையில் சமூக அங்கீகாரத்தை நல்குவார்.",
+      "descriptionEn": "Mercury's numerical precision, Jupiter's wealth stewardship, and Venus's liquidity yield immense distinction in Chartered Accountancy and Banking.",
+      "rolesTa": [
+        "Junior Accounts Assistant & Tally Specialist (இளநிலை கணக்காளர் & டேலி ஆபரேட்டர்)",
+        "Cooperative Bank Clerk / Cashier (கூட்டுறவு வங்கி எழுத்தர் / காசாளர்)",
+        "Commercial Billing & Inventory Store Keeper (பில்லிங் & ஸ்டோர் இன்சார்ஜ்)",
+        "Microfinance Loan Recovery Field Officer (மைக்ரோபைனான்ஸ் கடன் வசூல் அலுவலர்)",
+        "GST & Tax Filing Documentation Assistant (ஜிஎஸ்டி & வரி தாக்கல் உதவியாளர்)"
+      ],
+      "rolesEn": [
+        "Chartered Accountant (CA) & Audit Partner",
+        "Investment Banker & Portfolio Asset Manager",
+        "Equity Research & Algorithmic Stock Trader"
+      ],
+      "calculatedScore": 96,
+      "customExplanationTa": "உங்கள் தனுசு லக்னத்திற்கு 10-ஆம் வீடான கர்ம ஸ்தானம் கன்னி ராசியாகும். அதன் அதிபதி புதன் லக்னத்திற்கு 4-ம் இடமான சுக ஸ்தானத்தில் (மீனம்-ல்) சுப நட்பு நிலையில் அமைந்துள்ளார். [ஜாதகரின் கல்வித் தகுதி: டிப்ளமோ / ITI / தொழிற்கல்வி] மேலும் 10-ஆம் வீட்டை புதன், சுக்கிரன் சுபப் பார்வையால் நோக்குவது இத்துறைக்கு கூடுதல் அந்தஸ்தை அளிக்கிறது. 10-ஆம் அதிபதி இரண்டாம் நிலை சுபத்துவம் (2nd Grade Subathuvam - Venus/Mercury Blessed) பெற்றுள்ளதால் இந்நபருக்கு இத்துறையில் நிலையான கௌரவமும் உயர் அதிகாரமும் கிட்டும். தொழில் காரகனான அமத்யகாரகன் புதன் இந்நபருக்கு இத்துறையில் சமூக அங்கீகாரத்தை நல்குவார்."
+    },
+    {
+      "id": "trade_foreign",
+      "nameTa": "வணிகம், வர்த்தகம் & ஏற்றுமதி (Trading, Logistics & Enterprise)",
+      "nameEn": "Commercial Trading, Supply Chain, Logistics & Import-Export",
+      "icon": "🚢",
+      "primaryPlanets": [
+        "Me",
+        "Ve",
+        "Ra",
+        "Sa"
+      ],
+      "favorableElements": [
+        "Air",
+        "Water"
+      ],
+      "favorableSigns": [
+        2,
+        6,
+        10,
+        8
+      ],
+      "descriptionTa": "உங்கள் தனுசு லக்னத்திற்கு 10-ஆம் வீடான கர்ம ஸ்தானம் கன்னி ராசியாகும். அதன் அதிபதி புதன் லக்னத்திற்கு 4-ம் இடமான சுக ஸ்தானத்தில் (மீனம்-ல்) சுப நட்பு நிலையில் அமைந்துள்ளார். [ஜாதகரின் கல்வித் தகுதி: டிப்ளமோ / ITI / தொழிற்கல்வி] மேலும் 10-ஆம் வீட்டை புதன், சுக்கிரன் சுபப் பார்வையால் நோக்குவது இத்துறைக்கு கூடுதல் அந்தஸ்தை அளிக்கிறது. 10-ஆம் அதிபதி இரண்டாம் நிலை சுபத்துவம் (2nd Grade Subathuvam - Venus/Mercury Blessed) பெற்றுள்ளதால் இந்நபருக்கு இத்துறையில் நிலையான கௌரவமும் உயர் அதிகாரமும் கிட்டும். தொழில் காரகனான அமத்யகாரகன் புதன் இந்நபருக்கு இத்துறையில் சமூக அங்கீகாரத்தை நல்குவார்.",
+      "descriptionEn": "Mercury's commercial negotiation, Venus's market allure, and Saturn's distribution backbone enable lucrative trading and global logistics.",
+      "rolesTa": [
+        "Wholesale Trader & Distributor (மொத்த வர்த்தகர் & விநியோகஸ்தர்)",
+        "Supply Chain & Logistics Director (தளவாட மற்றும் சப்ளை செயின் மேலாளர்)",
+        "Import-Export Merchant (சர்வதேச ஏற்றுமதி-இறக்குமதி அதிபர்)"
+      ],
+      "rolesEn": [
+        "Wholesale Commodity Merchant & Stockist",
+        "Global Supply Chain & Logistics Director",
+        "Import-Export Trading House Founder"
+      ],
+      "calculatedScore": 90,
+      "customExplanationTa": "உங்கள் தனுசு லக்னத்திற்கு 10-ஆம் வீடான கர்ம ஸ்தானம் கன்னி ராசியாகும். அதன் அதிபதி புதன் லக்னத்திற்கு 4-ம் இடமான சுக ஸ்தானத்தில் (மீனம்-ல்) சுப நட்பு நிலையில் அமைந்துள்ளார். [ஜாதகரின் கல்வித் தகுதி: டிப்ளமோ / ITI / தொழிற்கல்வி] மேலும் 10-ஆம் வீட்டை புதன், சுக்கிரன் சுபப் பார்வையால் நோக்குவது இத்துறைக்கு கூடுதல் அந்தஸ்தை அளிக்கிறது. 10-ஆம் அதிபதி இரண்டாம் நிலை சுபத்துவம் (2nd Grade Subathuvam - Venus/Mercury Blessed) பெற்றுள்ளதால் இந்நபருக்கு இத்துறையில் நிலையான கௌரவமும் உயர் அதிகாரமும் கிட்டும். தொழில் காரகனான அமத்யகாரகன் புதன் இந்நபருக்கு இத்துறையில் சமூக அங்கீகாரத்தை நல்குவார்."
+    },
+    {
+      "id": "it_software",
+      "nameTa": "தகவல் தொழில்நுட்பம் & AI (IT, Software & Artificial Intelligence)",
+      "nameEn": "IT, Software Engineering & AI Technology",
+      "icon": "💻",
+      "primaryPlanets": [
+        "Me",
+        "Ra",
+        "Ke",
+        "Ma"
+      ],
+      "favorableElements": [
+        "Air",
+        "Fire"
+      ],
+      "favorableSigns": [
+        2,
+        10,
+        5,
+        0
+      ],
+      "descriptionTa": "உங்கள் தனுசு லக்னத்திற்கு 10-ஆம் வீடான கர்ம ஸ்தானம் கன்னி ராசியாகும். அதன் அதிபதி புதன் லக்னத்திற்கு 4-ம் இடமான சுக ஸ்தானத்தில் (மீனம்-ல்) சுப நட்பு நிலையில் அமைந்துள்ளார். [ஜாதகரின் கல்வித் தகுதி: டிப்ளமோ / ITI / தொழிற்கல்வி] மேலும் 10-ஆம் வீட்டை புதன், சுக்கிரன் சுபப் பார்வையால் நோக்குவது இத்துறைக்கு கூடுதல் அந்தஸ்தை அளிக்கிறது. 10-ஆம் அதிபதி இரண்டாம் நிலை சுபத்துவம் (2nd Grade Subathuvam - Venus/Mercury Blessed) பெற்றுள்ளதால் இந்நபருக்கு இத்துறையில் நிலையான கௌரவமும் உயர் அதிகாரமும் கிட்டும். தொழில் காரகனான அமத்யகாரகன் புதன் இந்நபருக்கு இத்துறையில் சமூக அங்கீகாரத்தை நல்குவார்.",
+      "descriptionEn": "Mercury's analytical logic combined with Rahu's technological innovation and Ketu's algorithmic depth creates stellar prowess in IT and AI.",
+      "rolesTa": [
+        "Software Architect / Tech Lead (முதுநிலை மென்பொருள் வடிவமைப்பாளர்)",
+        "AI & Machine Learning Specialist (செயற்கை நுண்ணறிவு நிபுணர்)",
+        "Full-Stack Developer / Cloud Engineer (கிளவுட் மற்றும் மென்பொருள் பொறியாளர்)",
+        "Cyber Security Specialist (சைபர் பாதுகாப்பு நிபுணர்)"
+      ],
+      "rolesEn": [
+        "Software Architect & Technical Lead",
+        "AI & Machine Learning Specialist",
+        "Cloud Solutions & Full-Stack Engineer",
+        "Cyber Security & Big Data Analyst"
+      ],
+      "calculatedScore": 84,
+      "customExplanationTa": "உங்கள் தனுசு லக்னத்திற்கு 10-ஆம் வீடான கர்ம ஸ்தானம் கன்னி ராசியாகும். அதன் அதிபதி புதன் லக்னத்திற்கு 4-ம் இடமான சுக ஸ்தானத்தில் (மீனம்-ல்) சுப நட்பு நிலையில் அமைந்துள்ளார். [ஜாதகரின் கல்வித் தகுதி: டிப்ளமோ / ITI / தொழிற்கல்வி] மேலும் 10-ஆம் வீட்டை புதன், சுக்கிரன் சுபப் பார்வையால் நோக்குவது இத்துறைக்கு கூடுதல் அந்தஸ்தை அளிக்கிறது. 10-ஆம் அதிபதி இரண்டாம் நிலை சுபத்துவம் (2nd Grade Subathuvam - Venus/Mercury Blessed) பெற்றுள்ளதால் இந்நபருக்கு இத்துறையில் நிலையான கௌரவமும் உயர் அதிகாரமும் கிட்டும். தொழில் காரகனான அமத்யகாரகன் புதன் இந்நபருக்கு இத்துறையில் சமூக அங்கீகாரத்தை நல்குவார்."
+    }
+  ]
+}
+YOGAS:
+[
+  {
+    "nameTa": "கேம துர்ம யோகம் (KEMA DHURMA YOGAM)",
+    "nameEn": "KEMA DHURMA YOGAM",
+    "ta": "கேம துர்ம யோகம்",
+    "en": "KEMA DHURMA YOGAM",
+    "level": "medium",
+    "levelTa": "நடுத்தரம் · MEDIUM",
+    "status": "அமைந்துள்ளது",
+    "descTa": "இந்த யோகம் உடையவர்கள் தம் வாழ்வில் பெரும்பகுதி துக்கத்தை அணுபவிக்கின்றனர்.",
+    "descEn": "Those with this yoga experience sorrow or hardships through significant phases of life, requiring conscious patience."
+  },
+  {
+    "nameTa": "அதி யோகம் (ADI YOGAM)",
+    "nameEn": "ADI YOGAM",
+    "ta": "அதி யோகம்",
+    "en": "ADI YOGAM",
+    "level": "high",
+    "levelTa": "வலுவானது · HIGH",
+    "status": "சுப யோகம்",
+    "descTa": "நாணயம் மிக்கவர், நேர்மையானவர். சுகயோகங்களை அனுபவிப்பவர். அறிஞ்சர்களால் பாராட்டதக்கவர்.",
+    "descEn": "Honest, principled, upright character. Enjoys refined comforts, luxuries and is esteemed by scholars and intellectual peers."
+  },
+  {
+    "nameTa": "வேசி யோகம் (VESI YOGAM)",
+    "nameEn": "VESI YOGAM",
+    "ta": "வேசி யோகம்",
+    "en": "VESI YOGAM",
+    "level": "high",
+    "levelTa": "வலுவானது · HIGH",
+    "status": "சுப யோகம்",
+    "descTa": "இந்த யோகம் உடையவர்கள் நினைத்ததை முடிபவராகவும், மகிழ்ச்சி உடையவராகவும், அதிஷ்டம் உடையவராகவும் இருப்பார்கள்.",
+    "descEn": "Accomplishes envisioned ambitions with resolute determination. Blessed with enduring cheerfulness, good fortune, and grace."
+  },
+  {
+    "nameTa": "கஜகேசரி யோகம் (GAJAKESARI YOGAM)",
+    "nameEn": "GAJAKESARI YOGAM",
+    "ta": "கஜகேசரி யோகம்",
+    "en": "GAJAKESARI YOGAM",
+    "level": "high",
+    "levelTa": "வலுவானது · HIGH",
+    "status": "முக்கிய யோகம்",
+    "descTa": "உறவினரால் உயர்வு அடைவார். பெரும் புகழும் உடையவர். இறந்த பின்பும் புகழ் மிக்கவர். அரசருக்கு நிகரான தொழில் புரிவர்.",
+    "descEn": "Elevated through loyal relatives. Blessed with widespread fame that outlasts generations. Engages in regal or noble leadership enterprises."
+  },
+  {
+    "nameTa": "பாச யோகம் (PAASA YOGAM)",
+    "nameEn": "PAASA YOGAM",
+    "ta": "பாச யோகம்",
+    "en": "PAASA YOGAM",
+    "level": "high",
+    "levelTa": "வலுவானது · HIGH",
+    "status": "சுப யோகம்",
+    "descTa": "நீதி நெறியை மதிபவராகவும், நேர்மையான தொழிலில் ஈடுபட்டு ஜீவனம் நத்துபாவராகவும் இருப்பார். செல்வம் செல்வாக்கு உடையவர். செல்வம் சேர்ப்பதில் குறியாக இருப்பார்.",
+    "descEn": "Upright defender of law and justice, sustains life through ethical trade/occupation. Possesses wealth, authority, and acumen in asset accumulation."
+  },
+  {
+    "nameTa": "சந்திர மங்கள யோகம் (CHANDRA MANGALA YOGAM)",
+    "nameEn": "CHANDRA MANGALA YOGAM",
+    "ta": "சந்திர மங்கள யோகம்",
+    "en": "CHANDRA MANGALA YOGAM",
+    "level": "high",
+    "levelTa": "வலுவானது · HIGH",
+    "status": "தன யோகம்",
+    "descTa": "இந்த யோகம் உடையவர் செல்வந்தராகவும் புகழ் மிக்கவராகவும் விளங்குகின்றனர்.",
+    "descEn": "Enjoys affluent wealth, extensive material success, prosperous property holdings, and lasting celebrity status."
+  },
+  {
+    "nameTa": "தர்ம கர்மாதிபதி யோகம் (DHARMA KARMAADHIBADHI YOGAM)",
+    "nameEn": "DHARMA KARMAADHIBADHI YOGAM",
+    "ta": "தர்ம கர்மாதிபதி யோகம்",
+    "en": "DHARMA KARMAADHIBADHI YOGAM",
+    "level": "high",
+    "levelTa": "வலுவானது · HIGH",
+    "status": "மகா ராஜ யோகம்",
+    "descTa": "அபரிமிதமான பொருள் சேர்கை அனைவர்க்கும் வழிகாட்டும் தலைமை / உயர்ந்த பதவி அனைத்தும் கிடைக்கிறது.",
+    "descEn": "Extraordinary acquisition of wealth and assets; commanding leadership that mentors many, endowed with supreme rank and honor."
+  },
+  {
+    "nameTa": "அந்திய வயது யோகம் (ANDHIYA VAYADHU YOGAM)",
+    "nameEn": "ANDHIYA VAYADHU YOGAM",
+    "ta": "அந்திய வயது யோகம்",
+    "en": "ANDHIYA VAYADHU YOGAM",
+    "level": "low",
+    "levelTa": "எளியது · LOW",
+    "status": "கால யோகம்",
+    "descTa": "இளமையில் துன்பம் அனுபவிக்கின்றனர். பிற்காலத்தில் கௌரவமான பதவி பெருமை புகழ் யாவும் உண்டாகிறது.",
+    "descEn": "Undergoes trials and struggles in early youth; attains honorable positions, widespread respect, and distinction in mature years."
+  },
+  {
+    "nameTa": "தேனு யோகம் (THENU YOGAM)",
+    "nameEn": "THENU YOGAM",
+    "ta": "தேனு யோகம்",
+    "en": "THENU YOGAM",
+    "level": "high",
+    "levelTa": "வலுவானது · HIGH",
+    "status": "சுப யோகம்",
+    "descTa": "நல்ல வாக்கு வன்மை செல்வம் செல்வாக்கு பெற்றவர்களாகவும், உயர்ந்த கல்வி கற்றவர்களாகவும் திகழ்கின்றனர்.",
+    "descEn": "Eloquent persuasive speech, wealth, magnetic influence, and distinguished scholastic attainments in higher education."
+  },
+  {
+    "nameTa": "கபட யோகம் (KABADA YOGAM)",
+    "nameEn": "KABADA YOGAM",
+    "ta": "கபட யோகம்",
+    "en": "KABADA YOGAM",
+    "level": "medium",
+    "levelTa": "நடுத்தரம் · MEDIUM",
+    "status": "அமைந்துள்ளது",
+    "descTa": "கபடம் செய்பவர் ஆவார்.",
+    "descEn": "Tactical, cautious, and secretive in dealings; requires transparent conduct in personal relationships."
+  },
+  {
+    "nameTa": "லக்ன கர்மாதிபதி யோகம் (LAGNA KARMAADHIPATHI YOGAM)",
+    "nameEn": "LAGNA KARMAADHIPATHI YOGAM",
+    "ta": "லக்ன கர்மாதிபதி யோகம்",
+    "en": "LAGNA KARMAADHIPATHI YOGAM",
+    "level": "high",
+    "levelTa": "வலுவானது · HIGH",
+    "status": "சுயமுயற்சி யோகம்",
+    "descTa": "தனது முயற்சியால் உயர்நிலை அடைவார்.",
+    "descEn": "Reaches eminent status, self-made success, and professional mastery solely through steadfast personal perseverance."
+  },
+  {
+    "nameTa": "வசுமதி யோகம் (VASUMATHI YOGAM (Lagna-or-Moon))",
+    "nameEn": "VASUMATHI YOGAM (Lagna-or-Moon)",
+    "ta": "வசுமதி யோகம்",
+    "en": "VASUMATHI YOGAM (Lagna-or-Moon)",
+    "level": "high",
+    "levelTa": "வலுவானது · HIGH",
+    "status": "சுப யோகம்",
+    "descTa": "சகல செல்வங்களும் பெற்று வசதியுடன் வாழ்வார்.",
+    "descEn": "Acquires all categories of wealth, flourishing in opulence, domestic prosperity, and independent living."
+  },
+  {
+    "nameTa": "தனயோகம் (DHANA YOGAM)",
+    "nameEn": "DHANA YOGAM",
+    "ta": "தனயோகம்",
+    "en": "DHANA YOGAM",
+    "level": "low",
+    "levelTa": "எளியது · LOW",
+    "status": "தன யோகம்",
+    "descTa": "தொழில் முறையில் செல்வம் சேர்கின்றனர்",
+    "descEn": "Steadily accumulates wealth through professional industry, calculated commerce, and patient discipline."
+  },
+  {
+    "nameTa": "இல்லற சந்நியாசி யோகம் (ILLARA SANNYAASI YOGAM)",
+    "nameEn": "ILLARA SANNYAASI YOGAM",
+    "ta": "இல்லற சந்நியாசி யோகம்",
+    "en": "ILLARA SANNYAASI YOGAM",
+    "level": "high",
+    "levelTa": "வலுவானது · HIGH",
+    "status": "ஞான யோகம்",
+    "descTa": "பற்றற்ற வாழ்க்கை நடத்துவர். இல்லறத்தில் ஈடுபாடு குறைந்து இருக்கும். இதனால் இவர்கள் இல்லற சந்நியாசி ஆகின்றனர்.",
+    "descEn": "Leads a detached, philosophical existence amidst domestic life; indifferent to worldly bonds, personifying the householder-sage."
+  },
+  {
+    "nameTa": "புத ஆதித்ய யோகம் (BUDHA AATHITHYA YOGAM)",
+    "nameEn": "BUDHA AATHITHYA YOGAM",
+    "ta": "புத ஆதித்ய யோகம்",
+    "en": "BUDHA AATHITHYA YOGAM",
+    "level": "high",
+    "levelTa": "வலுவானது · HIGH",
+    "status": "ஞான யோகம்",
+    "descTa": "உயர்கல்வி பெறுகின்றனர். (டிப்ளோமா அல்லது டிகிரி)",
+    "descEn": "Attains accomplished higher education, graduation degrees/diplomas, sharp cognitive focus, and academic distinction."
+  },
+  {
+    "nameTa": "வாகன லாப யோகம் (VAAHANA LAABHA YOGAM)",
+    "nameEn": "VAAHANA LAABHA YOGAM",
+    "ta": "வாகன லாப யோகம்",
+    "en": "VAAHANA LAABHA YOGAM",
+    "level": "medium",
+    "levelTa": "நடுத்தரம் · MEDIUM",
+    "status": "சுப யோகம்",
+    "descTa": "வீடு, வாகனம் நன்கு அமைகிறது.",
+    "descEn": "Comfortably endowed with residential properties, land, motor vehicles, and conveyance amenities."
+  }
+]
+SHADBALA:
+{
+  "planets": {
+    "Su": {
+      "nameTa": "சூரியன்",
+      "sthana": 130.0,
+      "dig": 22.5,
+      "kala": 83.0,
+      "chesta": 52.0,
+      "naisargika": 60.0,
+      "drik": 28.0,
+      "totalVirupas": 375.5,
+      "rupas": 6.26,
+      "requiredVirupas": 390.0,
+      "requiredRupas": 6.5,
+      "percentage": 96.3,
+      "isStrong": false,
+      "status": "சராசரி (Moderate)",
+      "rank": 5
+    },
+    "Mo": {
+      "nameTa": "சந்திரன்",
+      "sthana": 140.0,
+      "dig": 37.5,
+      "kala": 86.0,
+      "chesta": 52.0,
+      "naisargika": 51.43,
+      "drik": 28.0,
+      "totalVirupas": 394.93,
+      "rupas": 6.58,
+      "requiredVirupas": 360.0,
+      "requiredRupas": 6.0,
+      "percentage": 109.7,
+      "isStrong": true,
+      "status": "வலுவானது (Strong)",
+      "rank": 3
+    },
+    "Ma": {
+      "nameTa": "செவ்வாய்",
+      "sthana": 130.0,
+      "dig": 22.5,
+      "kala": 86.0,
+      "chesta": 42.0,
+      "naisargika": 17.14,
+      "drik": 28.0,
+      "totalVirupas": 325.64,
+      "rupas": 5.43,
+      "requiredVirupas": 300.0,
+      "requiredRupas": 5.0,
+      "percentage": 108.5,
+      "isStrong": true,
+      "status": "வலுவானது (Strong)",
+      "rank": 4
+    },
+    "Me": {
+      "nameTa": "புதன்",
+      "sthana": 140.0,
+      "dig": 37.5,
+      "kala": 78.0,
+      "chesta": 42.0,
+      "naisargika": 25.71,
+      "drik": 34.0,
+      "totalVirupas": 357.21,
+      "rupas": 5.95,
+      "requiredVirupas": 420.0,
+      "requiredRupas": 7.0,
+      "percentage": 85.0,
+      "isStrong": false,
+      "status": "சராசரி (Moderate)",
+      "rank": 7
+    },
+    "Ju": {
+      "nameTa": "குரு",
+      "sthana": 120.0,
+      "dig": 45.0,
+      "kala": 83.0,
+      "chesta": 42.0,
+      "naisargika": 34.29,
+      "drik": 34.0,
+      "totalVirupas": 358.29,
+      "rupas": 5.97,
+      "requiredVirupas": 390.0,
+      "requiredRupas": 6.5,
+      "percentage": 91.9,
+      "isStrong": false,
+      "status": "சராசரி (Moderate)",
+      "rank": 6
+    },
+    "Ve": {
+      "nameTa": "சுக்கிரன்",
+      "sthana": 140.0,
+      "dig": 60.0,
+      "kala": 83.0,
+      "chesta": 42.0,
+      "naisargika": 42.86,
+      "drik": 34.0,
+      "totalVirupas": 401.86,
+      "rupas": 6.7,
+      "requiredVirupas": 330.0,
+      "requiredRupas": 5.5,
+      "percentage": 121.8,
+      "isStrong": true,
+      "status": "வலுவானது (Strong)",
+      "rank": 1
+    },
+    "Sa": {
+      "nameTa": "சனி",
+      "sthana": 130.0,
+      "dig": 45.0,
+      "kala": 86.0,
+      "chesta": 42.0,
+      "naisargika": 8.57,
+      "drik": 28.0,
+      "totalVirupas": 339.57,
+      "rupas": 5.66,
+      "requiredVirupas": 300.0,
+      "requiredRupas": 5.0,
+      "percentage": 113.2,
+      "isStrong": true,
+      "status": "வலுவானது (Strong)",
+      "rank": 2
+    }
+  },
+  "ranksOrder": [
+    "Ve",
+    "Sa",
+    "Mo",
+    "Ma",
+    "Su",
+    "Ju",
+    "Me"
+  ],
+  "bhavas": [
+    {
+      "bhavaIndex": 1,
+      "bhavaName": "1. லக்னம் (தனுசு)",
+      "lord": "Ju",
+      "lordNameTa": "குரு",
+      "lordRupas": 5.97,
+      "bhavaDigbala": 45.0,
+      "bhavaDrishti": 25.0,
+      "totalBhavaRupas": 7.14,
+      "isStrong": true,
+      "status": "வலுவான பாவம்"
+    },
+    {
+      "bhavaIndex": 2,
+      "bhavaName": "2. தனம் (மகரம்)",
+      "lord": "Sa",
+      "lordNameTa": "சனி",
+      "lordRupas": 5.66,
+      "bhavaDigbala": 30.0,
+      "bhavaDrishti": 25.0,
+      "totalBhavaRupas": 6.58,
+      "isStrong": false,
+      "status": "சராசரி பாவம்"
+    },
+    {
+      "bhavaIndex": 3,
+      "bhavaName": "3. தைரியம் (கும்பம்)",
+      "lord": "Sa",
+      "lordNameTa": "சனி",
+      "lordRupas": 5.66,
+      "bhavaDigbala": 30.0,
+      "bhavaDrishti": 25.0,
+      "totalBhavaRupas": 6.58,
+      "isStrong": false,
+      "status": "சராசரி பாவம்"
+    },
+    {
+      "bhavaIndex": 4,
+      "bhavaName": "4. சுகம் (மீனம்)",
+      "lord": "Ju",
+      "lordNameTa": "குரு",
+      "lordRupas": 5.97,
+      "bhavaDigbala": 45.0,
+      "bhavaDrishti": 25.0,
+      "totalBhavaRupas": 7.14,
+      "isStrong": true,
+      "status": "வலுவான பாவம்"
+    },
+    {
+      "bhavaIndex": 5,
+      "bhavaName": "5. பூர்வபுண்ணியம் (மேஷம்)",
+      "lord": "Ma",
+      "lordNameTa": "செவ்வாய்",
+      "lordRupas": 5.43,
+      "bhavaDigbala": 30.0,
+      "bhavaDrishti": 25.0,
+      "totalBhavaRupas": 6.35,
+      "isStrong": false,
+      "status": "சராசரி பாவம்"
+    },
+    {
+      "bhavaIndex": 6,
+      "bhavaName": "6. ரோகம் (ரிஷபம்)",
+      "lord": "Ve",
+      "lordNameTa": "சுக்கிரன்",
+      "lordRupas": 6.7,
+      "bhavaDigbala": 30.0,
+      "bhavaDrishti": 25.0,
+      "totalBhavaRupas": 7.62,
+      "isStrong": true,
+      "status": "வலுவான பாவம்"
+    },
+    {
+      "bhavaIndex": 7,
+      "bhavaName": "7. களத்திரம் (மிதுனம்)",
+      "lord": "Me",
+      "lordNameTa": "புதன்",
+      "lordRupas": 5.95,
+      "bhavaDigbala": 45.0,
+      "bhavaDrishti": 25.0,
+      "totalBhavaRupas": 7.12,
+      "isStrong": true,
+      "status": "வலுவான பாவம்"
+    },
+    {
+      "bhavaIndex": 8,
+      "bhavaName": "8. ஆயுள் (கடகம்)",
+      "lord": "Mo",
+      "lordNameTa": "சந்திரன்",
+      "lordRupas": 6.58,
+      "bhavaDigbala": 30.0,
+      "bhavaDrishti": 25.0,
+      "totalBhavaRupas": 7.5,
+      "isStrong": true,
+      "status": "வலுவான பாவம்"
+    },
+    {
+      "bhavaIndex": 9,
+      "bhavaName": "9. பாக்கியம் (சிம்மம்)",
+      "lord": "Su",
+      "lordNameTa": "சூரியன்",
+      "lordRupas": 6.26,
+      "bhavaDigbala": 30.0,
+      "bhavaDrishti": 25.0,
+      "totalBhavaRupas": 7.18,
+      "isStrong": true,
+      "status": "வலுவான பாவம்"
+    },
+    {
+      "bhavaIndex": 10,
+      "bhavaName": "10. தொழில் (கன்னி)",
+      "lord": "Me",
+      "lordNameTa": "புதன்",
+      "lordRupas": 5.95,
+      "bhavaDigbala": 45.0,
+      "bhavaDrishti": 25.0,
+      "totalBhavaRupas": 7.12,
+      "isStrong": true,
+      "status": "வலுவான பாவம்"
+    },
+    {
+      "bhavaIndex": 11,
+      "bhavaName": "11. லாபம் (துலாம்)",
+      "lord": "Ve",
+      "lordNameTa": "சுக்கிரன்",
+      "lordRupas": 6.7,
+      "bhavaDigbala": 30.0,
+      "bhavaDrishti": 25.0,
+      "totalBhavaRupas": 7.62,
+      "isStrong": true,
+      "status": "வலுவான பாவம்"
+    },
+    {
+      "bhavaIndex": 12,
+      "bhavaName": "12. விரயம் (விருச்சிகம்)",
+      "lord": "Ma",
+      "lordNameTa": "செவ்வாய்",
+      "lordRupas": 5.43,
+      "bhavaDigbala": 30.0,
+      "bhavaDrishti": 25.0,
+      "totalBhavaRupas": 6.35,
+      "isStrong": false,
+      "status": "சராசரி பாவம்"
+    }
+  ],
+  "summary": {
+    "strongestPlanet": {
+      "code": "Ve",
+      "nameTa": "சுக்கிரன்",
+      "percentage": 121.8,
+      "rupas": 6.7
+    },
+    "weakestPlanet": {
+      "code": "Me",
+      "nameTa": "புதன்",
+      "percentage": 85.0,
+      "rupas": 5.95
+    },
+    "passingCount": 4,
+    "totalCount": 7,
+    "averageRupas": 6.08,
+    "averagePercentage": 103.8
+  }
+}
+BHAVAS:
+[
+  {
+    "bhavaNumber": 1,
+    "titleTa": "1. தனு பாவம் (உடல், குணம், ஆரோக்கியம்)",
+    "titleEn": "1st House: Self & Vitality",
+    "signId": 8,
+    "signNameTa": "தனுசு",
+    "lordCode": "Ju",
+    "madhyaLongitude": 248.1,
+    "arambhaLongitude": 233.1,
+    "anthyaLongitude": 263.1,
+    "occupantsTa": "கிரகங்கள் இல்லை (Empty)",
+    "pointsTa": [
+      "தனுசு லக்னத்தில் பிறந்தவர் நல்ல அறிவுள்ளவராகவும் சொத்துக்கள் உள்ளவராகவும் இருப்பார். மனைவியிடம் அன்புடன் பழகி அவரது நல்லெண்ணத்தையும் பெறுவார். மற்றவர்களுடன் இனிய சுபாவத்துடன் பழகுவார்.",
+      "தனுசு லக்னத்திற்குச் சூரியனும் செவ்வாயும் சுபர்கள். சுக்கிரன் ஒருவரே பாவி. சூரியனும் புதனும் யோககாரர்கள்; இருவரும் கூடியிருந்தால் பிரபலமான யோகத்தைக் கொடுப்பார்கள். சுக்கிரனும் புதனும் கூடினால் மாரகாதிபதியாவான்; சுக்கிரனுக்கு மாரகம் கொடுக்கும் வல்லமை உண்டு. சந்திரன், சனி மாரகம் கொடுக்க மாட்டார்கள். மற்ற கிரகங்கள் மாரக ஸ்தானத்தில் இருந்தால் மாரகத்திற்குச் சமமான கண்டத்தைக் கொடுப்பார்கள்.",
+      "லக்னாதிபதி 5 ஆம் இடத்தில் இருக்கும் அமைப்பைப் பெற்றவர் நீண்ட காலம் வாழும் பிள்ளைகளை உடையவர். நல்ல காரியங்களுக்காகப் பொருளைச் செலவிடக்கூடியவர். சங்கீத ஞானத்தில் பற்றுள்ளவர். பணிவும் அடக்கமும் இவரது பண்பு நலன்கள். முன்வினைப் புண்ணியம் வாய்க்கப்பெற்றவர்.",
+      "குரு லக்னத்தைப் பார்த்தால் யாகம், விரதம் ஆகியவற்றில் ஈடுபாடு கொண்டவர். சான்றோர்களிடமும், ஞானிகளிடமும் பிரியம் உள்ளவர்.",
+      "சனி லக்னத்தில் இருக்கப் பிறந்தவர் பல கலைகளையும் கற்றுணர்வார். ரூபவான். எதிர்மறை எண்ணங்கள் தோன்றும் தன்மை உள்ளவர். ஞானமுள்ளவர். உற்சாகமாகக் காலம் கழிப்பவர்."
+    ],
+    "predTa": "தனுசு லக்னத்தில் பிறந்தவர் நல்ல அறிவுள்ளவராகவும் சொத்துக்கள் உள்ளவராகவும் இருப்பார். மனைவியிடம் அன்புடன் பழகி அவரது நல்லெண்ணத்தையும் பெறுவார். மற்றவர்களுடன் இனிய சுபாவத்துடன் பழகுவார். தனுசு லக்னத்திற்குச் சூரியனும் செவ்வாயும் சுபர்கள். சுக்கிரன் ஒருவரே பாவி. சூரியனும் புதனும் யோககாரர்கள்; இருவரும் கூடியிருந்தால் பிரபலமான யோகத்தைக் கொடுப்பார்கள். சுக்கிரனும் புதனும் கூடினால் மாரகாதிபதியாவான்; சுக்கிரனுக்கு மாரகம் கொடுக்கும் வல்லமை உண்டு. சந்திரன், சனி மாரகம் கொடுக்க மாட்டார்கள். மற்ற கிரகங்கள் மாரக ஸ்தானத்தில் இருந்தால் மாரகத்திற்குச் சமமான கண்டத்தைக் கொடுப்பார்கள். லக்னாதிபதி 5 ஆம் இடத்தில் இருக்கும் அமைப்பைப் பெற்றவர் நீண்ட காலம் வாழும் பிள்ளைகளை உடையவர். நல்ல காரியங்களுக்காகப் பொருளைச் செலவிடக்கூடியவர். சங்கீத ஞானத்தில் பற்றுள்ளவர். பணிவும் அடக்கமும் இவரது பண்பு நலன்கள். முன்வினைப் புண்ணியம் வாய்க்கப்பெற்றவர். குரு லக்னத்தைப் பார்த்தால் யாகம், விரதம் ஆகியவற்றில் ஈடுபாடு கொண்டவர். சான்றோர்களிடமும், ஞானிகளிடமும் பிரியம் உள்ளவர். சனி லக்னத்தில் இருக்கப் பிறந்தவர் பல கலைகளையும் கற்றுணர்வார். ரூபவான். எதிர்மறை எண்ணங்கள் தோன்றும் தன்மை உள்ளவர். ஞானமுள்ளவர். உற்சாகமாகக் காலம் கழிப்பவர்."
+  },
+  {
+    "bhavaNumber": 2,
+    "titleTa": "2. தன பாவம் (பணம், வாக்கு, குடும்பம்)",
+    "titleEn": "2nd House: Wealth & Speech",
+    "signId": 9,
+    "signNameTa": "மகரம்",
+    "lordCode": "Sa",
+    "madhyaLongitude": 278.1,
+    "arambhaLongitude": 263.1,
+    "anthyaLongitude": 293.1,
+    "occupantsTa": "மாந்தி",
+    "pointsTa": [
+      "மகரம் 2 ஆம் இடமானால் பலவிதமான யுக்திகளால் பொருள் ஈட்ட வல்லவர். வெளிநாட்டுத் தொடர்பாலும், அரசு மூலமாகவும் செல்வம் சேரும்.",
+      "2 ஆம் இடத்து அதிபதி லக்னத்தில் இருந்தால் செல்வந்தராக இருந்தாலும் கருமித்தனம் உடையவர். சுயநலம் கொண்டவர். வியாபாரி, சுக வாழ்க்கை விரும்புபவர், அழகான உடலமைப்பு கொண்டவர்.",
+      "இரண்டாவது இடத்தில் செவ்வாய் இருக்கப் பிறந்தவர் அதிகப் படிப்பு இல்லாவிட்டாலும் செல்வம் உள்ளவராக இருப்பார். சுபகாரியங்களில் பிரியமுள்ளவராக இருப்பார். கண் தொடர்பான நோய்கள் இவரைப் பீடிக்கும். விரைவில் கோபம் வரும் சுபாவத்தால் கடுமையானவர் எனப்படும் நேரிடும்."
+    ],
+    "predTa": "மகரம் 2 ஆம் இடமானால் பலவிதமான யுக்திகளால் பொருள் ஈட்ட வல்லவர். வெளிநாட்டுத் தொடர்பாலும், அரசு மூலமாகவும் செல்வம் சேரும். 2 ஆம் இடத்து அதிபதி லக்னத்தில் இருந்தால் செல்வந்தராக இருந்தாலும் கருமித்தனம் உடையவர். சுயநலம் கொண்டவர். வியாபாரி, சுக வாழ்க்கை விரும்புபவர், அழகான உடலமைப்பு கொண்டவர். இரண்டாவது இடத்தில் செவ்வாய் இருக்கப் பிறந்தவர் அதிகப் படிப்பு இல்லாவிட்டாலும் செல்வம் உள்ளவராக இருப்பார். சுபகாரியங்களில் பிரியமுள்ளவராக இருப்பார். கண் தொடர்பான நோய்கள் இவரைப் பீடிக்கும். விரைவில் கோபம் வரும் சுபாவத்தால் கடுமையானவர் எனப்படும் நேரிடும்."
+  },
+  {
+    "bhavaNumber": 3,
+    "titleTa": "3. பிராத்ரு பாவம் (தைரியம், இளைய சகோதரம்)",
+    "titleEn": "3rd House: Courage & Siblings",
+    "signId": 10,
+    "signNameTa": "கும்பம்",
+    "lordCode": "Sa",
+    "madhyaLongitude": 308.1,
+    "arambhaLongitude": 293.1,
+    "anthyaLongitude": 323.1,
+    "occupantsTa": "குரு, கேது",
+    "pointsTa": [
+      "கும்பம் மூன்றாம் இடமாகப் பிறந்தவர் பொறுமை, கீர்த்தி, சத்தியம் மிக்கவர்களுடன் நட்பு கொள்வார். சில சமயங்களில் வஞ்சக குணமுடையவர்களுடனும் நட்பு ஏற்படலாம்.",
+      "3 ஆம் இடத்திற்கு அதிபதி லக்னத்தில் இருந்தால் உறவினர்களின் இடையூறுகளால் இல்லற சுகத்தை முழுமையாக அனுபவிக்க முடியாதவராக இருப்பார். பிறருக்குப் பணிபுரியும் தொழிலில் ஈடுபடுவார்.",
+      "3 ஆம் இடம் சனியினால் பார்க்கப்பட்டால் பராக்கிரமமும் பலமும் உள்ளவராக இருப்பார்; சகோதரர்களுக்கு சுகம் குறைவாக இருக்கும்.",
+      "மூன்றாவது இடத்தில் ராகுவோ, கேதுவோ இருக்கப் பிறந்தவர் புகழ் மிக்கவர். திடீர் கோபத்திற்கு ஆளாவார். தைரியசாலி. அகால போஜனமுள்ளவர். லட்சுமியின் அருள் பெறும் பாக்கியமும் உண்டு என்று சொல்ல வேண்டும்."
+    ],
+    "predTa": "கும்பம் மூன்றாம் இடமாகப் பிறந்தவர் பொறுமை, கீர்த்தி, சத்தியம் மிக்கவர்களுடன் நட்பு கொள்வார். சில சமயங்களில் வஞ்சக குணமுடையவர்களுடனும் நட்பு ஏற்படலாம். 3 ஆம் இடத்திற்கு அதிபதி லக்னத்தில் இருந்தால் உறவினர்களின் இடையூறுகளால் இல்லற சுகத்தை முழுமையாக அனுபவிக்க முடியாதவராக இருப்பார். பிறருக்குப் பணிபுரியும் தொழிலில் ஈடுபடுவார். 3 ஆம் இடம் சனியினால் பார்க்கப்பட்டால் பராக்கிரமமும் பலமும் உள்ளவராக இருப்பார்; சகோதரர்களுக்கு சுகம் குறைவாக இருக்கும். மூன்றாவது இடத்தில் ராகுவோ, கேதுவோ இருக்கப் பிறந்தவர் புகழ் மிக்கவர். திடீர் கோபத்திற்கு ஆளாவார். தைரியசாலி. அகால போஜனமுள்ளவர். லட்சுமியின் அருள் பெறும் பாக்கியமும் உண்டு என்று சொல்ல வேண்டும்."
+  },
+  {
+    "bhavaNumber": 4,
+    "titleTa": "4. மாத்ரு பாவம் (தாய், வீடு, வாகனம், கல்வி)",
+    "titleEn": "4th House: Mother & Comforts",
+    "signId": 11,
+    "signNameTa": "மீனம்",
+    "lordCode": "Ju",
+    "madhyaLongitude": 338.1,
+    "arambhaLongitude": 323.1,
+    "anthyaLongitude": 353.1,
+    "occupantsTa": "புதன், சுக்கிரன்",
+    "pointsTa": [
+      "நான்காம் பாவம் மீனமானால் விசித்திர ஆடைகளை அணிபவன்; செல்வம் உள்ளவன்.",
+      "4 குடையவன் 5 ஆம் இடத்தில் இருந்தால் நீண்ட ஆயுள்; புத்திமான்; வேதப் பயிற்சி மிக்கவன். கையெழுத்தை கண்ணில் ஒற்றிக் கொள்ளலாம்."
+    ],
+    "predTa": "நான்காம் பாவம் மீனமானால் விசித்திர ஆடைகளை அணிபவன்; செல்வம் உள்ளவன். 4 குடையவன் 5 ஆம் இடத்தில் இருந்தால் நீண்ட ஆயுள்; புத்திமான்; வேதப் பயிற்சி மிக்கவன். கையெழுத்தை கண்ணில் ஒற்றிக் கொள்ளலாம்."
+  },
+  {
+    "bhavaNumber": 5,
+    "titleTa": "5. புத்திர பாவம் (குழந்தை, பூர்வ புண்ணியம்)",
+    "titleEn": "5th House: Progeny & Intellect",
+    "signId": 0,
+    "signNameTa": "மேஷம்",
+    "lordCode": "Ma",
+    "madhyaLongitude": 8.1,
+    "arambhaLongitude": 353.1,
+    "anthyaLongitude": 23.1,
+    "occupantsTa": "சூரியன், செவ்வாய், சனி",
+    "pointsTa": [
+      "ஐந்தாம் இடம் மேஷமானால் பிரியமான புத்திரன் அமைகிறான். தெய்வத்தின் அருள் கிடைக்கிறது. குடும்பச் சொத்தை வாரிசாகப் பெறும் வாய்ப்பு உண்டு.",
+      "5 குடையவன் இரண்டாம் இடத்தில் இருந்தால் பிறக்கும் பிள்ளை குடும்பத்துடன் கருத்து வேறுபாடு கொள்ளக்கூடியவனாகவும், தகாதவர்களுடன் தொடர்பு கொள்ளக்கூடியவனாகவும் இருப்பான்.",
+      "சூரியன் 5 ஆவது இடத்தில் இருந்தால் உத்யோகம் செய்பவராக இருப்பார். இரக்க குணம் சற்றுக் குறைவாக இருக்கலாம். தரித்திர தசையில் கஷ்டப்பட வேண்டியவராகவும் இருப்பார்.",
+      "5 ஆம் இடமானது சந்திரனால் பார்க்கப்பட்டால் நண்பர்களால் சுகம் உண்டாகிறது. பிறந்த ஊருக்குப் பெருமை தேடித் தருபவன். வேறு தேசத்தில் வியாபாரம் செய்து ஜீவிக்கக் கூடியவன்.",
+      "புதன் 5ஆவது இடத்தில் இருக்கப் பிறந்தவர் வித்தை கலையில் சிறந்தவராய் இருப்பார். சுக ஜீவனம் செய்து நல்ல பதார்த்தங்களுடன் போஜனம் செய்யும் ப்ராப்தியுண்டு. செல்வந்தர்கள், அரசர்களால் போற்றுதலுக்குரியவர். அதே நேரத்தில் சச்சரவில் ஈடுபடும் தன்மையும், தற்பெருமை உள்ள தன்மையும் காணப்படும்.",
+      "5 ஆம் இடமானது செவ்வாயினால் பார்க்கப்பட்டால் முதலில் பிறந்த பிள்ளைக்கு உயிராபத்து ஏற்படலாம். கடும் வறுமை ஏற்படும் அபாயமும் உண்டு.",
+      "குரு 5ஆம் இடத்தில் இருக்கப் பிறந்தவர் புத்திமான். புதிர்கள் குறைவு. சேனைத் தலைவர் ஆகும் வாய்ப்பு உண்டு. அதிகமாகச் செலவு செய்பவர். ஆனால் தனம் சேர்ப்பதில் கருத்துள்ளவராகவும் இருப்பார்."
+    ],
+    "predTa": "ஐந்தாம் இடம் மேஷமானால் பிரியமான புத்திரன் அமைகிறான். தெய்வத்தின் அருள் கிடைக்கிறது. குடும்பச் சொத்தை வாரிசாகப் பெறும் வாய்ப்பு உண்டு. 5 குடையவன் இரண்டாம் இடத்தில் இருந்தால் பிறக்கும் பிள்ளை குடும்பத்துடன் கருத்து வேறுபாடு கொள்ளக்கூடியவனாகவும், தகாதவர்களுடன் தொடர்பு கொள்ளக்கூடியவனாகவும் இருப்பான். சூரியன் 5 ஆவது இடத்தில் இருந்தால் உத்யோகம் செய்பவராக இருப்பார். இரக்க குணம் சற்றுக் குறைவாக இருக்கலாம். தரித்திர தசையில் கஷ்டப்பட வேண்டியவராகவும் இருப்பார். 5 ஆம் இடமானது சந்திரனால் பார்க்கப்பட்டால் நண்பர்களால் சுகம் உண்டாகிறது. பிறந்த ஊருக்குப் பெருமை தேடித் தருபவன். வேறு தேசத்தில் வியாபாரம் செய்து ஜீவிக்கக் கூடியவன். புதன் 5ஆவது இடத்தில் இருக்கப் பிறந்தவர் வித்தை கலையில் சிறந்தவராய் இருப்பார். சுக ஜீவனம் செய்து நல்ல பதார்த்தங்களுடன் போஜனம் செய்யும் ப்ராப்தியுண்டு. செல்வந்தர்கள், அரசர்களால் போற்றுதலுக்குரியவர். அதே நேரத்தில் சச்சரவில் ஈடுபடும் தன்மையும், தற்பெருமை உள்ள தன்மையும் காணப்படும். 5 ஆம் இடமானது செவ்வாயினால் பார்க்கப்பட்டால் முதலில் பிறந்த பிள்ளைக்கு உயிராபத்து ஏற்படலாம். கடும் வறுமை ஏற்படும் அபாயமும் உண்டு. குரு 5ஆம் இடத்தில் இருக்கப் பிறந்தவர் புத்திமான். புதிர்கள் குறைவு. சேனைத் தலைவர் ஆகும் வாய்ப்பு உண்டு. அதிகமாகச் செலவு செய்பவர். ஆனால் தனம் சேர்ப்பதில் கருத்துள்ளவராகவும் இருப்பார்."
+  },
+  {
+    "bhavaNumber": 6,
+    "titleTa": "6. சத்ரு பாவம் (நோய், கடன், எதிரி, வெற்றி)",
+    "titleEn": "6th House: Enemies & Health",
+    "signId": 1,
+    "signNameTa": "ரிஷபம்",
+    "lordCode": "Ve",
+    "madhyaLongitude": 38.1,
+    "arambhaLongitude": 23.1,
+    "anthyaLongitude": 53.1,
+    "occupantsTa": "கிரகங்கள் இல்லை (Empty)",
+    "pointsTa": [
+      "ரிஷபம் ஆறாம் இடமானால் கால்நடைகள் விஷயத்தில் அடிக்கடி கருத்து வேறுபாடு ஏற்படும்; தன் மக்களாலும், சமூகத்தவராலும் அவ்வப்போது சச்சரவு உண்டாகும். பெண்களின் தொடர்பாலும், உறவினர்களாலும் மகிழ்ச்சி உண்டு.",
+      "ஆறுக்குடையவன் ஆறாம் பாவத்திலேயே இருந்தால் சொந்த ஊரில் சுகமுடையவன்; குழந்தைப் பேற்றில் விருப்பமுடையவன். சிக்கனம் மிகுந்தவர்கள், கடின சுபாவமுடையவர்கள் ஆகியோருடன் நட்பு கொள்வான். அவர்களால் சில தொல்லைகளையும் சந்திக்க நேரிடும்.",
+      "சுக்ரன் ஆறாம் இடத்தில் இருக்கப் பிறந்தவர் எதிரிகளை எளிதில் ஜெயிப்பார். புத்திமான். பெண்களிடம் ஈடுபாடு அதிகம் உள்ளவர். மனைவி குறையுள்ளவராக இருக்க வாய்ப்பு உண்டு."
+    ],
+    "predTa": "ரிஷபம் ஆறாம் இடமானால் கால்நடைகள் விஷயத்தில் அடிக்கடி கருத்து வேறுபாடு ஏற்படும்; தன் மக்களாலும், சமூகத்தவராலும் அவ்வப்போது சச்சரவு உண்டாகும். பெண்களின் தொடர்பாலும், உறவினர்களாலும் மகிழ்ச்சி உண்டு. ஆறுக்குடையவன் ஆறாம் பாவத்திலேயே இருந்தால் சொந்த ஊரில் சுகமுடையவன்; குழந்தைப் பேற்றில் விருப்பமுடையவன். சிக்கனம் மிகுந்தவர்கள், கடின சுபாவமுடையவர்கள் ஆகியோருடன் நட்பு கொள்வான். அவர்களால் சில தொல்லைகளையும் சந்திக்க நேரிடும். சுக்ரன் ஆறாம் இடத்தில் இருக்கப் பிறந்தவர் எதிரிகளை எளிதில் ஜெயிப்பார். புத்திமான். பெண்களிடம் ஈடுபாடு அதிகம் உள்ளவர். மனைவி குறையுள்ளவராக இருக்க வாய்ப்பு உண்டு."
+  },
+  {
+    "bhavaNumber": 7,
+    "titleTa": "7. களத்திர பாவம் (திருமணம், வாழ்க்கை துணை)",
+    "titleEn": "7th House: Spouse & Partners",
+    "signId": 2,
+    "signNameTa": "மிதுனம்",
+    "lordCode": "Me",
+    "madhyaLongitude": 68.1,
+    "arambhaLongitude": 53.1,
+    "anthyaLongitude": 83.1,
+    "occupantsTa": "சந்திரன்",
+    "pointsTa": [
+      "மிதுன ராசி ஏழாமிடமாக இருந்தால் மனைவி செல்வம், அழகு, நல்லொழுக்கம் ஆகியவை நிறைந்தவளாக இருப்பார்.",
+      "ஏழுக்குடையவன் 5 ஆம் இடத்தில் இருந்தால் ஜாதகருக்கு அழகு, அந்தஸ்து, தலைமைத்துவம், சுகம் ஆகியவை கிடைக்கும். தீயவர்களை வெல்பவனாக இருப்பான். மனைவியை எந்த ஆபத்திலிருந்தும் காப்பாற்றக் கூடியவன்.",
+      "சனியினால் களத்திர ஸ்தானம் பார்க்கப்படும்போது மனைவிக்கு நல்லதல்ல. அவருக்கு தீங்கு விளைவிக்கும் நிகழ்வுகள் ஏற்படக்கூடும். அவருக்கு தொடர்ந்து கஷ்டங்கள் வரும். ஜாதகரை பாண்டு நோய் பீடிக்கும். காய்ச்சல், வயிற்று வலி போன்ற நோய்கள் இடைவிடாமல் தொடரும்."
+    ],
+    "predTa": "மிதுன ராசி ஏழாமிடமாக இருந்தால் மனைவி செல்வம், அழகு, நல்லொழுக்கம் ஆகியவை நிறைந்தவளாக இருப்பார். ஏழுக்குடையவன் 5 ஆம் இடத்தில் இருந்தால் ஜாதகருக்கு அழகு, அந்தஸ்து, தலைமைத்துவம், சுகம் ஆகியவை கிடைக்கும். தீயவர்களை வெல்பவனாக இருப்பான். மனைவியை எந்த ஆபத்திலிருந்தும் காப்பாற்றக் கூடியவன். சனியினால் களத்திர ஸ்தானம் பார்க்கப்படும்போது மனைவிக்கு நல்லதல்ல. அவருக்கு தீங்கு விளைவிக்கும் நிகழ்வுகள் ஏற்படக்கூடும். அவருக்கு தொடர்ந்து கஷ்டங்கள் வரும். ஜாதகரை பாண்டு நோய் பீடிக்கும். காய்ச்சல், வயிற்று வலி போன்ற நோய்கள் இடைவிடாமல் தொடரும்."
+  },
+  {
+    "bhavaNumber": 8,
+    "titleTa": "8. ஆயுள் பாவம் (நீண்ட ஆயுள், திடீர் தனம்)",
+    "titleEn": "8th House: Longevity & Secrets",
+    "signId": 3,
+    "signNameTa": "கடகம்",
+    "lordCode": "Mo",
+    "madhyaLongitude": 98.1,
+    "arambhaLongitude": 83.1,
+    "anthyaLongitude": 113.1,
+    "occupantsTa": "கிரகங்கள் இல்லை (Empty)",
+    "pointsTa": [
+      "கடகம் எட்டாம் இடமாக இருக்கப் பிறந்த ஜாதகர் புழுவினாலோ, பயங்கரமான விஷ ஜந்துக்களாலோ, பகைவர்களினாலோ, நீர் நிலைகளில் இறங்கும் போதோ மரணம் ஏற்படுகின்றது. இந்த மரணம் பெரும்பாலும் வேறு தேசத்திலேயே அமைகின்றது.",
+      "எட்டுக்குடையவன் பதினொன்றாம் இடத்தில் இருந்தால் உடல் மெலிந்தவன். பிறரால் தான் சுகமடைவதற்கு வழிகள் தேடிக் கொள்வான்.",
+      "செவ்வாயினால் எட்டாம் இடம் பார்க்கப்பட்டால் நீரிழிவு நோயும், தன தான்ய நாசமும், இரும்பு மூலமாகப் பயமும், பயணங்களில் இடையூறுகளும், திருடர்களால் தன நாசமும் உண்டாகும்."
+    ],
+    "predTa": "கடகம் எட்டாம் இடமாக இருக்கப் பிறந்த ஜாதகர் புழுவினாலோ, பயங்கரமான விஷ ஜந்துக்களாலோ, பகைவர்களினாலோ, நீர் நிலைகளில் இறங்கும் போதோ மரணம் ஏற்படுகின்றது. இந்த மரணம் பெரும்பாலும் வேறு தேசத்திலேயே அமைகின்றது. எட்டுக்குடையவன் பதினொன்றாம் இடத்தில் இருந்தால் உடல் மெலிந்தவன். பிறரால் தான் சுகமடைவதற்கு வழிகள் தேடிக் கொள்வான். செவ்வாயினால் எட்டாம் இடம் பார்க்கப்பட்டால் நீரிழிவு நோயும், தன தான்ய நாசமும், இரும்பு மூலமாகப் பயமும், பயணங்களில் இடையூறுகளும், திருடர்களால் தன நாசமும் உண்டாகும்."
+  },
+  {
+    "bhavaNumber": 9,
+    "titleTa": "9. பாக்கிய பாவம் (தந்தை, தர்மம், புண்ணியம்)",
+    "titleEn": "9th House: Fortune & Dharma",
+    "signId": 4,
+    "signNameTa": "சிம்மம்",
+    "lordCode": "Su",
+    "madhyaLongitude": 128.1,
+    "arambhaLongitude": 113.1,
+    "anthyaLongitude": 143.1,
+    "occupantsTa": "ராகு",
+    "pointsTa": [
+      "சிம்மம் ஒன்பதாம் இடமானால் ஜாதகருக்கு இரக்க குணம் குறைவாக இருக்கும். இதனால் இவனது செல்வம் நாளடைவில் குறைந்துபோகும். பிள்ளைச் செல்வமும் பாதிக்கப்படும்.",
+      "ஒன்பதுக்கு உடையவன் ஐந்தாம் இடத்திலிருந்தால் தெய்வங்களிடமும், பிராமனர்களிடமும் பக்தியுடையவன்; நல்ல வனப்பு, புத்தி கூர்மை உடையவன். இன்சொல் பேசுபவன்.",
+      "ஒன்பதாம் இடம் செவ்வாயினால் பார்க்கப்பட்டால் பாக்கியவான். மைத்துனருடன் சேர்ந்து அறமற்ற காரியங்களில் ஈடுபடக் கூடியவன். கடின சுபாவம் படைத்தவன். ஆனாலும் சுகவாழ்வு உடையவன்.",
+      "ஒன்பதாம் இடம் குருவினால் பார்க்கப்பட்டால் தர்ம காரியங்களில் ஈடுபடக்கூடியவன்; சாஸ்திரங்களில் தேர்ச்சி பெற்றவன். அரசு மூலம் செல்வம் அடைபவன். இருந்தாலும் குணத்தில் சில குறைபாடுகள் இருக்கலாம்.",
+      "ஒன்பதாவது இடத்தில் ராகுவோ, கேதுவோ இருக்கப் பிறந்தவர் தந்தையின் பாக்கியத்தில் குறைவு காணக்கூடும். தெய்வ பக்தியில் நாட்டம் உள்ளவர். அன்னிய தேசங்களுடன் தொடர்பு ஏற்படலாம். பாக்கிய விருத்திக்கு இடையூறுகள் ஏற்பட்டாலும் படிப்படியாக முன்னேற்றம் காணக்கூடும்."
+    ],
+    "predTa": "சிம்மம் ஒன்பதாம் இடமானால் ஜாதகருக்கு இரக்க குணம் குறைவாக இருக்கும். இதனால் இவனது செல்வம் நாளடைவில் குறைந்துபோகும். பிள்ளைச் செல்வமும் பாதிக்கப்படும். ஒன்பதுக்கு உடையவன் ஐந்தாம் இடத்திலிருந்தால் தெய்வங்களிடமும், பிராமனர்களிடமும் பக்தியுடையவன்; நல்ல வனப்பு, புத்தி கூர்மை உடையவன். இன்சொல் பேசுபவன். ஒன்பதாம் இடம் செவ்வாயினால் பார்க்கப்பட்டால் பாக்கியவான். மைத்துனருடன் சேர்ந்து அறமற்ற காரியங்களில் ஈடுபடக் கூடியவன். கடின சுபாவம் படைத்தவன். ஆனாலும் சுகவாழ்வு உடையவன். ஒன்பதாம் இடம் குருவினால் பார்க்கப்பட்டால் தர்ம காரியங்களில் ஈடுபடக்கூடியவன்; சாஸ்திரங்களில் தேர்ச்சி பெற்றவன். அரசு மூலம் செல்வம் அடைபவன். இருந்தாலும் குணத்தில் சில குறைபாடுகள் இருக்கலாம். ஒன்பதாவது இடத்தில் ராகுவோ, கேதுவோ இருக்கப் பிறந்தவர் தந்தையின் பாக்கியத்தில் குறைவு காணக்கூடும். தெய்வ பக்தியில் நாட்டம் உள்ளவர். அன்னிய தேசங்களுடன் தொடர்பு ஏற்படலாம். பாக்கிய விருத்திக்கு இடையூறுகள் ஏற்பட்டாலும் படிப்படியாக முன்னேற்றம் காணக்கூடும்."
+  },
+  {
+    "bhavaNumber": 10,
+    "titleTa": "10. கர்ம பாவம் (தொழில், ஜீவனம், கீர்த்தி)",
+    "titleEn": "10th House: Career & Fame",
+    "signId": 5,
+    "signNameTa": "கன்னி",
+    "lordCode": "Me",
+    "madhyaLongitude": 158.1,
+    "arambhaLongitude": 143.1,
+    "anthyaLongitude": 173.1,
+    "occupantsTa": "கிரகங்கள் இல்லை (Empty)",
+    "pointsTa": [
+      "கன்னி பத்தாம் இடமானால் ஜாதகர் எப்போதும் அறிவு குறைந்தவர்களுடன் நட்பு கொண்டு ஊர் சுற்றித் திரிவான். பெரும்பாலும் பெண்களுடைய சொத்துக்கு மேலாளராக இடம்பிடித்து, தானும் சொத்து சேர்த்துக் கொள்ளும் வல்லவனாகின்றான்.",
+      "பத்துக்குடையன் ஐந்தாம் இடத்தில் இருந்தால் கலை ஆர்வம் மிக்கவன். அரசால் ஆதாயம் பெறக் கூடியவன். மிகுந்த யோகி, சிறந்த சங்கீத மேதையாகவும் இவன் திகழக் கூடும்.",
+      "பத்தாம் இடம் சனியினால் பார்க்கப்பட்டால் இவனுடைய தந்தை விரைவில் இறந்துவிடுவார். தாய் மூலமும் அவ்வளவு சுகம் இல்லை. அதிக காலம் வாழ்ந்திருக்க மாட்டான். ஜீவித்தால் பாக்கியமுள்ளவனாக இருப்பான்."
+    ],
+    "predTa": "கன்னி பத்தாம் இடமானால் ஜாதகர் எப்போதும் அறிவு குறைந்தவர்களுடன் நட்பு கொண்டு ஊர் சுற்றித் திரிவான். பெரும்பாலும் பெண்களுடைய சொத்துக்கு மேலாளராக இடம்பிடித்து, தானும் சொத்து சேர்த்துக் கொள்ளும் வல்லவனாகின்றான். பத்துக்குடையன் ஐந்தாம் இடத்தில் இருந்தால் கலை ஆர்வம் மிக்கவன். அரசால் ஆதாயம் பெறக் கூடியவன். மிகுந்த யோகி, சிறந்த சங்கீத மேதையாகவும் இவன் திகழக் கூடும். பத்தாம் இடம் சனியினால் பார்க்கப்பட்டால் இவனுடைய தந்தை விரைவில் இறந்துவிடுவார். தாய் மூலமும் அவ்வளவு சுகம் இல்லை. அதிக காலம் வாழ்ந்திருக்க மாட்டான். ஜீவித்தால் பாக்கியமுள்ளவனாக இருப்பான்."
+  },
+  {
+    "bhavaNumber": 11,
+    "titleTa": "11. லாப பாவம் (வருமானம், மூத்த சகோதரம்)",
+    "titleEn": "11th House: Gains & Desires",
+    "signId": 6,
+    "signNameTa": "துலாம்",
+    "lordCode": "Ve",
+    "madhyaLongitude": 188.1,
+    "arambhaLongitude": 173.1,
+    "anthyaLongitude": 203.1,
+    "occupantsTa": "கிரகங்கள் இல்லை (Empty)",
+    "pointsTa": [
+      "துலாம் பதினொன்றாம் இடமாக அமைந்தால் நண்பர்கள் மூலம் பொருள் வரவைப் பெறுவார். நல்லவர்களை வணங்குவார். அதிக புகழையும் அடைவார்.",
+      "11 ஆம் இடத்திற்கு அதிபதி ஆறாம் இடத்தில் இருந்தால் ஜாதகருக்கு எதிரிகள் உண்டாவார்கள். நோயாலும் பாதிக்கப்படலாம். மெலிந்த தேகமாகத் தோன்றினாலும் திறமையில் குறைவிருக்காது. வெளிநாடுகளுக்கும் பயணம் செய்வார்.",
+      "11 ஆம் இடம் சூரியனால் பார்க்கப்பட்டால் ஜாதகர் விரும்பும் அனைத்துப் பொருள்களையும் உறுதியாக அடைவார். புத்திரப் பேற்றில் இழப்பு ஏற்படலாம். நல்ல புத்திசாலி. உழைத்துப் பிழைப்பவர்.",
+      "சந்திரன் பதினோராவது இடத்தில் இருக்கப் பிறந்தவர் புத்திமான். பலவித வித்தைகளில் தேர்ந்தவர். கீர்த்தியுள்ளவர். திரவியமுள்ளவர். பணியாளர்களின் உதவி கிடைக்கும்.",
+      "11 ஆம் இடம் புதனால் பார்க்கப்பட்டால் பாக்கியசாலியாக இருப்பார். எல்லா வகையான பொருள் மூலமும் சுகம் பெறுவார். ஊக்கத்தால் சாஸ்திரத்தில் சிறந்த தேர்ச்சி பெறுவார். அதிக புகழ் பெறுவார். பெண் குழந்தைகளை அதிகம் பெறுபவர்.",
+      "11 ஆம் இடம் குருவால் பார்க்கப்பட்டால் நிலையான ஆயுள் உடையவராக இருப்பார். மனைவி, பிள்ளைகள் மூலம் சுகம் பெறுவார். காரியங்களில் வெற்றியும், சில நேரங்களில் உடல் சோர்வும் ஏற்படலாம்."
+    ],
+    "predTa": "துலாம் பதினொன்றாம் இடமாக அமைந்தால் நண்பர்கள் மூலம் பொருள் வரவைப் பெறுவார். நல்லவர்களை வணங்குவார். அதிக புகழையும் அடைவார். 11 ஆம் இடத்திற்கு அதிபதி ஆறாம் இடத்தில் இருந்தால் ஜாதகருக்கு எதிரிகள் உண்டாவார்கள். நோயாலும் பாதிக்கப்படலாம். மெலிந்த தேகமாகத் தோன்றினாலும் திறமையில் குறைவிருக்காது. வெளிநாடுகளுக்கும் பயணம் செய்வார். 11 ஆம் இடம் சூரியனால் பார்க்கப்பட்டால் ஜாதகர் விரும்பும் அனைத்துப் பொருள்களையும் உறுதியாக அடைவார். புத்திரப் பேற்றில் இழப்பு ஏற்படலாம். நல்ல புத்திசாலி. உழைத்துப் பிழைப்பவர். சந்திரன் பதினோராவது இடத்தில் இருக்கப் பிறந்தவர் புத்திமான். பலவித வித்தைகளில் தேர்ந்தவர். கீர்த்தியுள்ளவர். திரவியமுள்ளவர். பணியாளர்களின் உதவி கிடைக்கும். 11 ஆம் இடம் புதனால் பார்க்கப்பட்டால் பாக்கியசாலியாக இருப்பார். எல்லா வகையான பொருள் மூலமும் சுகம் பெறுவார். ஊக்கத்தால் சாஸ்திரத்தில் சிறந்த தேர்ச்சி பெறுவார். அதிக புகழ் பெறுவார். பெண் குழந்தைகளை அதிகம் பெறுபவர். 11 ஆம் இடம் குருவால் பார்க்கப்பட்டால் நிலையான ஆயுள் உடையவராக இருப்பார். மனைவி, பிள்ளைகள் மூலம் சுகம் பெறுவார். காரியங்களில் வெற்றியும், சில நேரங்களில் உடல் சோர்வும் ஏற்படலாம்."
+  },
+  {
+    "bhavaNumber": 12,
+    "titleTa": "12. விரய பாவம் (மோட்சம், வெளிநாடு, செலவு)",
+    "titleEn": "12th House: Expenditure & Moksha",
+    "signId": 7,
+    "signNameTa": "விருச்சிகம்",
+    "lordCode": "Ma",
+    "madhyaLongitude": 218.1,
+    "arambhaLongitude": 203.1,
+    "anthyaLongitude": 233.1,
+    "occupantsTa": "கிரகங்கள் இல்லை (Empty)",
+    "pointsTa": [
+      "விருச்சிகம் பன்னிரெண்டாம் இடமாக இருந்தால் ஜாதகருக்கு கவன குறைவினாலும் ஆடம்பர செலவினாலும் நஷ்டம் ஏற்படும். எதிரிகளின் எதிர்ப்புக்கு ஆளாவான்.",
+      "பன்னிரெண்டுக்கு உடையவன் மகரத்தில் இருந்தால் உணவு பானம் தொடர்பான செலவு செய்வான். தன் உறவினர்களை மதிக்காதவன். அளவுக்கு மீறி உண்பான். பிறரால் குறை கூறப்படுபவன். விவசாயத் தொழில் இல்லாதவனாக இருப்பான்.",
+      "பன்னிரெண்டாம் இடம் சுக்கிரனால் பார்க்கப்பட்டால் சுக போகங்களிலும் ஆடம்பரச் செலவுகளிலும் ஈடுபாடு ஏற்படும். உறக்க சுகமும், மனையறை இன்பங்களும் நிறைவாக அமையும். வெளிநாட்டு பயணங்கள் மூலம் மகிழ்ச்சி கிடைக்கும்."
+    ],
+    "predTa": "விருச்சிகம் பன்னிரெண்டாம் இடமாக இருந்தால் ஜாதகருக்கு கவன குறைவினாலும் ஆடம்பர செலவினாலும் நஷ்டம் ஏற்படும். எதிரிகளின் எதிர்ப்புக்கு ஆளாவான். பன்னிரெண்டுக்கு உடையவன் மகரத்தில் இருந்தால் உணவு பானம் தொடர்பான செலவு செய்வான். தன் உறவினர்களை மதிக்காதவன். அளவுக்கு மீறி உண்பான். பிறரால் குறை கூறப்படுபவன். விவசாயத் தொழில் இல்லாதவனாக இருப்பான். பன்னிரெண்டாம் இடம் சுக்கிரனால் பார்க்கப்பட்டால் சுக போகங்களிலும் ஆடம்பரச் செலவுகளிலும் ஈடுபாடு ஏற்படும். உறக்க சுகமும், மனையறை இன்பங்களும் நிறைவாக அமையும். வெளிநாட்டு பயணங்கள் மூலம் மகிழ்ச்சி கிடைக்கும்."
+  }
+]

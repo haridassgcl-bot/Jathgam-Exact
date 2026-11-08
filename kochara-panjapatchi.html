@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="ta">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>கோச்சார பஞ்சபட்சி · இன்றைய நாள் பட்சி அட்டவணை | Exact Jathagam (துல்லிய ஜாதகம்)</title>
+  <meta name="description" content="கோச்சார பஞ்சபட்சி சாஸ்திரம் - 100% துல்லியமான உள்ளூர் நண்பகல் மற்றும் சூரிய உதயம் அஸ்தமனக் கணித அட்டவணை. 5 பட்சிகள், 5 தொழில்கள், உப-பட்சி மற்றும் சூட்சும கால அட்டவணை.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Mukta+Malar:wght@400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css">
+  <style>
+    body {
+      background: #F8FAFC;
+      color: #0F172A;
+      font-family: 'Mukta Malar', 'Outfit', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    .standalone-nav {
+      background: #FFFFFF;
+      border-bottom: 1px solid #E2E8F0;
+      padding: 0.75rem 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.03);
+    }
+    .standalone-container {
+      max-width: 1200px;
+      margin: 1.5rem auto 3rem auto;
+      padding: 0 1rem;
+    }
+    .back-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      color: #831843;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 0.9rem;
+      background: #FDF2F8;
+      border: 1px solid #FBCFE8;
+      padding: 0.4rem 0.85rem;
+      border-radius: 6px;
+      transition: all 0.2s;
+    }
+    .back-btn:hover {
+      background: #FCE7F3;
+    }
+    .loc-modal-overlay {
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0,0,0,0.5);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+    }
+    .loc-modal-box {
+      background: #FFFFFF;
+      border-radius: 12px;
+      padding: 1.5rem;
+      width: 90%;
+      max-width: 460px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Standalone Navigation Bar -->
+  <header class="standalone-nav">
+    <div style="display: flex; align-items: center; gap: 0.75rem;">
+      <span style="font-size: 1.6rem;">🦅</span>
+      <div>
+        <div style="font-weight: 800; font-size: 1.15rem; color: #831843;">துல்லிய ஜாதகம் · Exact Jathagam</div>
+        <div style="font-size: 0.78rem; color: #64748B;">கோச்சார பஞ்சபட்சி சாஸ்திரம் (Pancha Pakshi Shastra)</div>
+      </div>
+    </div>
+    <div>
+      <a href="index.html" class="back-btn">⬅ முதன்மை ஜாதகத்திற்குத் திரும்பு</a>
+    </div>
+  </header>
+
+  <main class="standalone-container">
+    <div id="panchaPakshiAppCard" class="ep-pp-card ep-theme-modern">
+      
+      <!-- 1. Top Bar: Themes & Languages -->
+      <div class="ep-pp-top-bar">
+        <div class="ep-pp-theme-group">
+          <button type="button" class="ep-pp-theme-btn active" data-theme="modern">நவீனம்</button>
+          <button type="button" class="ep-pp-theme-btn" data-theme="traditional">பாரம்பரியம்</button>
+          <button type="button" class="ep-pp-theme-btn" data-theme="royal">அரச பாணி</button>
+          <button type="button" class="ep-pp-theme-btn" data-theme="eclipse">எக்லிப்ஸ்</button>
+          <button type="button" class="ep-pp-theme-btn" data-theme="classic">கிளாசிக்</button>
+        </div>
+
+        <div class="ep-pp-lang-group">
+          <button type="button" class="ep-pp-lang-btn" data-lang="en">English</button>
+          <button type="button" class="ep-pp-lang-btn active" data-lang="ta">தமிழ்</button>
+          <button type="button" class="ep-pp-lang-btn" data-lang="hi">हिन्दी</button>
+          <button type="button" class="ep-pp-lang-btn" data-lang="te">తెలుగు</button>
+          <button type="button" class="ep-pp-lang-btn" data-lang="ml">മലയാളം</button>
+          <button type="button" class="ep-pp-lang-btn" data-lang="kn">ಕನ್ನಡ</button>
+        </div>
+      </div>
+
+      <!-- 2. Date Navigation & Location Bar -->
+      <div class="ep-pp-nav-row">
+        <div class="ep-pp-date-nav">
+          <button type="button" id="ppPrevBtn" class="ep-pp-nav-btn">‹ முந்தைய</button>
+          <button type="button" id="ppTodayBtn" class="ep-pp-nav-btn primary">இன்று</button>
+          <button type="button" id="ppNextBtn" class="ep-pp-nav-btn">அடுத்த ›</button>
+          <input type="date" id="ppDateInput" value="2026-10-12" style="padding: 0.35rem 0.6rem; border-radius: 6px; border: 1px solid #CBD5E1; font-weight: 700; font-size: 0.88rem; outline: none;">
+        </div>
+
+        <div class="ep-pp-loc-display">
+          <span>இடம்: <strong id="ppLocName" class="ep-pp-loc-pill">Chennai</strong></span>
+          <span>·</span>
+          <button type="button" id="ppChangeLocBtn" class="ep-pp-link-btn">இடத்தை மாற்று</button>
+          <button type="button" id="ppShowLocBtn" class="ep-pp-link-btn">இடம்காட்டு</button>
+        </div>
+      </div>
+
+      <!-- 3. Core Bird & Day Overview Hero Banner -->
+      <div class="ep-pp-hero-banner" id="ppHeroBanner">
+        <h1 class="ep-pp-main-bird-title" id="ppMainBirdTitle">
+          <span>🐦</span> <span id="ppMainBirdName">காகம்</span>
+        </h1>
+        <div class="ep-pp-main-bird-sub" id="ppMainBirdSub">
+          சுக்ல பக்ஷம் · சுவாதி · காகம்
+        </div>
+        <div class="ep-pp-noon-bird-pill" id="ppNoonBirdBadge">
+          நண்பகல் பட்சி (தேர்ந்த நாள்): <strong id="ppNoonBirdName">காகம்</strong>
+        </div>
+      </div>
+
+      <!-- 4. Overview Metrics Grid Table -->
+      <div class="ep-pp-metrics-grid" id="ppMetricsGrid">
+        <div class="ep-pp-metric-card">
+          <div class="ep-pp-metric-label" id="lblTodayBird">இன்றைய பட்சி</div>
+          <div class="ep-pp-metric-val" id="valTodayBird">காகம்</div>
+        </div>
+        <div class="ep-pp-metric-card">
+          <div class="ep-pp-metric-label" id="lblPaksham">பட்சம்</div>
+          <div class="ep-pp-metric-val" id="valPaksham">சுக்ல பக்ஷம்</div>
+        </div>
+        <div class="ep-pp-metric-card">
+          <div class="ep-pp-metric-label" id="lblElement">பூதம்</div>
+          <div class="ep-pp-metric-val" id="valElement">நெருப்பு</div>
+        </div>
+        <div class="ep-pp-metric-card">
+          <div class="ep-pp-metric-label" id="lblWeekday">கிழமை</div>
+          <div class="ep-pp-metric-val" id="valWeekday">திங்கள்</div>
+        </div>
+        <div class="ep-pp-metric-card">
+          <div class="ep-pp-metric-label" id="lblSunrise">சூரிய உதயம்</div>
+          <div class="ep-pp-metric-val" id="valSunrise" style="color: #D97706;">5:58 AM</div>
+        </div>
+        <div class="ep-pp-metric-card">
+          <div class="ep-pp-metric-label" id="lblSunset">சூரிய அஸ்தமனம்</div>
+          <div class="ep-pp-metric-val" id="valSunset" style="color: #DC2626;">5:52 PM</div>
+        </div>
+      </div>
+
+      <!-- 5. Gochara Bird 3-Day Card (முந்தைய / இன்று / அடுத்த) -->
+      <div style="margin-bottom: 2rem;">
+        <h3 style="margin: 0 0 0.5rem 0; font-size: 1.15rem; font-weight: 800; color: #831843;" id="ppGocharaTitle">
+          🪐 கோச்சார பட்சி
+        </h3>
+        <div class="ep-pp-note-box" id="ppGocharaNote">
+          முந்தைய / இன்று / அடுத்த என்பவை உள்ளூர் நண்பகல் பதிவுகள். செயல் அட்டவணை சூரிய உதயம், அஸ்தமனம், நட்சத்திரம் மற்றும் பட்ச மாற்றங்களைப் பின்பற்றுகிறது.
+          தொடர் நட்சத்திரங்கள் ஒரே பட்சிக் குழுவில் இருக்கலாம். முந்தைய / இன்று / அடுத்த அனைத்தும் ஒரே பட்சியாக இருப்பது தவறல்ல.
+        </div>
+        <div class="ep-pp-table-wrap">
+          <table class="ep-pp-table">
+            <thead>
+              <tr>
+                <th id="thGocharaTime">காலம்</th>
+                <th id="thGocharaDate">தேதி</th>
+                <th id="thGocharaStar">நட்சத்திரம்</th>
+                <th id="thGocharaPaksha">பட்சம்</th>
+                <th id="thGocharaBird">பட்சி</th>
+                <th id="thGocharaDay">கிழமை</th>
+              </tr>
+            </thead>
+            <tbody id="ppGocharaTbody">
+              <!-- Dynamically populated -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- 6. Major Periods Timeline Table (கோச்சார பஞ்சபட்சி காலவரிசை) -->
+      <div style="margin-bottom: 2rem;">
+        <h3 style="margin: 0 0 0.5rem 0; font-size: 1.15rem; font-weight: 800; color: #1E3A8A;" id="ppTimelineTitle">
+          ⏱️ கோச்சார பஞ்சபட்சி காலவரிசை
+        </h3>
+        <div class="ep-pp-note-box" id="ppTimelineNote">
+          முந்தைய / இன்று / அடுத்த என்பவை உள்ளூர் நண்பகல் பதிவுகள். செயல் அட்டவணை சூரிய உதயம், அஸ்தமனம், நட்சத்திரம் மற்றும் பட்ச மாற்றங்களைப் பின்பற்றுகிறது.
+        </div>
+        <div class="ep-pp-table-wrap">
+          <table class="ep-pp-table">
+            <thead>
+              <tr>
+                <th id="thTlStart">ஆரம்பம்</th>
+                <th id="thTlEnd">முடிவு</th>
+                <th id="thTlBird">பட்சி</th>
+                <th id="thTlStar">நட்சத்திரம்</th>
+                <th id="thTlPaksha">பட்சம்</th>
+                <th id="thTlPeriod">பகல் / இரவு</th>
+                <th id="thTlActivity">தொழில்</th>
+              </tr>
+            </thead>
+            <tbody id="ppTimelineTbody">
+              <!-- Dynamically populated -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- 7. Astronomical Transitions Table (கோச்சார பஞ்சபட்சி காலவரிசை — மாற்றம்) -->
+      <div style="margin-bottom: 2rem;">
+        <h3 style="margin: 0 0 0.5rem 0; font-size: 1.15rem; font-weight: 800; color: #065F46;" id="ppTransitionsTitle">
+          🌅 கோச்சார பஞ்சபட்சி காலவரிசை — மாற்றம்
+        </h3>
+        <div class="ep-pp-table-wrap">
+          <table class="ep-pp-table">
+            <thead>
+              <tr>
+                <th id="thTrTime">நேரம்</th>
+                <th id="thTrChange">மாற்றம்</th>
+                <th id="thTrStar">நட்சத்திரம்</th>
+                <th id="thTrPaksha">பட்சம்</th>
+                <th id="thTrBird">பட்சி</th>
+                <th id="thTrStatus">பட்சி</th>
+              </tr>
+            </thead>
+            <tbody id="ppTransitionsTbody">
+              <!-- Dynamically populated -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- 8. Real-time Live Sub-Period Indicator Card -->
+      <div class="ep-pp-live-indicator-card" id="ppLiveCard">
+        <div class="ep-pp-live-left">
+          <div class="ep-pp-pulse-dot"></div>
+          <div>
+            <span class="ep-pp-live-title" id="ppLiveLabel">இப்போது — 6:47 PM</span>
+          </div>
+        </div>
+        <div>
+          <span class="ep-pp-live-badge-val" id="ppLiveVal">6:46 PM – 6:48 PM · நடை</span>
+        </div>
+      </div>
+
+      <!-- 9. 3-Tier Nested Accordion Schedule: பகல் அட்டவணை & இரவு அட்டவணை -->
+      <div class="ep-pp-accordion-group">
+        
+        <!-- Daytime Schedule -->
+        <div class="ep-pp-section-heading">
+          <h2 class="ep-pp-heading-text" id="ppDayHeading">
+            <span>☀️</span> பகல் அட்டவணை
+          </h2>
+          <div>
+            <button type="button" class="ep-pp-nav-btn" id="ppExpandAllDayBtn">அனைத்தும் விரி</button>
+            <button type="button" class="ep-pp-nav-btn" id="ppCollapseAllDayBtn">அனைத்தும் சுருக்கு</button>
+          </div>
+        </div>
+        <div id="ppDayAccordionList">
+          <!-- Dynamically populated 5 Major Yamams -->
+        </div>
+
+        <!-- Nighttime Schedule -->
+        <div class="ep-pp-section-heading" style="margin-top: 2.5rem;">
+          <h2 class="ep-pp-heading-text" id="ppNightHeading">
+            <span>🌙</span> இரவு அட்டவணை
+          </h2>
+          <div>
+            <button type="button" class="ep-pp-nav-btn" id="ppExpandAllNightBtn">அனைத்தும் விரி</button>
+            <button type="button" class="ep-pp-nav-btn" id="ppCollapseAllNightBtn">அனைத்தும் சுருக்கு</button>
+          </div>
+        </div>
+        <div id="ppNightAccordionList">
+          <!-- Dynamically populated 5 Major Yamams -->
+        </div>
+      </div>
+
+      <!-- 10. Master Reference Static Tables (நிலையான குறிப்பு அட்டவணைகள்) -->
+      <div style="margin-top: 3rem;">
+        <h2 class="ep-pp-heading-text" style="margin-bottom: 1rem;" id="ppStaticHeading">
+          <span>📚</span> நிலையான குறிப்பு அட்டவணைகள்
+        </h2>
+
+        <!-- Reference 1: 5 Birds & Elements -->
+        <div style="margin-bottom: 1.5rem;">
+          <h4 style="color: #831843; margin-bottom: 0.5rem; font-size: 1rem;">1. பஞ்ச பட்சிகள், பூதங்கள் &amp; கிரகங்கள் (5 Birds, Elements &amp; Planets)</h4>
+          <div class="ep-pp-table-wrap">
+            <table class="ep-pp-table">
+              <thead>
+                <tr>
+                  <th>பட்சி</th>
+                  <th>பூதம்</th>
+                  <th>எழுத்து</th>
+                  <th>திசை</th>
+                  <th>அதிபதி கிரகம்</th>
+                  <th>நிறம்</th>
+                </tr>
+              </thead>
+              <tbody id="ppRefBirdsTbody">
+                <!-- Dynamically populated -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Reference 2: 5 Activities Power & Recommendations -->
+        <div style="margin-bottom: 1.5rem;">
+          <h4 style="color: #065F46; margin-bottom: 0.5rem; font-size: 1rem;">2. பஞ்ச தொழில்களும் அதன் வலிமையும் பலன்களும் (5 Activities Strength &amp; Effects)</h4>
+          <div class="ep-pp-table-wrap">
+            <table class="ep-pp-table">
+              <thead>
+                <tr>
+                  <th>தொழில்</th>
+                  <th>சக்தி %</th>
+                  <th>நாழிகை அளவு</th>
+                  <th>நிலை</th>
+                  <th>செயல் வழிகாட்டுதல்</th>
+                </tr>
+              </thead>
+              <tbody id="ppRefActivitiesTbody">
+                <!-- Dynamically populated -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Location Change Modal -->
+  <div class="loc-modal-overlay" id="locModal">
+    <div class="loc-modal-box">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+        <h3 style="margin: 0; color: #1E3A8A; font-size: 1.15rem;">📍 இடத்தை மாற்றுக</h3>
+        <button type="button" id="locModalClose" style="background: none; border: none; font-size: 1.3rem; cursor: pointer;">&times;</button>
+      </div>
+      <div style="margin-bottom: 1rem;">
+        <label style="display: block; font-size: 0.85rem; font-weight: 600; margin-bottom: 0.35rem;">பிரபலமான இடங்கள்:</label>
+        <select id="locSelect" style="width: 100%; padding: 0.5rem; border-radius: 6px; border: 1px solid #CBD5E1; font-size: 0.9rem;">
+          <option value="Chennai|13.0827|80.2707" selected>Chennai (சென்னை) - 13.0827° N, 80.2707° E</option>
+          <option value="Madurai|9.9252|78.1198">Madurai (மதுரை) - 9.9252° N, 78.1198° E</option>
+          <option value="Coimbatore|11.0168|76.9558">Coimbatore (கோயம்புத்தூர்) - 11.0168° N, 76.9558° E</option>
+          <option value="Tiruchirappalli|10.7905|78.7047">Tiruchirappalli (திருச்சிராப்பள்ளி) - 10.7905° N, 78.7047° E</option>
+          <option value="Salem|11.6643|78.1460">Salem (சேலம்) - 11.6643° N, 78.1460° E</option>
+          <option value="Tirunelveli|8.7139|77.7567">Tirunelveli (திருநெல்வேலி) - 8.7139° N, 77.7567° E</option>
+          <option value="Thanjavur|10.7870|79.1378">Thanjavur (தஞ்சாவூர்) - 10.7870° N, 79.1378° E</option>
+          <option value="Vellore|12.9165|79.1325">Vellore (வேலூர்) - 12.9165° N, 79.1325° E</option>
+          <option value="Bangalore|12.9716|77.5946">Bangalore (பெங்களூரு) - 12.9716° N, 77.5946° E</option>
+          <option value="Mumbai|19.0760|72.8777">Mumbai (மும்பை) - 19.0760° N, 72.8777° E</option>
+          <option value="Delhi|28.7041|77.1025">Delhi (டெல்லி) - 28.7041° N, 77.1025° E</option>
+          <option value="Singapore|1.3521|103.8198">Singapore (சிங்கப்பூர்) - 1.3521° N, 103.8198° E</option>
+          <option value="Kuala Lumpur|3.1390|101.6869">Kuala Lumpur (மலேசியா) - 3.1390° N, 101.6869° E</option>
+          <option value="Colombo|6.9271|79.8612">Colombo (கொழும்பு) - 6.9271° N, 79.8612° E</option>
+        </select>
+      </div>
+      <div style="text-align: right;">
+        <button type="button" id="locModalApply" class="ep-pp-nav-btn primary">பயன்படுத்துக</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/pancha-pakshi-engine.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      // Parse URL Search Params
+      const urlParams = new URLSearchParams(window.location.search);
+      let curTheme = urlParams.get("theme") || "modern";
+      if (curTheme === "1") curTheme = "modern";
+      else if (curTheme === "2") curTheme = "traditional";
+      else if (curTheme === "3") curTheme = "royal";
+      else if (curTheme === "4") curTheme = "eclipse";
+      else if (curTheme === "5") curTheme = "classic";
+
+      const getTodayIso = () => {
+        const d = new Date();
+        return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`;
+      };
+
+      let curLang = urlParams.get("language") || "ta";
+      let curPlace = urlParams.get("place") || "Chennai";
+      let curLat = parseFloat(urlParams.get("lat")) || 13.0827;
+      let curLon = parseFloat(urlParams.get("lon")) || 80.2707;
+      let curDate = urlParams.get("date") || getTodayIso();
+
+      const card = document.getElementById("panchaPakshiAppCard");
+      const dateInput = document.getElementById("ppDateInput");
+      dateInput.value = curDate;
+
+      // Theme Switcher
+      function applyTheme(themeName) {
+        curTheme = themeName;
+        card.className = "ep-pp-card ep-theme-" + themeName;
+        document.querySelectorAll(".ep-pp-theme-btn").forEach(b => {
+          b.classList.toggle("active", b.getAttribute("data-theme") === themeName);
+        });
+      }
+      applyTheme(curTheme);
+
+      document.querySelectorAll(".ep-pp-theme-btn").forEach(btn => {
+        btn.addEventListener("click", () => applyTheme(btn.getAttribute("data-theme")));
+      });
+
+      // Language Switcher
+      function applyLanguage(langCode) {
+        curLang = langCode;
+        document.querySelectorAll(".ep-pp-lang-btn").forEach(b => {
+          b.classList.toggle("active", b.getAttribute("data-lang") === langCode);
+        });
+        renderAll();
+      }
+
+      document.querySelectorAll(".ep-pp-lang-btn").forEach(btn => {
+        btn.addEventListener("click", () => applyLanguage(btn.getAttribute("data-lang")));
+      });
+
+      // Date Navigation
+      document.getElementById("ppPrevBtn").addEventListener("click", () => {
+        const d = new Date(curDate);
+        d.setDate(d.getDate() - 1);
+        curDate = d.toISOString().split("T")[0];
+        dateInput.value = curDate;
+        renderAll();
+      });
+
+      document.getElementById("ppTodayBtn").addEventListener("click", () => {
+        curDate = getTodayIso();
+        dateInput.value = curDate;
+        renderAll();
+      });
+
+      document.getElementById("ppNextBtn").addEventListener("click", () => {
+        const d = new Date(curDate);
+        d.setDate(d.getDate() + 1);
+        curDate = d.toISOString().split("T")[0];
+        dateInput.value = curDate;
+        renderAll();
+      });
+
+      dateInput.addEventListener("change", (e) => {
+        if (e.target.value) {
+          curDate = e.target.value;
+          renderAll();
+        }
+      });
+
+      // Location Modal
+      const locModal = document.getElementById("locModal");
+      document.getElementById("ppChangeLocBtn").addEventListener("click", () => {
+        locModal.style.display = "flex";
+      });
+      document.getElementById("locModalClose").addEventListener("click", () => {
+        locModal.style.display = "none";
+      });
+      document.getElementById("locModalApply").addEventListener("click", () => {
+        const val = document.getElementById("locSelect").value;
+        const [p, latStr, lonStr] = val.split("|");
+        curPlace = p;
+        curLat = parseFloat(latStr);
+        curLon = parseFloat(lonStr);
+        document.getElementById("ppLocName").textContent = curPlace;
+        locModal.style.display = "none";
+        renderAll();
+      });
+      document.getElementById("ppShowLocBtn").addEventListener("click", () => {
+        alert("இடம்: " + curPlace + " (Latitude: " + curLat + ", Longitude: " + curLon + ")");
+      });
+
+      // Render Schedule
+      function renderAll() {
+        if (typeof PanchaPakshiEngine === "undefined") return;
+
+        const schedule = PanchaPakshiEngine.calculateDailySchedule({
+          date: curDate,
+          place: curPlace,
+          lat: curLat,
+          lon: curLon,
+          tz: 5.5,
+          lang: curLang
+        });
+
+        const t = (k) => PanchaPakshiEngine.t(k, curLang);
+
+        // Update Labels
+        document.getElementById("lblTodayBird").textContent = t("todayBird");
+        document.getElementById("lblPaksham").textContent = t("paksham");
+        document.getElementById("lblElement").textContent = t("element");
+        document.getElementById("lblWeekday").textContent = t("weekday");
+        document.getElementById("lblSunrise").textContent = t("sunrise");
+        document.getElementById("lblSunset").textContent = t("sunset");
+
+        // 1. Hero
+        document.getElementById("ppMainBirdName").textContent = schedule.bird.ta;
+        document.getElementById("ppMainBirdSub").textContent = `${schedule.pakshaTa} · ${schedule.starObj.ta} · ${schedule.bird.ta}`;
+        document.getElementById("ppNoonBirdBadge").innerHTML = `${t("noonBirdTitle")}: <strong>${schedule.bird.ta}</strong>`;
+
+        // 2. Metrics
+        document.getElementById("valTodayBird").textContent = schedule.bird.ta;
+        document.getElementById("valPaksham").textContent = schedule.pakshaTa;
+        document.getElementById("valElement").textContent = schedule.elementTa;
+        document.getElementById("valWeekday").textContent = schedule.weekday.ta;
+        document.getElementById("valSunrise").textContent = schedule.sunriseStr;
+        document.getElementById("valSunset").textContent = schedule.sunsetStr;
+
+        // 3. Gochara 3-Day Table
+        const gTbody = document.getElementById("ppGocharaTbody");
+        gTbody.innerHTML = schedule.threeDaysGochara.map(row => `
+          <tr class="${row.isCurrent ? 'active-row' : ''}">
+            <td><strong>${row.periodLabel}</strong></td>
+            <td>${row.date}</td>
+            <td>${row.nakshatra}</td>
+            <td>${row.paksha}</td>
+            <td><strong>${row.bird}</strong></td>
+            <td>${row.weekday}</td>
+          </tr>
+        `).join("");
+
+        // 4. Major Timeline
+        const tlTbody = document.getElementById("ppTimelineTbody");
+        tlTbody.innerHTML = schedule.majorTimeline.map(row => `
+          <tr>
+            <td style="font-family: monospace; font-weight: 700;">${row.startStr}</td>
+            <td style="font-family: monospace; font-weight: 700;">${row.endStr}</td>
+            <td>${row.bird.ta}</td>
+            <td>${row.nakshatraTa}</td>
+            <td>${row.pakshaTa}</td>
+            <td><span class="ep-pp-badge" style="background: ${row.periodType === 'day' ? '#FEF3C7' : '#E0E7FF'}; color: ${row.periodType === 'day' ? '#92400E' : '#3730A3'};">${row.periodType}</span></td>
+            <td><span class="ep-pp-badge ${row.activity.badgeClass}">${row.activity.ta}</span></td>
+          </tr>
+        `).join("");
+
+        // 5. Transitions
+        const trTbody = document.getElementById("ppTransitionsTbody");
+        trTbody.innerHTML = schedule.transitions.map(tr => `
+          <tr>
+            <td style="font-family: monospace; font-weight: 700;">${tr.time}</td>
+            <td><span class="ep-pp-badge badge-nadai">${tr.typeTa}</span></td>
+            <td>${tr.nakshatra}</td>
+            <td>${tr.paksha}</td>
+            <td><strong>${tr.bird}</strong></td>
+            <td><span style="color: #64748B;">${tr.status}</span></td>
+          </tr>
+        `).join("");
+
+        // 6. Live Indicator with Real-Time Ticker
+        function updateStandaloneLiveSlot() {
+          const nowObj = new Date();
+          const isToday = (curDate === getTodayIso());
+          const targetObj = isToday ? nowObj : new Date(`${curDate}T12:00:00`);
+          const liveSlot = PanchaPakshiEngine.getLiveActiveSlot(schedule, targetObj);
+          
+          const timeStr = isToday
+            ? nowObj.toLocaleTimeString([], { hour: 'numeric', minute: '2-digit', second: '2-digit', hour12: true })
+            : '12:00 PM';
+
+          document.getElementById("ppLiveLabel").textContent = `${t("nowLabel")} — ${timeStr}`;
+          document.getElementById("ppLiveVal").textContent = liveSlot.displayText || `${schedule.bird.ta} · ${schedule.pakshaTa}`;
+        }
+
+        updateStandaloneLiveSlot();
+
+        if (window._standalonePpInterval) clearInterval(window._standalonePpInterval);
+        window._standalonePpInterval = setInterval(updateStandaloneLiveSlot, 1000);
+
+        // 7. Day & Night Accordions
+        renderAccordionList("ppDayAccordionList", schedule.dayPeriods);
+        renderAccordionList("ppNightAccordionList", schedule.nightPeriods);
+
+        // 8. Static Reference Tables
+        renderStaticReferenceTables();
+      }
+
+      function renderAccordionList(containerId, yamamList) {
+        const container = document.getElementById(containerId);
+        container.innerHTML = yamamList.map((y, idx) => `
+          <div class="ep-pp-tree-card ${idx === 0 ? 'open' : ''}" id="card-${y.id}">
+            <div class="ep-pp-accordion-header" onclick="document.getElementById('card-${y.id}').classList.toggle('open')">
+              <div class="ep-pp-tree-title">
+                <span style="font-family: monospace; font-weight: 800; font-size: 0.95rem;">${y.timeRangeStr}</span>
+                <span>·</span>
+                <span>${y.bird.ta} · <strong>${y.activity.ta}</strong></span>
+              </div>
+              <div>
+                <span class="ep-pp-badge ${y.activity.badgeClass}">${y.activity.verdictTa}</span>
+              </div>
+            </div>
+
+            <div class="ep-pp-sub-container">
+              ${y.subPeriods.map(sub => `
+                <div class="ep-pp-sub-card">
+                  <div class="ep-pp-sub-header">
+                    <div>
+                      <span style="font-family: monospace; font-weight: 700;">${sub.timeRangeStr}</span>
+                      <span style="margin: 0 0.4rem;">·</span>
+                      <strong style="color: ${sub.activity.color};">${sub.activity.ta}</strong>
+                    </div>
+                    <div>
+                      <span class="ep-pp-badge ${sub.activity.badgeClass}">${sub.activity.verdictTa}</span>
+                    </div>
+                  </div>
+
+                  <!-- Micro-periods -->
+                  <div class="ep-pp-micro-grid">
+                    ${sub.microPeriods.map(m => `
+                      <div class="ep-pp-micro-item">
+                        <span class="ep-pp-micro-time">${m.timeRangeStr}</span>
+                        <span class="ep-pp-badge ${m.activity.badgeClass}">${m.activity.ta} · ${m.activity.verdictTa}</span>
+                      </div>
+                    `).join("")}
+                  </div>
+                </div>
+              `).join("")}
+            </div>
+          </div>
+        `).join("");
+      }
+
+      function renderStaticReferenceTables() {
+        const refBirds = PanchaPakshiEngine.MASTER_TABLES.birdsSummary;
+        const bTbody = document.getElementById("ppRefBirdsTbody");
+        if (bTbody) {
+          bTbody.innerHTML = refBirds.map(b => `
+            <tr>
+              <td><strong>${b.symbol} ${b.birdTa}</strong> (${b.birdEn})</td>
+              <td>${b.elementTa}</td>
+              <td style="font-weight: 800; color: #831843;">${b.letter}</td>
+              <td>${b.directionTa}</td>
+              <td>${b.planetTa}</td>
+              <td>${b.colorTa}</td>
+            </tr>
+          `).join("");
+        }
+
+        const refActs = PanchaPakshiEngine.MASTER_TABLES.activitiesSummary;
+        const aTbody = document.getElementById("ppRefActivitiesTbody");
+        if (aTbody) {
+          aTbody.innerHTML = refActs.map(a => `
+            <tr>
+              <td><strong>${a.actTa}</strong> (${a.actEn})</td>
+              <td style="font-weight: 800; color: ${a.color};">${a.power}</td>
+              <td>${a.weightNazhigai}</td>
+              <td><span class="ep-pp-badge" style="background: #F1F5F9; color: ${a.color}; border: 1px solid ${a.color};">${a.verdictTa}</span></td>
+              <td style="font-size: 0.85rem; color: #475569;">${a.descriptionTa}</td>
+            </tr>
+          `).join("");
+        }
+      }
+
+      // Expand / Collapse toggles
+      document.getElementById("ppExpandAllDayBtn").addEventListener("click", () => {
+        document.querySelectorAll("#ppDayAccordionList .ep-pp-tree-card").forEach(c => c.classList.add("open"));
+      });
+      document.getElementById("ppCollapseAllDayBtn").addEventListener("click", () => {
+        document.querySelectorAll("#ppDayAccordionList .ep-pp-tree-card").forEach(c => c.classList.remove("open"));
+      });
+      document.getElementById("ppExpandAllNightBtn").addEventListener("click", () => {
+        document.querySelectorAll("#ppNightAccordionList .ep-pp-tree-card").forEach(c => c.classList.add("open"));
+      });
+      document.getElementById("ppCollapseAllNightBtn").addEventListener("click", () => {
+        document.querySelectorAll("#ppNightAccordionList .ep-pp-tree-card").forEach(c => c.classList.remove("open"));
+      });
+
+      // Initial Render
+      renderAll();
+    });
+  </script>
+</body>
+</html>

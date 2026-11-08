@@ -1,0 +1,39 @@
+=== DETAILED PLANETARY POSITIONS ===
+Su   | சூரியன்  | மேஷம்      ( 0) | 14° 50' 54" | பரணி-1 (Ve) | Dig: உச்சம் (Exalted) | Retro: False | Combust: False
+Me   | புதன்    | மீனம்      (11) | 19° 4' 9"  | ரேவதி-1 (Me) | Dig: நீசம் (Debilitated) | Retro: False | Combust: False
+Ve   | சுக்கிரன் | மீனம்      (11) | 1° 0' 40"  | பூரட்டாதி-4 (Ju) | Dig: உச்சம் (Exalted) | Retro: False | Combust: False
+Ma   | செவ்வாய் | மேஷம்      ( 0) | 18° 7' 57" | பரணி-2 (Ve) | Dig: ஆட்சி (Own Sign) | Retro: False | Combust: True
+Ju   | குரு     | கும்பம்    (10) | 25° 21' 45" | பூரட்டாதி-2 (Ju) | Dig: நட்பு (Friendly) | Retro: False | Combust: False
+Sa   | சனி      | மேஷம்      ( 0) | 1° 32' 21" | அஸ்வினி-1 (Ke) | Dig: நீசம் (Debilitated) | Retro: False | Combust: True
+Mo   | சந்திரன் | மிதுனம்    ( 2) | 13° 29' 56" | திருவாதிரை-3 (Ra) | Dig: நட்பு (Friendly) | Retro: False | Combust: False
+Ra   | ராகு     | சிம்மம்    ( 4) | 13° 33' 18" | பூரம்-1 (Ve) | Dig: நட்பு (Friendly) | Retro: True | Combust: False
+Ke   | கேது     | கும்பம்    (10) | 13° 33' 18" | சதயம்-3 (Ra) | Dig: நட்பு (Friendly) | Retro: True | Combust: False
+Asc  | லக்னம்   | தனுசு      ( 8) | 8° 6' 7"   | மூலம்-3 (Ke) | Dig: நட்பு (Friendly) | Retro: False | Combust: False
+Man  | மாந்தி   | மகரம்      ( 9) | 7° 13' 12" | உத்திராடம்-4 (Su) | Dig: நட்பு (Friendly) | Retro: False | Combust: False
+
+=== NAVAMSHA (D9) POSITIONS ===
+Su   in D9: சிம்மம் (4)
+Me   in D9: தனுசு (8)
+Ve   in D9: கடகம் (3)
+Ma   in D9: கன்னி (5)
+Ju   in D9: ரிஷபம் (1)
+Sa   in D9: மேஷம் (0)
+Mo   in D9: கும்பம் (10)
+Ra   in D9: சிம்மம் (4)
+Ke   in D9: கும்பம் (10)
+Asc  in D9: மிதுனம் (2)
+Man  in D9: மீனம் (11)
+
+=== BHAVA HOUSES FROM LAGNA (Dhanusu) ===
+Bhava  1 (தனுசு     ): Empty
+Bhava  2 (மகரம்     ): Man (மாந்தி)
+Bhava  3 (கும்பம்   ): Ju (குரு), Ke (கேது)
+Bhava  4 (மீனம்     ): Me (புதன்), Ve (சுக்கிரன்)
+Bhava  5 (மேஷம்     ): Su (சூரியன்), Ma (செவ்வாய்), Sa (சனி)
+Bhava  6 (ரிஷபம்    ): Empty
+Bhava  7 (மிதுனம்   ): Mo (சந்திரன்)
+Bhava  8 (கடகம்     ): Empty
+Bhava  9 (சிம்மம்   ): Ra (ராகு)
+Bhava 10 (கன்னி     ): Empty
+Bhava 11 (துலாம்    ): Empty
+Bhava 12 (விருச்சிகம்): Empty
